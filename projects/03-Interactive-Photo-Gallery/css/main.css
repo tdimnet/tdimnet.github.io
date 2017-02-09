@@ -1,0 +1,168 @@
+/*
+Fonts used
+  font-family: 'Source Sans Pro', sans-serif;
+*/
+
+/*
+  Using box-sizing code snippets
+  To see more about this rule: http://blog.teamtreehouse.com/box-sizing-secret-simple-css-layouts
+*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/*
+  Layout styles
+*/
+
+/* Header ************/
+header {
+  text-align: center;
+  padding: 0 20px;
+}
+
+input {
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  margin: auto;
+  padding: .5rem 1rem;
+  border: 2px solid #e5e5e5;
+  border-radius: 5px;
+  color: #999;
+  outline: 0;
+}
+
+/* Photo Gallery ************/
+#photoGallery {
+  margin-top: 50px;
+  list-style: none;
+  padding-left: 0;
+}
+
+#photoGallery li {
+  float: left;
+  width: 45%;
+  margin: 10px 2.5%;
+}
+
+#photoGallery img {
+  width: 100%;
+}
+
+#photoGallery img:hover {
+  transition: .5s;
+  box-shadow: 2px 2px 10px 10px #bbb;
+}
+
+/* Overlay ************/
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /*dim the background*/
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+}
+
+#imgBlock {
+  text-align: center;
+}
+
+#overlay img {
+  width: 600px;
+  height: auto;
+  box-shadow: 0 0 2em #aaa;
+}
+
+#overlay .arrow {
+  width: 30px;
+  opacity: .8;
+}
+
+#close {
+  width: 20px;
+}
+
+#close:hover,
+#prev:hover,
+#next:hover {
+  box-shadow: 1px 2px 3px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+#overlay p {
+  font-size: 1.1em;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+
+/*
+  Media Queries
+*/
+@media (min-width: 768px) {
+  #photoGallery li {
+    width: 28.3333%;
+  }
+
+  #imgBlock {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  #overlay p {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  #close {
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  #prev {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+  }
+
+  #next {
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+  }
+
+}
+
+@media (min-width: 992px) {
+  #photoGallery {
+    max-width: 980px;
+    margin: auto;
+  }
+  #photoGallery li {
+    width: 20%;
+  }
+
+  #overlay p {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
