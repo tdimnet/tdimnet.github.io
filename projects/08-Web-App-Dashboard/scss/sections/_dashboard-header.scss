@@ -1,0 +1,68 @@
+// Dashboard Header
+.dashboard-header {
+  text-align: center;
+  @media #{$tablet} {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.dashboard-header h2 {
+  font-weight: normal;
+  color: #777;
+  @media #{$tablet} {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+}
+
+.dashboard-header-searchbar {
+  position: relative;
+  padding: 0 15px;
+  @media #{$tablet} {
+    margin-left: auto;
+    width: 100%;
+    padding: 14px 15px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.dashboard-header-searchbar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #7377BF;
+  @media #{$tablet} {
+    width: 50%;
+    float: right;
+  }
+}
+
+// Target the magnifying glass inside the input element
+span.magnifying-glass {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 12px;
+  right: 6%;
+  @media #{$tablet} {
+    top: 25px;
+    right: 4%;
+  }
+}
+
+.magnifying-glass-icon {
+  fill: #7377BF;
+}
+
+.dashboard-header-searchbar input:hover,
+.dashboard-header-searchbar input:focus {
+  border-color: #7377BF;
+}
+
+.dashboard-header-searchbar input:focus {
+  outline: 0;
+}

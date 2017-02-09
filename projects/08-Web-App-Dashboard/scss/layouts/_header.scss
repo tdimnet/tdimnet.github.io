@@ -1,0 +1,94 @@
+// Header
+.main-header {
+  background-color: #7377BF;
+}
+
+.main-header ul {
+  margin: 0;
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.main-header li {
+  margin-right: 5px;
+}
+
+.main-header a {
+  color: #fff;
+}
+
+.main-header h1 {
+  font-size: 1.4em;
+}
+
+.main-header h1 span {
+  font-weight: 100;
+  position: relative;
+}
+
+//Targets the TM element
+.main-header h1 span:last-child {
+  font-size: .7em;
+  position: absolute;
+}
+
+// Targets the bell icon svg element
+.main-header li:nth-of-type(2) {
+  height: 20px;
+  width: 22px;
+  margin-left: auto;
+  margin-right: 10px;
+  position: relative;
+}
+
+.icon-bell {
+  fill: #FFFFFF;
+}
+
+.main-header li:nth-of-type(2) a {
+  position: relative;
+}
+
+.icon-bell-notification {
+  height: 7px;
+  width: 7px;
+  background-color: #3AC162;
+  position: absolute;
+  top: -10px;
+  right: -2px;
+  border-radius: 50%;
+}
+
+.main-header li:nth-of-type(2) svg {
+  opacity: .7;
+}
+
+.main-header li:nth-of-type(2) svg:hover {
+  opacity: 1;
+}
+
+/* Targets the image and the name of the user */
+.main-header li:last-child {
+  padding: 7px 0px 7px 5px;
+  border-left: 1px solid #4D4C72;
+  font-weight: lighter;
+  position: relative;
+}
+
+.main-header li:last-child img {
+  display: none;
+  @media #{$tablet} {
+    display: initial;
+    position: absolute;
+    border-radius: 50%;
+    height: 35px;
+    top: 0;
+  }
+}
+
+.main-header li:last-child span {
+  @media #{$tablet} {
+    margin-left: 40px;
+  }
+}

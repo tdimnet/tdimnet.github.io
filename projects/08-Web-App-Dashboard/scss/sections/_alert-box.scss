@@ -1,0 +1,34 @@
+// Alert Box
+.alert-box {
+  background-color: #7377BF;
+  color: #fff;
+  text-align: justify;
+  font-size: .9em;
+  margin: 20px 0;
+  padding: 10px 35px 10px 10px;
+  border-radius: 5px;
+}
+
+.alert-box p {
+  margin: 0;
+  position: relative;
+}
+
+.alert-box span {
+  position: absolute;
+  right: -30px;
+  top: 0px;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+  opacity: .7;
+}
+
+.alert-box span:hover {
+  opacity: 1;
+}
+
+.alert-box .close-button {
+  fill: #FFFFFF;
+  stroke-width: 2;
+}

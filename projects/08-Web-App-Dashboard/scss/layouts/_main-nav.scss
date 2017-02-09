@@ -1,0 +1,39 @@
+// Main Navigation
+.main-nav {
+  background-color: #4D4C72;
+}
+
+.main-nav ul {
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  @media #{$desktop} {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.main-nav li {
+  height: 30px;
+  width: 30px;
+  @media #{$desktop} {
+    margin-top: 40px;
+  }
+}
+
+
+.main-nav .icon {
+  fill:#FFFFFF;
+}
+
+.main-nav svg {
+  opacity: .7;
+}
+
+.main-nav svg:hover {
+  opacity: 1;
+}
