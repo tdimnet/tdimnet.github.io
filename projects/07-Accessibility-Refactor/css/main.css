@@ -1,0 +1,500 @@
+/*****************************
+  Global Layout Set-up
+*****************************/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #D9E7E3;
+  background: #2d2b30;
+}
+
+a {
+  text-decoration: none;
+  color: #72F060;
+}
+
+a:hover {
+  color: #72F060;
+  text-decoration: underline;
+}
+
+
+
+/*****************************
+  Navigation
+*****************************/
+.main-nav {
+  background: rgba(45, 43, 48, .9);
+  min-height: 30px;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 5px solid green;
+}
+
+.main-nav ul {
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-nav li {
+  margin: 10px auto;
+  padding: 5px 12px 10px 12px;
+}
+
+.main-nav ul a {
+  display: block;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.main-nav a:hover {
+  background: #72F060;
+  border-color: #72F060;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+
+/*****************************
+  Header
+*****************************/
+.main-header {
+  text-align: center;
+  background: url('../img/concert02_no_text.jpg') no-repeat top center ;
+  background-size: cover;
+  overflow: hidden;
+  height: 350px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.main-header h1 {
+  font-size: 3em;
+}
+
+.main-header p {
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+
+
+/*****************************
+  Page: index.html
+*****************************/
+.main-section {
+  margin: 30px 15px 10px;
+}
+
+.band-info {
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 4px solid #72F060;
+}
+
+.album-img img,
+.band-img img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.information {
+  text-align: center;
+}
+
+.information h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #72F060;
+  margin-top: 10px;
+}
+
+.btn-buy {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.btn-buy:hover {
+  background: #72F060;
+  border-color: #72F060;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+
+/*****************************
+  Page: tour.html
+*****************************/
+.tour-page {
+  margin: 10px 5px;
+}
+
+.tour-dates {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.tour-dates h2 {
+  display: inline;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  color: #72F060;
+}
+
+.pick {
+  width: 40px;
+  padding: 10px;
+  vertical-align: text-bottom;
+}
+
+.tour-dates-table {
+  width: 100%;
+  font-size: .9em;
+}
+
+.tour-dates-table caption {
+  padding: 10px 0px 20px;
+}
+
+.tour-dates-table thead {
+  color: #72F060;
+}
+
+.tour-dates-table th,
+.tour-dates-table td {
+  padding: 5px;
+}
+
+.tour-dates-table tbody {
+  background: #333;
+}
+
+
+
+/*****************************
+  Page: survey.html
+*****************************/
+.first-form,
+.second-form {
+  margin-top: 20px;
+  padding: 20px 10px;
+}
+
+.first-form h2,
+.second-form h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #72F060;
+  margin-top: 10px;
+}
+
+.form-img img {
+  width: 100%;
+}
+
+form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+fieldset {
+  border: 0;
+  text-align: left;
+}
+
+.survey,
+.newsletter {
+  background-color: #444;
+  padding: 10px 15px;
+}
+
+.survey legend,
+.newsletter legend {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.survey input[type="radio"],
+.survey label {
+  cursor: pointer;
+}
+
+.survey select {
+  width: 100%;
+  font-size: 1.1em;
+  padding: 5px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.survey select:hover {
+  outline: 2px solid #333;
+  background-color: #72F060;
+}
+
+.survey select:focus {
+  outline: 2px solid #333;
+  background-color: #72F060;
+  color: #000;
+}
+
+.survey textarea {
+  padding: 5px;
+  height: 100px;
+  width: 100%;
+  font-size: 1.1em;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.survey textarea:hover {
+  outline: 2px solid #333;
+  background-color: #72F060;
+}
+
+.survey textarea:focus {
+  outline: 2px solid #333;
+  background-color: #72F060;
+  color: #000;
+}
+
+.survey button,
+.newsletter button {
+  margin: auto;
+  cursor: pointer;
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  background: #555;
+  color: #fff;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.survey button:hover,
+.newsletter button:hover {
+  border-color: #72F060;
+  background-color: #72F060;
+  color: #000;
+}
+
+.newsletter label,
+.newsletter input {
+  cursor: pointer;
+}
+
+.newsletter input {
+  padding: 5px;
+  width: 100%;
+  font-size: 0.9em;
+  transition: .3s;
+}
+
+.newsletter input:hover {
+  outline: 2px solid #333;
+  background-color: #72F060;
+}
+
+.newsletter input:focus {
+  outline: 2px solid #333;
+  background-color: #72F060;
+  color: #000;
+}
+
+.newsletter ::-webkit-input-placeholder {
+   color: #555;
+   text-align: right;
+}
+
+
+
+/*****************************
+  Footer
+*****************************/
+.main-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 4px solid #72F060;
+}
+
+.main-footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-footer li {
+  display: inline-block;
+}
+
+.main-footer a.social {
+  display: inline-block;
+  text-indent: -20000px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .4;
+  transition: all .5s;
+}
+
+.main-footer a.twitter {
+  background-image: url(../img/twitter-32.png);
+}
+
+.main-footer a.youtube {
+  background-image: url(../img/youtube-32.png);
+}
+
+.main-footer a.spotify {
+  background-image: url(../img/spotify-32.png);
+}
+
+.main-footer a.social:hover {
+  opacity: 1;
+}
+
+.main-footer .copyright {
+  font-size: .75em;
+}
+
+
+
+/*****************************
+  Media Queries
+*****************************/
+@media screen and (min-width: 768px) {
+  /*****************************
+    Global Layout Set-up
+  *****************************/
+  .clearfix:before,
+  .clearfix:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+  }
+
+  .clearfix:after {
+      clear: both;
+  }
+  /*****************************
+    Navigation
+  *****************************/
+  .main-nav ul {
+    display: flex;
+  }
+
+  .main-nav li {
+    margin: 10px 0px;
+  }
+
+  .main-nav li:nth-child(2) {
+    margin-left: auto;
+  }
+
+  .main-nav ul a {
+    display: initial;
+    font-size: 1.2em;
+  }
+
+  /*****************************
+    Header
+  *****************************/
+  .main-header {
+    min-height: 470px;
+    padding-top: 50px;
+  }
+
+  .main-header h1 {
+    font-size: 3.4em;
+  }
+
+  .main-header p {
+    font-size: 2em;
+  }
+
+  /*****************************
+    Page: index.html
+  *****************************/
+  .main-section {
+    max-width: 1024px;
+    margin: 20px auto;
+    padding: 20px 40px;
+  }
+
+  .album-img,
+  .band-img {
+    float: left;
+    width: 40%;
+  }
+
+  .band-info .information {
+    float: left;
+    width: 60%;
+  }
+
+  .btn-buy {
+    display: block;
+    width: 80%;
+    margin: 80px auto 0px;
+  }
+
+  /*****************************
+    Page: tour.html
+  *****************************/
+  .tour-dates h2 {
+    font-size: 2em;
+  }
+
+  .tour-dates-table {
+    font-size: 1.2em;
+    max-width: 1024px;
+  }
+
+  .tour-dates-table th,
+  .tour-dates-table td {
+    padding: 10px;
+  }
+
+  /*****************************
+    Page: survey.html
+  *****************************/
+  .first-form,
+  .second-form {
+    max-width: 1024px;
+    margin: 20px auto;
+  }
+
+  .form-img {
+    float: left;
+    width: 40%;
+    padding: 0px 10px;
+    vertical-align: top;
+  }
+
+  .survey-form-container,
+  .newsletter-form-container {
+    float: left;
+    width: 60%;
+    padding: 0px 20px;
+    vertical-align: top;
+  }
+}
