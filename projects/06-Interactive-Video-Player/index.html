@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Video Player Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet  " href="css/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+      <div class="main-wrapper">
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        <header>
+          <h1>Video Player Project</h1>
+        </header>
+
+        <section>
+          <!-- The video goes here  -->
+          <aside id="video-container">
+            <video preload="auto" controls>
+              <source src="video/video.mp4" type="video/mp4">
+              <source src="video/video.ogg" type="video/ogg">
+              <track kind="subtitles" label="English" srclang="en" src="captions.vtt">
+            </video>
+            <div id="video-controls"> <!-- Here are the video controls -->
+              <progress id="progress-bar" max="100" value="0">0% played</progress>
+            </div>
+          </aside>
+
+          <!-- The text goes here -->
+          <article id="captions">
+            <p>
+              <span class="captionsText">Now that we've looked at the architecture
+              of the internet, let's see how you might</span>
+              <span class="captionsText">connect your personal devices to
+              the internet inside your house.</span>
+            </p>
+            <p>
+              <span class="captionsText">Well there are many ways to
+                connect to the internet, and</span>
+              <span class="captionsText">most often people connect wirelessly.</span>
+              <span class="captionsText">Let's look at an example of how
+              you can connect to the internet.</span>
+            </p>
+            <p>
+              <span class="captionsText">If you live in a city or a town,
+              you probably have a coaxial cable for</span>
+              <span class="captionsText">cable Internet, or a phone line if you
+              have DSL, running to the outside of</span>
+              <span class="captionsText">your house, that connects you to
+              the Internet Service Provider, or ISP.</span>
+            </p>
+            <p>
+              <span class="captionsText">If you live far out in the country,
+              you'll more likely have</span>
+              <span class="captionsText">a dish outside your house, connecting
+              you wirelessly to your closest ISP, or</span>
+              <span class="captionsText">you might also use the telephone system.</span>
+              <span class="captionsText">Whether a wire comes straight from
+              the ISP hookup outside your house, or</span>
+              <span class="captionsText">it travels over radio
+              waves from your roof,</span>
+              <span class="captionsText">the first stop a wire will make once
+              inside your house, is at your modem.</span>
+            </p>
+            <p>
+              <span class="captionsText">A modem is what connects the internet
+              to your network at home.</span>
+              <span class="captionsText">A few common residential modems are DSL or</span>
+            </p>
+          </article>
+        </section>
+      </div>  <!-- END: main-wrapper -->
+      <script src="js/app.js"></script>
+    </body>
+</html>
