@@ -1,0 +1,228 @@
+/************************
+    GENERAL
+************************/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  background: #f7f5f0;
+}
+
+
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  color: #999;
+}
+
+a:hover {
+  color: #6633ff;
+}
+
+
+
+/************************
+    NAVIGATION (ABOVE HEADER)
+************************/
+
+.main-nav {
+  width: 100%;
+  background: black;
+  min-height: 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav .name {
+    display: block;
+    margin-right: auto;
+    color: white;
+}
+
+.nav li {
+  padding: 5px 10px 10px 10px;
+}
+
+.nav a {
+  transition: all .5s;
+}
+
+.nav a:hover, .selected {
+  color: white
+}
+
+
+
+/************************
+    HEADER
+************************/
+
+header {
+  text-align: center;
+  background: url('../img/paris-eiffel-tower.jpg') no-repeat bottom center ;
+  background-size: cover;
+  padding-top: 60px;
+}
+
+header {
+  line-height: 1.5;
+}
+
+header .profile-image {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all .5s;
+}
+
+header .profile-image:hover {
+  border: 5px solid #555;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.tag {
+  background-color: #efefef;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  display: table;
+  margin: 10px auto;
+}
+
+h1.name:hover {
+    color: #fff;
+    background-color: #222;
+    transition: 2s;
+}
+
+.location {
+  background-color: #222;
+  color: #fff;
+}
+
+
+
+/************************
+    PAGE: CARDS (Background & Skills)
+************************/
+
+.card {
+  margin: 30px;
+  padding: 20px 40px 40px;
+  max-width: 500px;
+  text-align: left;
+  background: #fff;
+  border-bottom: 6px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+}
+
+.card:hover {
+  border-color: #333;
+  transition: 1s;
+}
+
+ul.skills {
+  padding: 0;
+  text-align: center;
+}
+
+.skills li {
+  border-radius: 6px;
+  display: inline-block;
+  background: #ff9904;
+  color: white;
+  padding: 5px 10px;
+  margin: 2px;
+}
+
+.skills li:nth-child(odd) {
+  background: #0399ff;
+}
+
+
+
+/************************
+    PAGE: PROJECTS
+************************/
+
+.photo-card {
+  width: 100%;
+}
+
+
+
+/************************
+    FOOTER
+************************/
+
+footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 20px 0 40px 20px;
+}
+
+footer .copyright {
+  top: -8px;
+  font-size: .75em;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+a.social {
+  display: inline-block;
+  text-indent: -9999px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .4;
+  transition: all .5s;
+}
+
+a.twitter {
+  background-image: url('../img/twitter.svg');
+}
+
+a.linkedin {
+  background-image: url('../img/linkedin.svg');
+}
+
+a.github {
+  background-image: url('../img/github.svg');
+}
+
+a.social:hover {
+  opacity: 1;
+}
+
+.clearfix {
+  clear: both;
+}
