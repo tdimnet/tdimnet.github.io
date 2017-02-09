@@ -1,0 +1,39 @@
+.main-nav ul {
+  @extend %no-padding;
+  display: none;
+  @media #{$tablet} {
+    display: inline-flex !important;
+  }
+  @media #{$desktop} {
+    align-self: center;
+  }
+}
+
+@media #{$desktop} {
+  .main-nav ul,
+  .main-nav li {
+    margin: 0;
+  }
+}
+
+.main-nav li {
+  background: $background-color-main-nav;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @media #{$tablet} {
+    background: initial;
+    padding: 0px 5px;
+  }
+}
+
+.main-nav a {
+  @extend %to-upper;
+  @include text(1em, $weight: bold, $color: $color-link-default);
+  display: block;
+
+  // Only target my a tags inside .main-nav
+  &:hover {
+    color: $color-link-hover;
+  }
+}

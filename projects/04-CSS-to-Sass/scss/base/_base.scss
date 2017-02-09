@@ -1,0 +1,45 @@
+/************************
+    GENERAL
+************************/
+
+* {
+   box-sizing: border-box;
+   font-family: $open-sans;
+}
+
+body {
+  background-color: $color-body;
+}
+
+.main-wrapper {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+article {
+  margin-top: 50px;
+}
+
+h2 {
+  @include text(1.3em, 1.2, normal);
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}

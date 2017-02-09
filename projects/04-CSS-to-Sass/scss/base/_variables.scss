@@ -1,0 +1,32 @@
+// Descriptive color variables
+$white        : #fff;
+$black        : #000;
+$boulder      : #777;
+$silver       : #bbb;
+$spring-wood  : #F7F5F0;
+$dusty-gray   : #999;
+
+
+
+// Functional color variables
+$color-body                 : $spring-wood;
+$color-background-nav       : $white;
+
+$color-link-default         : $black;
+$color-link-hover           : $boulder;
+$background-color-main-nav  : $white;
+
+$color-border-light         : $silver;
+$color-border-dark          : $dusty-gray;
+
+
+
+// Font stacks
+$sans-serif : sans-serif;
+$open-sans  : 'Open Sans', $sans-serif;
+
+
+
+// Media query breakpoints
+$tablet   : '(min-width: 768px)';
+$desktop  : '(min-width: 1024px)';

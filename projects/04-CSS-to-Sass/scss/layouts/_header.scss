@@ -1,0 +1,22 @@
+.page-header {
+  padding: 15px 0 30px;
+  text-align: center;
+  border-bottom: 1px solid $color-border-light;
+  margin-bottom: 50px;
+  @media #{$desktop} {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // Only have one h1 tag on my document
+  & h1 {
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  // I keep the "& h1 a" complete for a better comprehension
+  & h1 a {
+    color: $color-link-default;
+  }
+}

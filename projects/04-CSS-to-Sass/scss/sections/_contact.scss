@@ -1,0 +1,18 @@
+.student-contact-page {
+  @extend %centered;
+  font-weight: 300;
+}
+
+.contact-student-items {
+  padding-left: 0;
+}
+
+.contact-student-items a {
+  margin-left: 10px;
+  color: $color-link-default;
+  font-weight: 400;
+  // Only targets the a tags (phone & e-mail)
+  &:hover {
+    text-decoration: underline;
+  }
+}

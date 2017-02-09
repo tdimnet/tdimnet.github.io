@@ -1,0 +1,37 @@
+.footer-nav ul {
+  @extend %no-padding;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+.footer-nav li:first-child {
+  margin-right: auto;
+}
+
+.to-top {
+  @media #{$tablet} {
+    display: none;
+  }
+}
+
+.footer-nav a {
+  @extend %to-upper;
+  color: $color-link-default;
+}
+
+.footer-nav-items {
+  @media #{$tablet} {
+    padding: 0px 5px;
+  }
+}
+
+.footer-nav-items a {
+  display: none;
+  @media #{$tablet} {
+    display: initial;
+    &:hover {
+      color: #777;
+    }
+  }
+}

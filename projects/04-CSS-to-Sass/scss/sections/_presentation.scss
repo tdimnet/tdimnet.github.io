@@ -1,0 +1,34 @@
+.student-presentation {
+  @extend %centered;
+  @extend %clearfix;
+  font-weight: 300;
+
+  & img {
+    max-width: 80%;
+    @media #{$tablet} {
+      float: left;
+      max-width: 40%;
+    }
+  }
+
+  // Only targets the p bloc inside the student presentation
+  & p {
+    @media #{$tablet} {
+      float: right;
+      max-width: 60%;
+      padding: 0px 5px;
+    }
+  }
+}
+
+
+
+
+.student-presentation p a {
+  color: $color-link-default;
+  font-weight: 400;
+  // Only targets the a tags on hover
+  &:hover {
+    text-decoration: underline;
+  }
+}
