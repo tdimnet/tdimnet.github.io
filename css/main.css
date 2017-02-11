@@ -369,32 +369,33 @@ textarea {
 
 .main-header {
   background-color: #7F8C8D;
-  height: 100vh;
-  padding-top: 10px; }
+  color: #ecf0f1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff; }
 
-.main-nav {
-  border-bottom: 1px solid black;
+.heading {
   padding: 0px 5px;
   display: flex;
   flex-direction: row; }
 
-.main-nav .hamburger {
+.heading .hamburger {
   margin-left: auto;
   cursor: pointer;
   opacity: .7;
   transition: .5s; }
 
-.main-nav .hamburger:hover {
+.heading .hamburger:hover {
   opacity: 1; }
 
-.main-nav .svg-icon {
+.heading .svg-icon {
   height: 35px;
   width: 35px; }
 
-.main-nav .hamburger path {
+.heading .hamburger path {
   fill: #ecf0f1; }
 
-.main-nav h2 {
+.heading h2 {
   margin-top: 5px;
   margin-bottom: 0; }
 
@@ -415,5 +416,15 @@ textarea {
   text-decoration: none;
   color: #000;
   display: block; }
+
+.branding {
+  background-color: #7F8C8D;
+  color: #fff;
+  height: calc(100vh - 60.33px); }
+
+.branding h1,
+.branding p {
+  margin-top: 0;
+  margin-bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */

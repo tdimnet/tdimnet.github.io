@@ -1,5 +1,38 @@
 .main-header {
   background-color: #7F8C8D;
-  height: 100vh;
+  color: #ecf0f1;
   padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+.heading {
+  padding: 0px 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.heading .hamburger {
+  margin-left: auto;
+  cursor: pointer;
+  opacity: .7;
+  transition: .5s;
+}
+
+.heading .hamburger:hover {
+  opacity: 1;
+}
+
+.heading .svg-icon {
+  height: 35px;
+  width: 35px;
+}
+
+.heading .hamburger path {
+  fill: #ecf0f1;
+}
+
+.heading h2 {
+  margin-top: 5px;
+  margin-bottom: 0;
 }
