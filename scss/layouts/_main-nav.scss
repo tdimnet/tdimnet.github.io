@@ -1,0 +1,52 @@
+.main-nav {
+  border-bottom: 1px solid black;
+  padding: 0px 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-nav .hamburger {
+  margin-left: auto;
+  cursor: pointer;
+  opacity: .7;
+  transition: .5s;
+}
+
+.main-nav .hamburger:hover {
+  opacity: 1;
+}
+
+.main-nav .svg-icon {
+  height: 35px;
+  width: 35px;
+}
+
+.main-nav .hamburger path {
+  fill: #ecf0f1;
+}
+
+.main-nav h2 {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.main-nav ul {
+  margin-top: 0;
+  padding-left: 0;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main-nav li {
+  list-style-type: none;
+  margin: 0 10px 10px;
+  background-color: #fff;
+  padding: 10px 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
