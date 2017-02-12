@@ -18,3 +18,32 @@
   color: #000;
   display: block;
 }
+
+@media (min-width: 768px) {
+  .main-nav ul {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    margin: 20px auto 10px;
+  }
+
+  .main-nav li {
+    background-color: transparent;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .main-nav a {
+    display: inline;
+    color: #fff;
+    opacity: .8;
+    transition: .4s;
+  }
+
+  .main-nav a:hover {
+    opacity: 1;
+  }
+}

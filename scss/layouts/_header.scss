@@ -36,3 +36,13 @@
   margin-top: 5px;
   margin-bottom: 0;
 }
+
+@media (min-width: 768px) {
+  .heading {
+    justify-content: center;
+  }
+
+  .heading .hamburger {
+    display: none;
+  }
+}

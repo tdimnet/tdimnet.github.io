@@ -3,6 +3,12 @@
   background-color: #7F8C8D;
   color: #fff;
   height: calc(100vh - 60.33px);
+  position: relative;
+}
+
+.branding div {
+  position: absolute;
+  top: 40%;
 }
 
 .branding h1,
