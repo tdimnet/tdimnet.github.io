@@ -47,3 +47,13 @@
     opacity: 1;
   }
 }
+
+@media (min-width: 1024px) {
+  .main-nav ul {
+    margin: 0 0;
+  }
+
+  .main-nav li {
+    margin-left: 20px;
+  }
+}

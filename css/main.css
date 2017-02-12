@@ -405,6 +405,17 @@ textarea {
 
   .heading .hamburger {
     display: none; } }
+@media (min-width: 1024px) {
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline; }
+
+  .heading h2 {
+    margin-top: 0; }
+
+  .main-nav {
+    margin-left: auto; } }
 .main-nav ul {
   margin-top: 0;
   padding-left: 0;
@@ -446,6 +457,12 @@ textarea {
 
   .main-nav a:hover {
     opacity: 1; } }
+@media (min-width: 1024px) {
+  .main-nav ul {
+    margin: 0 0; }
+
+  .main-nav li {
+    margin-left: 20px; } }
 .branding {
   background-color: #7F8C8D;
   color: #fff;

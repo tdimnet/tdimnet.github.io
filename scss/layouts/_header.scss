@@ -46,3 +46,19 @@
     display: none;
   }
 }
+
+@media (min-width: 1024px) {
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .heading h2 {
+    margin-top: 0;
+  }
+
+  .main-nav {
+    margin-left: auto;
+  }
+}
