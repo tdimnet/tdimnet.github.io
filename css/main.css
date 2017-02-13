@@ -367,6 +367,14 @@ textarea {
 * {
   box-sizing: border-box; }
 
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
 .btn {
   background-color: #1abc9c;
   color: #fff;
@@ -583,5 +591,48 @@ textarea {
     left: -15px;
     border-width: 8px 16px 8px 0;
     border-color: transparent #F45B69 transparent transparent; } }
+.projects {
+  padding-top: 20px;
+  background-color: #1abc9c;
+  color: #fff;
+  padding: 50px 0; }
+
+.projects h1 {
+  margin: 0;
+  text-align: center; }
+
+.projects p {
+  margin-top: 60px;
+  text-align: center; }
+
+.projects .btn {
+  background-color: #F45B69;
+  transition: .4s; }
+
+.projects .btn:hover {
+  background-color: #c0392b; }
+
+.projects ul {
+  list-style: none;
+  margin: 40px 0 0;
+  padding-left: 0; }
+
+.projects li {
+  width: 100%;
+  float: left;
+  margin-top: -5px; }
+
+.projects li img {
+  width: 100%; }
+
+@media (min-width: 500px) {
+  .projects li {
+    width: 50%; } }
+@media (min-width: 768px) {
+  .projects li {
+    width: 33.333%; } }
+@media (min-width: 1024px) {
+  .projects li {
+    width: 25%; } }
 
 /*# sourceMappingURL=main.css.map */
