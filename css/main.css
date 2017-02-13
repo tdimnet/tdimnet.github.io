@@ -606,10 +606,12 @@ textarea {
   list-style: none;
   padding-left: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center; }
 
 .projects .skills li {
-  margin-left: 20px;
+  margin-top: 30px;
+  margin-left: 10px;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 10px;
@@ -667,10 +669,62 @@ textarea {
   .projects .portfolio li {
     width: 50%; } }
 @media (min-width: 768px) {
+  .projects .skills li {
+    margin-top: 0; }
+
   .projects .portfolio li {
     width: 33.333%; } }
 @media (min-width: 1024px) {
   .projects .portfolio li {
     width: 25%; } }
+.contact {
+  background-color: #fff;
+  padding: 50px 0 10px;
+  color: #2980b9;
+  text-align: center; }
+
+.contact h1 {
+  margin: 0; }
+
+.contact p {
+  width: 90%;
+  margin: 10px auto 0; }
+
+.contact .email {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 1.2em; }
+
+.footer-icons {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 40px auto 60px;
+  width: 40%; }
+
+.footer-icons .svg-icon {
+  height: 35px;
+  width: 35px; }
+
+.footer-icons .svg-icon path {
+  fill: #F45B69;
+  opacity: .8;
+  transition: .3s; }
+
+.footer-icons .svg-icon:hover path {
+  opacity: 1; }
+
+.copyright {
+  margin: 0; }
+
+@media (min-width: 768px) {
+  .contact p {
+    width: 75%; } }
+@media (min-width: 1024px) {
+  .contact p {
+    width: 50%; } }
 
 /*# sourceMappingURL=main.css.map */
