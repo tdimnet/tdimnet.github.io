@@ -495,6 +495,9 @@ textarea {
   right: 0;
   text-align: center; }
 
+#canvas-animation {
+  width: 100%; }
+
 .branding h1,
 .branding p {
   margin-top: 0;
@@ -503,6 +506,9 @@ textarea {
 .branding p {
   margin-bottom: 30px; }
 
+@media (min-width: 1024px) {
+  .branding {
+    height: calc(100vh - 48.67px); } }
 .story {
   padding-top: 20px;
   background-color: #fff;
@@ -571,6 +577,23 @@ textarea {
   border-width: 8px 0 8px 16px;
   border-color: transparent transparent transparent #F45B69; }
 
+.timeline ul li::after {
+  background: #fff;
+  transition: background .5s ease-in-out; }
+
+.timeline ul li.in-view::after {
+  background: #F45B69; }
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out; }
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1; }
+
 @media screen and (max-width: 900px) {
   .timeline ul li div {
     width: 250px; }
@@ -619,7 +642,8 @@ textarea {
   background-color: #fff;
   color: #2980b9; }
 
-.projects .skills li:hover {
+.projects .skills li:hover,
+.projects .skills .selected {
   background-color: #2980b9;
   color: #fff; }
 
@@ -696,10 +720,10 @@ textarea {
   text-decoration: none;
   font-size: 1em;
   font-weight: bold;
-  color: #1abc9c; }
+  color: #F45B69; }
 
 .contact .email:visited {
-  color: #1abc9c; }
+  color: #F45B69; }
 
 .footer-icons {
   list-style: none;

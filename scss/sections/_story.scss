@@ -78,6 +78,27 @@
   border-color: transparent transparent transparent #F45B69;
 }
 
+.timeline ul li::after {
+  background: #fff;
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: #F45B69;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
 @media screen and (max-width: 900px) {
   .timeline ul li div {
     width: 250px;

@@ -29,7 +29,8 @@
   color: #2980b9;
 }
 
-.projects .skills li:hover {
+.projects .skills li:hover,
+.projects .skills .selected {
   background-color: #2980b9;
   color: #fff;
 }
