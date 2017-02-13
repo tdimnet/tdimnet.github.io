@@ -183,37 +183,39 @@ $('.skills li').click(function() {
   switch (category) {
     case 'all':
       $('.skills li').removeClass('selected');
-      $('.thumbnails').show('fast');
+      $('.thumbnails').show();
       break;
     case 'html':
       $('.skills li').removeClass('selected');
-      $('.thumbnails').hide('fast');
+      $('.thumbnails').hide();
       $(this).addClass('selected');
-      $('.html').show('fast');
+      $('.html').show();
       break;
     case 'css':
       $('.skills li').removeClass('selected');
-      $('.thumbnails').hide('fast');
+      $('.thumbnails').hide();
       $(this).addClass('selected');
-      $('.css').show('fast');
+      $('.css').show();
       break;
     case 'javascript':
       $('.skills li').removeClass('selected');
-      $('.thumbnails').hide('fast');
+      $('.thumbnails').hide();
       $(this).addClass('selected');
-      $('.javascript').show('fast');
+      $('.javascript').show();
       break;
     case 'wordpress':
       $('.skills li').removeClass('selected');
-      $('.thumbnails').hide('fast');
+      $('.thumbnails').hide();
       $(this).addClass('selected');
-      $('.wordpress').show('fast');
-      break;
-    case 'php':
-      $('.skills li').removeClass('selected');
-      $('.thumbnails').hide('fast');
-      $(this).addClass('selected');
-      $('.php').show('fast');
+      $('.wordpress').show();
       break;
   }
+});
+
+// Portfolio overlay
+$('.thumbnails').click(function(event) {
+  event.preventDefault();
+
+  var websitePresentation = $(this);
+  console.log(websitePresentation);
 });
