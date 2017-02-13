@@ -1,7 +1,7 @@
 .contact {
   background-color: #fff;
   padding: 50px 0 10px;
-  color: #2980b9;
+  color: #F45B69;
   text-align: center;
 }
 
@@ -18,7 +18,13 @@
   display: block;
   margin-top: 20px;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1em;
+  font-weight: bold;
+  color: #1abc9c;
+}
+
+.contact .email:visited {
+  color: #1abc9c;
 }
 
 .footer-icons {
@@ -38,7 +44,7 @@
 }
 
 .footer-icons .svg-icon path {
-  fill: #F45B69;
+  fill: #1abc9c;
   opacity: .8;
   transition: .3s;
 }
@@ -49,6 +55,8 @@
 
 .copyright {
   margin: 0;
+  color: #1abc9c;
+  opacity: .7;
 }
 
 

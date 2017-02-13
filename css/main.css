@@ -512,7 +512,7 @@ textarea {
 .story h1 {
   margin: 0;
   text-align: center;
-  color: #2980b9; }
+  color: #F45B69; }
 
 .story p {
   margin: 50px 0 0;
@@ -527,7 +527,7 @@ textarea {
   width: 6px;
   margin: 0 auto;
   padding-top: 50px;
-  background: #2980b9; }
+  background: #1abc9c; }
 
 .timeline ul li::after {
   content: '';
@@ -680,7 +680,7 @@ textarea {
 .contact {
   background-color: #fff;
   padding: 50px 0 10px;
-  color: #2980b9;
+  color: #F45B69;
   text-align: center; }
 
 .contact h1 {
@@ -694,7 +694,12 @@ textarea {
   display: block;
   margin-top: 20px;
   text-decoration: none;
-  font-size: 1.2em; }
+  font-size: 1em;
+  font-weight: bold;
+  color: #1abc9c; }
+
+.contact .email:visited {
+  color: #1abc9c; }
 
 .footer-icons {
   list-style: none;
@@ -710,7 +715,7 @@ textarea {
   width: 35px; }
 
 .footer-icons .svg-icon path {
-  fill: #F45B69;
+  fill: #1abc9c;
   opacity: .8;
   transition: .3s; }
 
@@ -718,7 +723,9 @@ textarea {
   opacity: 1; }
 
 .copyright {
-  margin: 0; }
+  margin: 0;
+  color: #1abc9c;
+  opacity: .7; }
 
 @media (min-width: 768px) {
   .contact p {
