@@ -1,13 +1,14 @@
 .story {
   padding-top: 20px;
-  background-color: #2980b9;
-  color: #fff;
+  background-color: #fff;
   padding: 50px 0;
+  color: #fff;
 }
 
 .story h1 {
   margin: 0;
   text-align: center;
+  color: #2980b9;
 }
 
 .story p {
@@ -25,7 +26,7 @@
   width: 6px;
   margin: 0 auto;
   padding-top: 50px;
-  background: #fff;
+  background: #2980b9;
 }
 
 .timeline ul li::after {

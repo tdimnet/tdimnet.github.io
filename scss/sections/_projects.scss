@@ -1,6 +1,6 @@
 .projects {
   padding-top: 20px;
-  background-color: #1abc9c;
+  background-color: #F45B69;
   color: #fff;
   padding: 50px 0;
 }
@@ -10,29 +10,48 @@
   text-align: center;
 }
 
-.projects .btn {
-  background-color: #F45B69;
+.projects .skills {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.projects .skills li {
+  margin-left: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
   transition: .4s;
+  background-color: #fff;
+  color: #2980b9;
 }
 
-.projects .btn:hover {
-  background-color: #c0392b;
+.projects .skills li:hover {
+  background-color: #2980b9;
+  color: #fff;
 }
 
-.projects ul {
+.projects .btn-paragraph {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 0;
+}
+
+.projects .portfolio {
   list-style: none;
   margin: 40px 0 0;
   padding-left: 0;
 }
 
-.projects li {
+.projects .portfolio li {
   width: 100%;
   float: left;
   margin-top: -5px;
   position: relative;
 }
 
-.projects li img {
+.projects .portfolio li img {
   width: 100%;
 }
 
@@ -53,7 +72,8 @@
   opacity: 0;
 	transition-property: opacity;
 	transition-duration: .5s;
-  cursor: pointer;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .presentation:hover {
@@ -61,19 +81,19 @@
 }
 
 @media (min-width: 500px) {
-  .projects li {
+  .projects .portfolio li {
     width: 50%;
   }
 }
 
 @media (min-width: 768px) {
-  .projects li {
+  .projects .portfolio li {
     width: 33.333%;
   }
 }
 
 @media (min-width: 1024px) {
-  .projects li {
+  .projects .portfolio li {
     width: 25%;
   }
 }
