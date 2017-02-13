@@ -212,10 +212,106 @@ $('.skills li').click(function() {
   }
 });
 
-// Portfolio overlay
+//
+  // Portfolio overlay
+//
+// The project gallery
+var galleryItems = [
+  {
+    id: 'profilePage',
+    title: 'Profile Page',
+    imgSrc: '',
+    imgAlt: '',
+    introduction: 'Duplexque isdem diebus acciderat malum, quod et Theophilum insontem atrox interceperat casus, et Serenianus dignus exsecratione cunctorum, innoxius, modo non reclamante publico vigore, discessit.',
+    link: 'projects/01-Personal-Profile-Page/index.html'
+  },
+  {
+    id: 'registrationForm',
+    title: 'Registration Form',
+    link: 'projects/02-Online-Registration-Form/index.html'
+  },
+  {
+    id: 'photoGallery',
+    title: 'Photo Gallery',
+    link: 'projects/03-Interactive-Photo-Gallery/index.html',
+  },
+  {
+    id: 'responsiveLayoutWithSass',
+    title: 'Responsive Layout With Sass',
+    link: 'projects/04-CSS-to-Sass/index.html',
+  },
+  {
+    id: 'tributePageWithSVG',
+    title: 'Tribute Page With SVG',
+    link: 'projects/05-SVG-Site-Update/index.html'
+  },
+  {
+    id: 'customVideoPlayer',
+    title: 'Custom Video Player',
+    link: 'projects/06-Interactive-Video-Player/index.html'
+  },
+  {
+    id: 'accessibleWebsiteForALocalBand',
+    title: 'Accessible Website For A Local Band',
+    link: 'projects/07-Accessibility-Refactor/index.html'
+  },
+  {
+    id: 'webAppDashboard',
+    title: 'Web App Dashboard',
+    link: 'projects/08-Web-App-Dashboard/index.html'
+  },
+  {
+    id: 'galleryWithAPI',
+    title: 'Gallery With API',
+    link: 'projects/09-Use-a-Public-API-to-Create-a-Gallery/index.html'
+  },
+  {
+    id: 'frontEndAutomation',
+    title: 'Front End Automation',
+    link: 'projects/10-Optimizing-a-Site-for-Performance/index.html'
+  },
+  {
+    id: 'cityWebsite',
+    title: 'City Website',
+    link: 'http://pontarion.themecloud.me/'
+  },
+];
+
+// Create the overlay and its relative elements.
+var $overlay = $('<div id="overlay"></div>');
+var $websitePresentation = $('<div id="websitePresentation"></div>');
+var $websiteImageContainer = $('<div id="websiteImageContainer"></div>');
+var $websiteImage = $('<img src="" alt="">');
+var $websiteDescription = $('<div id="websiteDescription"></div>');
+var $websiteTitle = $('<h4></h4>');
+var $introduction = $('<p></p>');
+var $runSiteLink = $('<a class="btn" href="" target="_blank">Run project</a>');
+var $gitHubLink = $('<a class="btn" href="" target="_blank">View code on GitHub</a>');;
+
+// Append it to the projects container
+$websiteDescription.append($websiteTitle);
+$websiteDescription.append($introduction);
+$websiteDescription.append($gitHubLink);
+$websiteDescription.append($runSiteLink);
+$websitePresentation.append($websiteDescription);
+$overlay.append($websitePresentation);
+$('#projects').append($overlay);
+
+// When a list item is clicked, display the proper project
 $('.thumbnails').click(function(event) {
   event.preventDefault();
 
-  var websitePresentation = $(this);
-  console.log(websitePresentation);
+  var websiteID = $(this).attr('id');
+  $.each(galleryItems, function(key, value) {
+    if (websiteID === value.id) {
+      $introduction.text(value.introduction);
+      $websiteTitle.text(value.title);
+      $runSiteLink.attr('href', value.link)
+    }
+  });
+  $overlay.fadeIn('fast');
+});
+
+$overlay.click(function() {
+  $(this).fadeOut('fast');
 });
