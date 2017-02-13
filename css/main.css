@@ -766,14 +766,29 @@ textarea {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
-  padding-top: 50px;
+  padding-top: 30px;
   color: white; }
 
 #websitePresentation {
   background-color: #F45B69;
+  padding: 20px 10px;
   color: #fff;
   width: 60%;
   margin: auto;
   border-radius: 10px; }
+
+#websiteImageContainer {
+  width: 70%;
+  margin: auto; }
+
+#websiteImageContainer img {
+  max-width: 100%; }
+
+#websiteDescription {
+  width: 70%;
+  margin: auto; }
+
+#websiteDescription .btn {
+  margin-right: 20px; }
 
 /*# sourceMappingURL=main.css.map */

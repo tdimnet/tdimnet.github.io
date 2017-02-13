@@ -220,8 +220,8 @@ var galleryItems = [
   {
     id: 'profilePage',
     title: 'Profile Page',
-    imgSrc: '',
-    imgAlt: '',
+    imgSrc: 'img/project1.png',
+    imgAlt: 'Image of the profile page project',
     introduction: 'Duplexque isdem diebus acciderat malum, quod et Theophilum insontem atrox interceperat casus, et Serenianus dignus exsecratione cunctorum, innoxius, modo non reclamante publico vigore, discessit.',
     link: 'projects/01-Personal-Profile-Page/index.html'
   },
@@ -293,6 +293,8 @@ $websiteDescription.append($websiteTitle);
 $websiteDescription.append($introduction);
 $websiteDescription.append($gitHubLink);
 $websiteDescription.append($runSiteLink);
+$websiteImageContainer.append($websiteImage);
+$websitePresentation.append($websiteImageContainer);
 $websitePresentation.append($websiteDescription);
 $overlay.append($websitePresentation);
 $('#projects').append($overlay);
@@ -304,9 +306,11 @@ $('.thumbnails').click(function(event) {
   var websiteID = $(this).attr('id');
   $.each(galleryItems, function(key, value) {
     if (websiteID === value.id) {
+      $websiteImage.attr('src', value.imgSrc);
+      $websiteImage.attr('alt', value.imgAlt);
       $introduction.text(value.introduction);
       $websiteTitle.text(value.title);
-      $runSiteLink.attr('href', value.link)
+      $runSiteLink.attr('href', value.link);
     }
   });
   $overlay.fadeIn('fast');
