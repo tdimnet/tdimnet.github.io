@@ -219,61 +219,71 @@ $('.skills li').click(function() {
 var galleryItems = [
   {
     id: 'profilePage',
-    title: 'Profile Page',
     imgSrc: 'img/project1.png',
     imgAlt: 'Image of the profile page project',
-    introduction: 'Duplexque isdem diebus acciderat malum, quod et Theophilum insontem atrox interceperat casus, et Serenianus dignus exsecratione cunctorum, innoxius, modo non reclamante publico vigore, discessit.',
+    title: 'Profile Page',
+    introduction: 'In order to exhibit my new skills in HTML & CSS, I have created a simple but nice profile page with Treehouse.',
     link: 'projects/01-Personal-Profile-Page/index.html'
   },
   {
     id: 'registrationForm',
     title: 'Registration Form',
+    introduction: "Web forms appear everywhere online. This project has challenged me to build a responsive, mobile-first registration form using a variety of HTML form elements.",
     link: 'projects/02-Online-Registration-Form/index.html'
   },
   {
     id: 'photoGallery',
     title: 'Photo Gallery',
+    introduction: "Nowadays Interactive image galleries are a common feature of many websites, from photo sites to e-commerce applications. Using HTML, CSS and JavaScript, I have created an interactive and searchable gallery of photos.",
     link: 'projects/03-Interactive-Photo-Gallery/index.html',
   },
   {
     id: 'responsiveLayoutWithSass',
     title: 'Responsive Layout With Sass',
+    introduction: "It's a fact: Sass is an important tool in a modern Front End Web Developer’s toolbox. With this, I have used programming principles to refactor a standard CSS stylesheet to Sass by identifying repeating patterns, using variables, and adding mixins.",
     link: 'projects/04-CSS-to-Sass/index.html',
   },
   {
     id: 'tributePageWithSVG',
     title: 'Tribute Page With SVG',
+    introduction: "SVG graphics are quickly becoming one of the most widely used graphic formats on the Web. With SVGs, I have modernized the user interface of this tribute page.",
     link: 'projects/05-SVG-Site-Update/index.html'
   },
   {
     id: 'customVideoPlayer',
     title: 'Custom Video Player',
-    link: 'projects/06-Interactive-Video-Player/index.html'
+    introduction: "Video, and the interface used to control the video, is increasingly important for many different kinds of web applications, including web site landing pages, blogs, podcasts, product marketing and training. With this project, I have built an HTML5 video player using JavaScript and the HTML5 Video API.",
+    link: 'projects/06-Interactive-Video-Player/index.html',
   },
   {
     id: 'accessibleWebsiteForALocalBand',
     title: 'Accessible Website For A Local Band',
-    link: 'projects/07-Accessibility-Refactor/index.html'
+    introduction: "Accessible web sites allow anyone and everyone to use the web, regardless of physical or hardware differences. They also, generally, make sites faster to download and improve a site's search engine friendliness. In this project, I have changed a website to make it more accessible for users and search engines.",
+    link: 'projects/07-Accessibility-Refactor/index.html',
   },
   {
     id: 'webAppDashboard',
     title: 'Web App Dashboard',
-    link: 'projects/08-Web-App-Dashboard/index.html'
+    introduction: "This project involves creating tables, charts, graphics and other user interface components in a manner that promotes interactivity and usability. To build it, I have used advanced CSS, SVG graphics and JavaScript programming.",
+    link: 'projects/08-Web-App-Dashboard/index.html',
   },
   {
     id: 'galleryWithAPI',
     title: 'Gallery With API',
-    link: 'projects/09-Use-a-Public-API-to-Create-a-Gallery/index.html'
+    introduction: "Many sites — Twitter, Facebook, IMDB, and Wikipedia to name a few — offer a vast sea of data that you can access and display on your own web pages. Using JavaScript programming I have created a gallery of information and images by communicating with a third-party API (Application Programming Interface).",
+    link: 'projects/09-Use-a-Public-API-to-Create-a-Gallery/index.html',
   },
   {
     id: 'frontEndAutomation',
     title: 'Front End Automation',
-    link: 'projects/10-Optimizing-a-Site-for-Performance/index.html'
+    introduction: "Web site performance is often a live-or-die metric for web sites and apps. Sites and apps that load, or appear to load, quickly are usually seen as being better built and more useful. Thanks to Gulp, I have significantly increased the number of requests and the web site is now loading faster.",
+    link: 'projects/10-Optimizing-a-Site-for-Performance/index.html',
   },
   {
     id: 'cityWebsite',
     title: 'City Website',
-    link: 'http://pontarion.themecloud.me/'
+    introduction: "WordPress is everywhere and a lot of people want to use it to manage their website. We use WordPress to create blogs, company web sites and do e-commerce. With this project, I have created a complete web site where people can manage their content and their events easily.",
+    link: 'http://pontarion.themecloud.me/',
   },
 ];
 
@@ -283,14 +293,16 @@ var $websitePresentation = $('<div id="websitePresentation"></div>');
 var $websiteImageContainer = $('<div id="websiteImageContainer"></div>');
 var $websiteImage = $('<img src="" alt="">');
 var $websiteDescription = $('<div id="websiteDescription"></div>');
-var $websiteTitle = $('<h4></h4>');
-var $introduction = $('<p></p>');
+var $websiteTitle = $('<h4 id="websiteTitle"></h4>');
+var $introduction = $('<p id="introduction"></p>');
+
 var $runSiteLink = $('<a class="btn" href="" target="_blank">Run project</a>');
 var $gitHubLink = $('<a class="btn" href="" target="_blank">View code on GitHub</a>');;
 
 // Append it to the projects container
 $websiteDescription.append($websiteTitle);
 $websiteDescription.append($introduction);
+
 $websiteDescription.append($gitHubLink);
 $websiteDescription.append($runSiteLink);
 $websiteImageContainer.append($websiteImage);

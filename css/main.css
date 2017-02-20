@@ -510,10 +510,10 @@ textarea {
   .branding {
     height: calc(100vh - 48.67px); } }
 .story {
+  background-color: #F45B69;
+  color: #fff;
   padding-top: 20px;
-  background-color: #fff;
-  padding: 50px 0;
-  color: #fff; }
+  padding: 50px 0; }
 
 .story h1 {
   margin: 0;
@@ -533,7 +533,7 @@ textarea {
   width: 6px;
   margin: 0 auto;
   padding-top: 50px;
-  background: #1abc9c; }
+  background: #fff; }
 
 .timeline ul li::after {
   content: '';
@@ -551,7 +551,7 @@ textarea {
   bottom: 0;
   width: 400px;
   padding: 15px;
-  background: #F45B69; }
+  background: #16a085; }
 
 .timeline ul li div::before {
   content: '';
@@ -567,7 +567,7 @@ textarea {
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent #F45B69 transparent transparent; }
+  border-color: transparent #16a085 transparent transparent; }
 
 .timeline ul li:nth-child(even) div {
   left: -439px; }
@@ -575,14 +575,14 @@ textarea {
 .timeline ul li:nth-child(even) div::before {
   right: -15px;
   border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent #F45B69; }
+  border-color: transparent transparent transparent #16a085; }
 
 .timeline ul li::after {
   background: #fff;
   transition: background .5s ease-in-out; }
 
 .timeline ul li.in-view::after {
-  background: #F45B69; }
+  background: #16a085; }
 
 .timeline ul li div {
   visibility: hidden;
@@ -614,11 +614,11 @@ textarea {
   .timeline ul li:nth-child(even) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #F45B69 transparent transparent; } }
+    border-color: transparent #16a085 transparent transparent; } }
 .projects {
   padding-top: 20px;
-  background-color: #F45B69;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   padding: 50px 0; }
 
 .projects h1 {
@@ -639,13 +639,14 @@ textarea {
   cursor: pointer;
   border-radius: 10px;
   transition: .4s;
-  background-color: #fff;
-  color: #2980b9; }
+  background-color: #2980b9;
+  border: 1px solid #2980b9;
+  color: #fff; }
 
 .projects .skills li:hover,
 .projects .skills .selected {
-  background-color: #2980b9;
-  color: #fff; }
+  background-color: #fff;
+  color: #2980b9; }
 
 .projects .btn-paragraph {
   text-align: center;
@@ -661,7 +662,8 @@ textarea {
   width: 100%;
   float: left;
   margin-top: -5px;
-  position: relative; }
+  position: relative;
+  padding: 5px 10px; }
 
 .projects .portfolio li img {
   width: 100%; }
@@ -702,9 +704,9 @@ textarea {
   .projects .portfolio li {
     width: 25%; } }
 .contact {
-  background-color: #fff;
+  background-color: #F45B69;
+  color: #fff;
   padding: 50px 0 10px;
-  color: #F45B69;
   text-align: center; }
 
 .contact h1 {
@@ -720,10 +722,10 @@ textarea {
   text-decoration: none;
   font-size: 1em;
   font-weight: bold;
-  color: #F45B69; }
+  color: #fff; }
 
 .contact .email:visited {
-  color: #F45B69; }
+  color: #fff; }
 
 .footer-icons {
   list-style: none;
@@ -739,7 +741,7 @@ textarea {
   width: 35px; }
 
 .footer-icons .svg-icon path {
-  fill: #1abc9c;
+  fill: #fff;
   opacity: .8;
   transition: .3s; }
 
@@ -748,8 +750,7 @@ textarea {
 
 .copyright {
   margin: 0;
-  color: #000;
-  opacity: .7; }
+  color: #fff; }
 
 @media (min-width: 768px) {
   .contact p {
