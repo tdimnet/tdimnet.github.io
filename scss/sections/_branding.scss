@@ -4,6 +4,9 @@
   color: #fff;
   height: calc(100vh - 60.33px);
   position: relative;
+  @media #{$desktop} {
+    height: calc(100vh - 48.67px);
+  }
 }
 
 .branding div {
@@ -26,10 +29,4 @@
 
 .branding p {
   margin-bottom: 30px;
-}
-
-@media (min-width: 1024px) {
-  .branding {
-    height: calc(100vh - 48.67px);
-  }
 }

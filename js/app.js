@@ -223,7 +223,8 @@ var galleryItems = [
     imgAlt: 'Image of the profile page project',
     title: 'Profile Page',
     introduction: 'In order to exhibit my new skills in HTML & CSS, I have created a simple but nice profile page with Treehouse.',
-    link: 'projects/01-Personal-Profile-Page/index.html'
+    link: 'projects/01-Personal-Profile-Page/index.html',
+    gitLink: 'https://github.com/tdimnet/personalProfilePage'
   },
   {
     id: 'registrationForm',
@@ -231,7 +232,8 @@ var galleryItems = [
     imgAlt: 'Image of the online registration form project',
     title: 'Registration Form',
     introduction: "Web forms appear everywhere online. This project has challenged me to build a responsive, mobile-first registration form using a variety of HTML form elements.",
-    link: 'projects/02-Online-Registration-Form/index.html'
+    link: 'projects/02-Online-Registration-Form/index.html',
+    gitLink: 'https://github.com/tdimnet/onlineRegistrationForm'
   },
   {
     id: 'photoGallery',
@@ -240,6 +242,7 @@ var galleryItems = [
     title: 'Photo Gallery',
     introduction: "Nowadays Interactive image galleries are a common feature of many websites, from photo sites to e-commerce applications. Using HTML, CSS and JavaScript, I have created an interactive and searchable gallery of photos.",
     link: 'projects/03-Interactive-Photo-Gallery/index.html',
+    gitLink: 'https://github.com/tdimnet/interactivePhotoGallery'
   },
   {
     id: 'responsiveLayoutWithSass',
@@ -248,6 +251,7 @@ var galleryItems = [
     title: 'Responsive Layout With Sass',
     introduction: "It's a fact: Sass is an important tool in a modern Front End Web Developer’s toolbox. With this, I have used programming principles to refactor a standard CSS stylesheet to Sass by identifying repeating patterns, using variables, and adding mixins.",
     link: 'projects/04-CSS-to-Sass/index.html',
+    gitLink: 'https://github.com/tdimnet/CSS-to-Sass'
   },
   {
     id: 'tributePageWithSVG',
@@ -255,7 +259,8 @@ var galleryItems = [
     imgAlt: 'Image of the tribute page with SVG project',
     title: 'Tribute Page With SVG',
     introduction: "SVG graphics are quickly becoming one of the most widely used graphic formats on the Web. With SVGs, I have modernized the user interface of this tribute page.",
-    link: 'projects/05-SVG-Site-Update/index.html'
+    link: 'projects/05-SVG-Site-Update/index.html',
+    gitLink: 'https://github.com/tdimnet/SVG-Site-Update'
   },
   {
     id: 'customVideoPlayer',
@@ -264,6 +269,7 @@ var galleryItems = [
     title: 'Custom Video Player',
     introduction: "Video, and the interface used to control the video, is increasingly important for many different kinds of web applications, including web site landing pages, blogs, podcasts, product marketing and training. With this project, I have built an HTML5 video player using JavaScript and the HTML5 Video API.",
     link: 'projects/06-Interactive-Video-Player/index.html',
+    gitLink: 'https://github.com/tdimnet/Interactive-Video-Player'
   },
   {
     id: 'accessibleWebsiteForALocalBand',
@@ -272,6 +278,7 @@ var galleryItems = [
     title: 'Accessible Website For A Local Band',
     introduction: "Accessible web sites allow anyone and everyone to use the web, regardless of physical or hardware differences. They also, generally, make sites faster to download and improve a site's search engine friendliness. In this project, I have changed a website to make it more accessible for users and search engines.",
     link: 'projects/07-Accessibility-Refactor/index.html',
+    gitLink: 'https://github.com/tdimnet/Accessibility-Refactor'
   },
   {
     id: 'webAppDashboard',
@@ -280,6 +287,7 @@ var galleryItems = [
     title: 'Web App Dashboard',
     introduction: "This project involves creating tables, charts, graphics and other user interface components in a manner that promotes interactivity and usability. To build it, I have used advanced CSS, SVG graphics and JavaScript programming.",
     link: 'projects/08-Web-App-Dashboard/index.html',
+    gitLink: 'https://github.com/tdimnet/Web-App-Dashboard'
   },
   {
     id: 'galleryWithAPI',
@@ -288,6 +296,7 @@ var galleryItems = [
     title: 'Gallery With API',
     introduction: "Many sites — Twitter, Facebook, IMDB, and Wikipedia to name a few — offer a vast sea of data that you can access and display on your own web pages. Using JavaScript programming I have created a gallery of information and images by communicating with a third-party API (Application Programming Interface).",
     link: 'projects/09-Use-a-Public-API-to-Create-a-Gallery/index.html',
+    gitLink: 'https://github.com/tdimnet/Use-a-Public-API-to-Create-a-Gallery'
   },
   {
     id: 'frontEndAutomation',
@@ -296,6 +305,7 @@ var galleryItems = [
     title: 'Front End Automation',
     introduction: "Web site performance is often a live-or-die metric for web sites and apps. Sites and apps that load, or appear to load, quickly are usually seen as being better built and more useful. Thanks to Gulp, I have significantly increased the number of requests and the web site is now loading faster.",
     link: 'projects/10-Optimizing-a-Site-for-Performance/index.html',
+    gitLink: 'https://github.com/tdimnet/Optimizing-a-Site-for-Performance'
   },
   {
     id: 'cityWebsite',
@@ -304,6 +314,7 @@ var galleryItems = [
     title: 'City Website',
     introduction: "WordPress is everywhere and a lot of people want to use it to manage their website. We use WordPress to create blogs, company web sites and do e-commerce. With this project, I have created a complete web site where people can manage their content and their events easily.",
     link: 'http://pontarion.themecloud.me/',
+    gitLink: null
   },
 ];
 
@@ -343,13 +354,19 @@ $('.thumbnails').click(function(event) {
       $introduction.text(value.introduction);
       $websiteTitle.text(value.title);
       $runSiteLink.attr('href', value.link);
+      if (value.gitLink !== null) {
+        $websiteDescription.append($gitHubLink);
+        $gitHubLink.attr('href', value.gitLink);
+      } else {
+        $gitHubLink.remove();
+      }
     }
   });
   $overlay.fadeIn('fast');
 });
 
-$overlay.click(function() {
-  $(this).fadeOut('fast');
+$closeButton.click(function() {
+  $($overlay).fadeOut('fast');
 });
 
 

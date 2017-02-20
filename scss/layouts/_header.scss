@@ -4,12 +4,20 @@
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #fff;
+  @media #{$desktop} {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
 .heading {
   padding: 0px 5px;
   display: flex;
   flex-direction: row;
+  @media #{$tablet} {
+    justify-content: center;
+  }
 }
 
 .heading .hamburger {
@@ -17,6 +25,9 @@
   cursor: pointer;
   opacity: .7;
   transition: .5s;
+  @media #{$tablet} {
+    display: none;
+  }
 }
 
 .heading .hamburger:hover {
@@ -35,30 +46,7 @@
 .heading h2 {
   margin-top: 5px;
   margin-bottom: 0;
-}
-
-@media (min-width: 768px) {
-  .heading {
-    justify-content: center;
-  }
-
-  .heading .hamburger {
-    display: none;
-  }
-}
-
-@media (min-width: 1024px) {
-  .main-header {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-  }
-
-  .heading h2 {
+  @media #{$desktop} {
     margin-top: 0;
-  }
-
-  .main-nav {
-    margin-left: auto;
   }
 }

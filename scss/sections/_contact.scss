@@ -12,6 +12,12 @@
 .contact p {
   width: 90%;
   margin: 10px auto 0;
+  @media #{$tablet} {
+    width: 75%;
+  }
+  @media #{$desktop} {
+    width: 50%;
+  }
 }
 
 .contact .email {
@@ -56,17 +62,4 @@
 .copyright {
   margin: 0;
   color: #fff;
-}
-
-
-@media (min-width: 768px) {
-  .contact p {
-    width: 75%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .contact p {
-    width: 50%;
-  }
 }
