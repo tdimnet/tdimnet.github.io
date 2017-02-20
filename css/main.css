@@ -769,31 +769,54 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
   padding-top: 30px;
   color: white; }
 
 #websitePresentation {
-  background-color: #F45B69;
   padding: 20px 10px;
   color: #fff;
-  width: 60%;
+  width: 95%;
   margin: auto;
   border-radius: 10px; }
 
+@media (min-width: 768px) {
+  #websitePresentation {
+    width: 70%; } }
+@media (min-width: 1024px) {
+  #websitePresentation {
+    width: 45%; } }
 #websiteImageContainer {
-  width: 70%;
+  width: 100%;
   margin: auto; }
 
 #websiteImageContainer img {
-  max-width: 100%; }
+  max-width: 100%;
+  border-radius: 10px;
+  opacity: .8;
+  transition: .5s; }
+
+#websiteImageContainer img:hover {
+  opacity: 1; }
 
 #websiteDescription {
-  width: 70%;
+  width: 100%;
   margin: auto; }
 
+#websiteDescription #introduction {
+  margin-bottom: 40px; }
+
 #websiteDescription .btn {
-  margin-right: 20px; }
+  display: block;
+  margin-top: 20px; }
+
+@media (min-width: 768px) {
+  #websiteDescription .btn {
+    display: inline-block;
+    width: 45%; }
+
+  #websiteDescription .btn:first-of-type {
+    margin-right: 9.99%; } }
 
 /*# sourceMappingURL=main.css.map */
