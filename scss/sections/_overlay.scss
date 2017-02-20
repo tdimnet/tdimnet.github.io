@@ -46,6 +46,10 @@ img#closeBtn {
   cursor: pointer;
 }
 
+img#closeBtn:hover {
+  opacity: 1;
+}
+
 @media (min-width: 768px) {
   img#closeBtn {
     top: -10%;
@@ -55,12 +59,7 @@ img#closeBtn {
 #websiteImageContainer img {
   max-width: 100%;
   border-radius: 10px;
-  opacity: .8;
   transition: .5s;
-}
-
-#websiteImageContainer img:hover {
-  opacity: 1;
 }
 
 #websiteDescription {
@@ -74,7 +73,6 @@ img#closeBtn {
 
 #websiteDescription .btn {
   display: block;
-  margin-top: 20px;
 }
 
 @media (min-width: 768px) {

@@ -800,17 +800,16 @@ img#closeBtn {
   opacity: .7;
   cursor: pointer; }
 
+img#closeBtn:hover {
+  opacity: 1; }
+
 @media (min-width: 768px) {
   img#closeBtn {
     top: -10%; } }
 #websiteImageContainer img {
   max-width: 100%;
   border-radius: 10px;
-  opacity: .8;
   transition: .5s; }
-
-#websiteImageContainer img:hover {
-  opacity: 1; }
 
 #websiteDescription {
   width: 100%;
@@ -820,8 +819,7 @@ img#closeBtn {
   margin-bottom: 40px; }
 
 #websiteDescription .btn {
-  display: block;
-  margin-top: 20px; }
+  display: block; }
 
 @media (min-width: 768px) {
   #websiteDescription .btn {
