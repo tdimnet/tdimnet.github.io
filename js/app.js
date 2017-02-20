@@ -295,17 +295,17 @@ var $websiteImage = $('<img src="" alt="">');
 var $websiteDescription = $('<div id="websiteDescription"></div>');
 var $websiteTitle = $('<h4 id="websiteTitle"></h4>');
 var $introduction = $('<p id="introduction"></p>');
-
+var $closeButton = $('<img id="closeBtn" src="img/cancel.svg">')
 var $runSiteLink = $('<a class="btn" href="" target="_blank">Run project</a>');
 var $gitHubLink = $('<a class="btn" href="" target="_blank">View code on GitHub</a>');;
 
 // Append it to the projects container
 $websiteDescription.append($websiteTitle);
 $websiteDescription.append($introduction);
-
 $websiteDescription.append($gitHubLink);
 $websiteDescription.append($runSiteLink);
 $websiteImageContainer.append($websiteImage);
+$websiteImageContainer.append($closeButton);
 $websitePresentation.append($websiteImageContainer);
 $websitePresentation.append($websiteDescription);
 $overlay.append($websitePresentation);

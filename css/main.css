@@ -775,7 +775,7 @@ textarea {
   color: white; }
 
 #websitePresentation {
-  padding: 20px 10px;
+  padding: 30px 10px;
   color: #fff;
   width: 95%;
   margin: auto;
@@ -789,8 +789,20 @@ textarea {
     width: 45%; } }
 #websiteImageContainer {
   width: 100%;
-  margin: auto; }
+  margin: auto;
+  position: relative; }
 
+img#closeBtn {
+  width: 25px;
+  position: absolute;
+  top: -20%;
+  right: 0;
+  opacity: .7;
+  cursor: pointer; }
+
+@media (min-width: 768px) {
+  img#closeBtn {
+    top: -10%; } }
 #websiteImageContainer img {
   max-width: 100%;
   border-radius: 10px;
