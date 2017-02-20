@@ -666,7 +666,28 @@ textarea {
   padding: 5px 10px; }
 
 .projects .portfolio li img {
-  width: 100%; }
+  width: 100%;
+  transition: .5s; }
+
+.projects .portfolio li:hover img {
+  opacity: .4; }
+
+.projects .portfolio li:hover h3 {
+  opacity: 1; }
+
+.projects .portfolio li h3 {
+  color: #000;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: capitalize;
+  opacity: 0;
+  transition: .5s; }
 
 .presentation {
   color: #fff;
@@ -687,9 +708,6 @@ textarea {
   transition-duration: .5s;
   text-align: center;
   text-transform: capitalize; }
-
-.presentation:hover {
-  opacity: 1; }
 
 @media (min-width: 500px) {
   .projects .portfolio li {
