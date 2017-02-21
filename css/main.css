@@ -837,10 +837,12 @@ img#closeBtn:hover {
   margin: auto; }
 
 #websiteDescription #introduction {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-size: .8em; }
   @media (min-width: 768px) {
     #websiteDescription #introduction {
-      margin-bottom: 30px; } }
+      margin-bottom: 30px;
+      font-size: 1em; } }
 
 #websiteDescription .btn {
   display: block;
