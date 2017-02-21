@@ -5,7 +5,7 @@
   height: calc(100vh - 60.33px);
   position: relative;
   @media #{$desktop} {
-    height: calc(100vh - 48.67px);
+    max-height: calc(100vh - 48.67px);
   }
 }
 

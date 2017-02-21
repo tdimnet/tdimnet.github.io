@@ -494,7 +494,7 @@ textarea {
   position: relative; }
   @media (min-width: 1024px) {
     .branding {
-      height: calc(100vh - 48.67px); } }
+      max-height: calc(100vh - 48.67px); } }
 
 .branding div {
   position: absolute;
@@ -621,7 +621,6 @@ textarea {
     border-color: transparent #1abc9c transparent transparent; } }
 .presentation {
   padding: 50px 10px;
-  min-height: 50vh;
   text-align: center; }
   @media (min-width: 768px) {
     .presentation {
