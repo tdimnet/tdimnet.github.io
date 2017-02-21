@@ -375,6 +375,9 @@ textarea {
 .clearfix:after {
   clear: both; }
 
+body {
+  font-family: 'Open Sans', sans-serif; }
+
 .btn {
   background-color: #1abc9c;
   color: #fff;
