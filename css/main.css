@@ -384,7 +384,7 @@ textarea {
   transition: .5s; }
 
 .btn:hover {
-  background-color: #16a085; }
+  background-color: #118D75; }
 
 .main-header {
   background-color: #fff;
@@ -427,10 +427,16 @@ textarea {
 
 .heading h2 {
   margin-top: 5px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-left: 5px; }
   @media (min-width: 1024px) {
     .heading h2 {
+      margin-left: 25px;
       margin-top: 0; } }
+
+.heading h2 a {
+  text-decoration: none;
+  color: #F45B69; }
 
 @media (min-width: 1024px) {
   .main-nav {
@@ -549,7 +555,7 @@ textarea {
   bottom: 0;
   width: 400px;
   padding: 15px;
-  background: #16a085; }
+  background: #1abc9c; }
 
 .timeline ul li div::before {
   content: '';
@@ -565,7 +571,7 @@ textarea {
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent #16a085 transparent transparent; }
+  border-color: transparent #1abc9c transparent transparent; }
 
 .timeline ul li:nth-child(even) div {
   left: -439px; }
@@ -573,14 +579,14 @@ textarea {
 .timeline ul li:nth-child(even) div::before {
   right: -15px;
   border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent #16a085; }
+  border-color: transparent transparent transparent #1abc9c; }
 
 .timeline ul li::after {
   background: #fff;
   transition: background .5s ease-in-out; }
 
 .timeline ul li.in-view::after {
-  background: #16a085; }
+  background: #1abc9c; }
 
 .timeline ul li div {
   visibility: hidden;
@@ -612,7 +618,22 @@ textarea {
   .timeline ul li:nth-child(even) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #16a085 transparent transparent; } }
+    border-color: transparent #1abc9c transparent transparent; } }
+.presentation {
+  padding: 50px 10px;
+  min-height: 50vh;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .presentation {
+      width: 80%;
+      margin: auto; } }
+  @media (min-width: 1024px) {
+    .presentation {
+      width: 65%; } }
+
+.presentation .presentation-article {
+  margin-bottom: 60px; }
+
 .projects {
   padding-top: 20px;
   background-color: #fff;
@@ -637,14 +658,14 @@ textarea {
   cursor: pointer;
   border-radius: 10px;
   transition: .4s;
-  background-color: #2980b9;
-  border: 1px solid #2980b9;
+  background-color: #2980B9;
+  border: 1px solid #2980B9;
   color: #fff; }
 
 .projects .skills li:hover,
 .projects .skills .selected {
   background-color: #fff;
-  color: #2980b9; }
+  color: #2980B9; }
 
 .projects .btn-paragraph {
   text-align: center;

@@ -1,6 +1,6 @@
 .main-header {
-  background-color: #fff;
-  color: #F45B69;
+  background-color: $main-nav-background-color;
+  color: $main-nav-color;
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #fff;
@@ -40,13 +40,20 @@
 }
 
 .heading .hamburger path {
-  fill: #F45B69;
+  fill: $carnation;
 }
 
 .heading h2 {
   margin-top: 5px;
   margin-bottom: 0;
+  margin-left: 5px;
   @media #{$desktop} {
+    margin-left: 25px;
     margin-top: 0;
   }
+}
+
+.heading h2 a {
+  text-decoration: none;
+  color: #F45B69;
 }

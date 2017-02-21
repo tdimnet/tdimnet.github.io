@@ -1,7 +1,30 @@
 // Descriptive color variables
+$white            : #fff;
+$black            : #000;
+$carnation        : #F45B69;
+$mountain-meadow  : #1abc9c;
+$surfie-green     : #118D75;
+$mariner          : #2980B9;
+
 
 
 // Functional color variables
+$color-primary              : $carnation;
+$color-secondary            : $mountain-meadow;
+$color-tertiary             : $mariner;
+
+$main-background-color      : $white;
+$second-background-color    : $carnation;
+
+$main-nav-color             : $carnation;
+$main-nav-background-color  : $white;
+
+$main-text-body-color       : $white;
+$second-text-body-color     : $black;
+
+$btn-color                  : $mountain-meadow;
+$btn-hover-color            : $surfie-green;
+
 
 
 // Media query breakpoints

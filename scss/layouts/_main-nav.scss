@@ -25,7 +25,7 @@
 .main-nav li {
   list-style-type: none;
   margin: 0 10px 10px;
-  background-color: #fff;
+  background-color: $main-nav-background-color;
   padding: 10px 0;
   @media #{$tablet} {
     background-color: transparent;
@@ -45,7 +45,7 @@
   display: block;
   @media #{$tablet} {
     display: inline;
-    color: #F45B69;
+    color: $main-nav-color;
     opacity: .8;
     transition: .4s;
     &:hover {

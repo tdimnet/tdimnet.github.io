@@ -1,7 +1,7 @@
 // Comment
 .branding {
-  background-color: #F45B69;
-  color: #fff;
+  background-color: $color-primary;
+  color: $main-text-body-color;
   height: calc(100vh - 60.33px);
   position: relative;
   @media #{$desktop} {

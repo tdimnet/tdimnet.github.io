@@ -1,0 +1,16 @@
+.presentation {
+  padding: 50px 10px;
+  min-height: 50vh;
+  text-align: center;
+  @media #{$tablet} {
+    width: 80%;
+    margin: auto;
+  }
+  @media #{$desktop} {
+    width: 65%;
+  }
+}
+
+.presentation .presentation-article {
+  margin-bottom: 60px;
+}

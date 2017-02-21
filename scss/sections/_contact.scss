@@ -1,6 +1,6 @@
 .contact {
-  background-color: #F45B69;
-  color: #fff;
+  background-color: $color-primary;
+  color: $main-text-body-color;
   padding: 50px 0 10px;
   text-align: center;
 }
@@ -26,11 +26,11 @@
   text-decoration: none;
   font-size: 1em;
   font-weight: bold;
-  color: #fff;
+  color: $main-text-body-color;
 }
 
 .contact .email:visited {
-  color: #fff;
+  color: $main-text-body-color;
 }
 
 .footer-icons {
@@ -50,7 +50,7 @@
 }
 
 .footer-icons .svg-icon path {
-  fill: #fff;
+  fill: $main-text-body-color;
   opacity: .8;
   transition: .3s;
 }
@@ -61,5 +61,5 @@
 
 .copyright {
   margin: 0;
-  color: #fff;
+  color: $main-text-body-color;
 }

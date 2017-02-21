@@ -1,7 +1,7 @@
 .projects {
   padding-top: 20px;
-  background-color: #fff;
-  color: #000;
+  background-color: $main-background-color;
+  color: $second-text-body-color;
   padding: 50px 0;
 }
 
@@ -25,15 +25,15 @@
   cursor: pointer;
   border-radius: 10px;
   transition: .4s;
-  background-color: #2980b9;
-  border: 1px solid #2980b9;
-  color: #fff;
+  background-color: $color-tertiary;
+  border: 1px solid $color-tertiary;
+  color: $main-text-body-color;
 }
 
 .projects .skills li:hover,
 .projects .skills .selected {
-  background-color: #fff;
-  color: #2980b9;
+  background-color: $main-text-body-color;
+  color: $color-tertiary;
 }
 
 .projects .btn-paragraph {
