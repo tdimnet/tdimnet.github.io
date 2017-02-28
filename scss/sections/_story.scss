@@ -15,6 +15,15 @@
   text-align: center;
 }
 
+.story a {
+  color: #ddd;
+  transition: .4s;
+}
+
+.story a:hover {
+  color: $main-text-body-color;
+}
+
 .timeline ul {
   padding-left: 0;
 }

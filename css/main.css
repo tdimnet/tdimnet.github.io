@@ -531,6 +531,13 @@ body {
   margin: 50px 0 0;
   text-align: center; }
 
+.story a {
+  color: #ddd;
+  transition: .4s; }
+
+.story a:hover {
+  color: #fff; }
+
 .timeline ul {
   padding-left: 0; }
 
