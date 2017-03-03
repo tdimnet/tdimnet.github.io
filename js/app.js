@@ -209,6 +209,12 @@ $('.skills li').click(function() {
       $(this).addClass('selected');
       $('.wordpress').show();
       break;
+    case 'symfony':
+      $('.skills li').removeClass('selected');
+      $('.thumbnails').hide();
+      $(this).addClass('selected');
+      $('.symfony').show();
+      break;
   }
 });
 
@@ -314,6 +320,15 @@ var galleryItems = [
     title: 'City Website',
     introduction: "WordPress is everywhere and a lot of people want to use it to manage their website. We use WordPress to create blogs, company web sites and do e-commerce. With this project, I have created a complete web site where people can manage their content and their events easily.",
     link: 'http://pontarion.themecloud.me/',
+    gitLink: null
+  },
+  {
+    id: 'birdwatching',
+    imgSrc: 'img/project12.png',
+    imgAlt: 'Image of the birdwatching project',
+    title: 'birdwatching',
+    introduction: "Here is the lastest project I had to do with OpenClassrooms and the IESA School. This is a complexe web site using the Symfony framework, complexe AJAX request and a full original layout.",
+    link: 'http://nao.boudetnature.com/',
     gitLink: null
   },
 ];

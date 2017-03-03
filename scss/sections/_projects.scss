@@ -28,6 +28,10 @@
   background-color: $color-tertiary;
   border: 1px solid $color-tertiary;
   color: $main-text-body-color;
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+
 }
 
 .projects .skills li:hover,
@@ -51,9 +55,44 @@
 .projects .portfolio li {
   width: 100%;
   float: left;
-  margin-top: -5px;
   position: relative;
   padding: 5px 10px;
+  @media (min-width: 500px) {
+    width: 50%;
+  }
+  @media (min-width: 768px) {
+    width: 33.333%;
+  }
+  @media (min-width: 1024px) {
+    width: 25%;
+  }
+}
+
+@media (min-width: 500px) {
+  .projects .portfolio li:nth-child(2n + 1) {
+    clear: both;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects .portfolio li:nth-child(2n + 1) {
+    clear: initial;
+  }
+  .projects .portfolio li:nth-child(7),
+  .projects .portfolio li:nth-child(10) {
+    clear: both;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects .portfolio li:nth-child(7),
+  .projects .portfolio li:nth-child(10) {
+    clear: initial;
+  }
+  .projects .portfolio li:nth-child(5),
+  .projects .portfolio li:nth-child(9) {
+    clear: both;
+  }
 }
 
 .projects .portfolio li img {
@@ -83,32 +122,10 @@
 }
 
 .projects .portfolio li:hover img {
-  opacity: .5;
+  opacity: .3;
 }
 
 .projects .portfolio li:hover h3,
 .projects .portfolio li:hover p {
   opacity: 1;
-}
-
-@media (min-width: 500px) {
-  .projects .portfolio li {
-    width: 50%;
-  }
-}
-
-@media (min-width: 768px) {
-  .projects .skills li {
-    margin-top: 0;
-  }
-
-  .projects .portfolio li {
-    width: 33.333%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .projects .portfolio li {
-    width: 25%;
-  }
 }

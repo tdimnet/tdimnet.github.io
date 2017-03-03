@@ -670,6 +670,9 @@ body {
   background-color: #2980B9;
   border: 1px solid #2980B9;
   color: #fff; }
+  @media (min-width: 768px) {
+    .projects .skills li {
+      margin-top: 0; } }
 
 .projects .skills li:hover,
 .projects .skills .selected {
@@ -689,10 +692,36 @@ body {
 .projects .portfolio li {
   width: 100%;
   float: left;
-  margin-top: -5px;
   position: relative;
   padding: 5px 10px; }
+  @media (min-width: 500px) {
+    .projects .portfolio li {
+      width: 50%; } }
+  @media (min-width: 768px) {
+    .projects .portfolio li {
+      width: 33.333%; } }
+  @media (min-width: 1024px) {
+    .projects .portfolio li {
+      width: 25%; } }
 
+@media (min-width: 500px) {
+  .projects .portfolio li:nth-child(2n + 1) {
+    clear: both; } }
+@media (min-width: 768px) {
+  .projects .portfolio li:nth-child(2n + 1) {
+    clear: initial; }
+
+  .projects .portfolio li:nth-child(7),
+  .projects .portfolio li:nth-child(10) {
+    clear: both; } }
+@media (min-width: 1024px) {
+  .projects .portfolio li:nth-child(7),
+  .projects .portfolio li:nth-child(10) {
+    clear: initial; }
+
+  .projects .portfolio li:nth-child(5),
+  .projects .portfolio li:nth-child(9) {
+    clear: both; } }
 .projects .portfolio li img {
   width: 100%;
   transition: .5s; }
@@ -717,24 +746,12 @@ body {
   font-size: .9em; }
 
 .projects .portfolio li:hover img {
-  opacity: .5; }
+  opacity: .3; }
 
 .projects .portfolio li:hover h3,
 .projects .portfolio li:hover p {
   opacity: 1; }
 
-@media (min-width: 500px) {
-  .projects .portfolio li {
-    width: 50%; } }
-@media (min-width: 768px) {
-  .projects .skills li {
-    margin-top: 0; }
-
-  .projects .portfolio li {
-    width: 33.333%; } }
-@media (min-width: 1024px) {
-  .projects .portfolio li {
-    width: 25%; } }
 .contact {
   background-color: #F45B69;
   color: #fff;
@@ -849,7 +866,7 @@ img#closeBtn:hover {
   @media (min-width: 768px) {
     #websiteDescription #introduction {
       margin-bottom: 30px;
-      font-size: 1em; } }
+      font-size: .9em; } }
 
 #websiteDescription .btn {
   display: block;
