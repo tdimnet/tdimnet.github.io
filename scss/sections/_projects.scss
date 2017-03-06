@@ -68,33 +68,6 @@
   }
 }
 
-@media (min-width: 500px) {
-  .projects .portfolio li:nth-child(2n + 1) {
-    clear: both;
-  }
-}
-
-@media (min-width: 768px) {
-  .projects .portfolio li:nth-child(2n + 1) {
-    clear: initial;
-  }
-  .projects .portfolio li:nth-child(7),
-  .projects .portfolio li:nth-child(10) {
-    clear: both;
-  }
-}
-
-@media (min-width: 1024px) {
-  .projects .portfolio li:nth-child(7),
-  .projects .portfolio li:nth-child(10) {
-    clear: initial;
-  }
-  .projects .portfolio li:nth-child(5),
-  .projects .portfolio li:nth-child(9) {
-    clear: both;
-  }
-}
-
 .projects .portfolio li img {
   width: 100%;
   transition: .5s;
