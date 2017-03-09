@@ -331,6 +331,15 @@ var galleryItems = [
     link: 'http://nao.boudetnature.com/',
     gitLink: null
   },
+  {
+    id: 'randomQuoteGenerator',
+    imgSrc: 'img/project13.png',
+    imgAlt: 'Image of the Random Quote Generator project',
+    title: 'Random Quote Generator',
+    introduction: "By building a program that displays a randomly selected quote each time the user clicks a button, I have put my knowledge of basic JavaScript syntax and data structures into practice.",
+    link: 'projects/11-Random-Quote-Generator/index.html',
+    gitLink: 'https://github.com/tdimnet/Random-Quote-Generator'
+  },
 ];
 
 // Create the overlay and its relative elements.
