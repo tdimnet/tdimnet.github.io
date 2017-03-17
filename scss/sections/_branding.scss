@@ -30,3 +30,13 @@
 .branding p {
   margin-bottom: 30px;
 }
+
+.external-link {
+  color: #fff;
+  opacity: .8;
+  transition: .4s;
+}
+
+.external-link:hover {
+  opacity: 1;
+}
