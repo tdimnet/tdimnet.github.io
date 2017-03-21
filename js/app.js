@@ -329,7 +329,7 @@ var galleryItems = [
     title: 'birdwatching',
     introduction: "Here is the lastest project I had to do with OpenClassrooms and the IESA School. This is a complexe web site using the Symfony framework, complexe AJAX request and a full original layout.",
     link: 'http://nao.boudetnature.com/',
-    gitLink: null
+    gitLink: 'https://github.com/jgmbr/projet_nao'
   },
   {
     id: 'randomQuoteGenerator',
@@ -339,6 +339,15 @@ var galleryItems = [
     introduction: "By building a program that displays a randomly selected quote each time the user clicks a button, I have put my knowledge of basic JavaScript syntax and data structures into practice.",
     link: 'projects/11-Random-Quote-Generator/index.html',
     gitLink: 'https://github.com/tdimnet/Random-Quote-Generator'
+  },
+  {
+    id: 'paginationAndContentFilter',
+    imgSrc: 'img/project14.png',
+    imgAlt: 'Image of the pagination and content filter project',
+    title: 'Pagination & Content Filter',
+    introduction: "In this project, I've enhanced the usability of a web page containing an overly long listing of students. By using JavaScript, I've dynamically divided the contents into pages and added a search function to list only the students that match that search.",
+    link: 'projects/12-pagination-filter/index.html',
+    gitLink: 'https://github.com/tdimnet/Pagination-And-Content-Filter'
   },
 ];
 
