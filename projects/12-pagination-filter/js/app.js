@@ -140,6 +140,9 @@ const searchForAName = () => {
       paginationContainer.className = 'hidden';
     }
   }
+
+  // Clean the input text
+  searchInput.value = '';
 } // End: searchForAName function
 
 
