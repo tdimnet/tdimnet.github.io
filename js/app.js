@@ -222,6 +222,18 @@ $('.skills li').click(function() {
   // Portfolio overlay
 //
 // The project gallery
+
+// The creating object function
+function Item(id, imgSrc, imgAlt, title, introduction, link, gitLink) {
+    this.id = id;
+    this.imgSrc = imgSrc;
+    this.imgAlt = imgAlt;
+    this.title = title;
+    this.introduction = introduction;
+    this.link = link;
+    this.gitLink = gitLink;
+}
+
 var galleryItems = [
   {
     id: 'profilePage',
