@@ -361,6 +361,24 @@ var galleryItems = [
     link: 'projects/12-pagination-filter/index.html',
     gitLink: 'https://github.com/tdimnet/Pagination-And-Content-Filter'
   },
+  {
+    id: 'buildAnInteractiveForm',
+    imgSrc: 'img/project14.png',
+    imgAlt: 'Image of the building interactive form project',
+    title: 'Build An Interactive Form',
+    introduction: "Wording goes here",
+    link: 'projects/13-Build-an-Interactive-Form/index.html',
+    gitLink: 'https://github.com/tdimnet/Build-an-Interactive-Form'
+  },
+  {
+    id: 'ticTacToe',
+    imgSrc: 'img/project14.png',
+    imgAlt: 'Image of the Tic Tac Toe project',
+    title: 'Tic Tac Toe',
+    introduction: "Wording goes here",
+    link: 'projects/14-Tic-Tac-Toe/index.html',
+    gitLink: 'https://github.com/tdimnet/Tic-Tac-Toe'
+  },
 ];
 
 // Create the overlay and its relative elements.
