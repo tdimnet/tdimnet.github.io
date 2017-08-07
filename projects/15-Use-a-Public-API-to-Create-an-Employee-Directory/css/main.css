@@ -1,0 +1,166 @@
+/***********************************
+  GENERAL SETTINGS
+***********************************/
+body {
+  background-color: #F7F5F0;
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+}
+
+#main-wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+
+
+/***********************************
+  HEADER SETTINGS
+***********************************/
+header {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.6em;
+  font-weight: 400;
+  position: relative;
+}
+
+.search-container {
+  margin-left: auto;
+}
+
+.search-container input {
+  padding: 10px 5px;
+  width: 300px;
+  cursor: pointer;
+  transition: .4s;
+  border: none;
+}
+
+.search-container input:hover,
+.search-container input:focus {
+  outline: 1px solid #888;
+  border: none;
+}
+
+
+
+/***********************************
+  GALLERY SETTINGS
+***********************************/
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  border: 1px solid #bbb;
+  padding: 20px 10px 10px;
+  width: 30%;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: .4s;
+  opacity: .8;
+  display: none;
+}
+
+.card:hover {
+  border-color: #999;
+  opacity: 1;
+}
+
+.card img {
+  width: 28%;
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.active {
+  display: block;
+}
+
+.card a {
+  text-decoration: none;
+  color: #555;
+}
+
+
+
+/***********************************
+  OVERLAY SETTINGS
+***********************************/
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #444;
+}
+
+#employee-detail {
+  background-color: #fff;
+  width: 30%;
+  margin: 20px auto;
+  border-radius: 7.5px;
+  padding: 15px 10px;
+  text-align: center;
+  text-transform: capitalize;
+  position: relative;
+}
+
+#previous {
+  position: absolute;
+  left: 20px;
+  top: 200px;
+  cursor: pointer;
+  opacity: .7;
+  transition: .4s;
+}
+
+#next {
+  position: absolute;
+  right: 20px;
+  top: 200px;
+  cursor: pointer;
+  opacity: .7;
+  transition: .4s;
+}
+
+#close {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  cursor: pointer;
+  opacity: .7;
+  transition: .4s;
+}
+
+#previous:hover,
+#next:hover,
+#close:hover {
+  opacity: 1;
+}
+
+#employee-detail img {
+  display: block;
+  margin: auto;
+  height: 160px;
+  width: auto;
+  border-radius: 50%;
+}
+
+#employee-detail .email {
+  text-transform: lowercase;
+}
+
+#overlay hr {
+  width: 80%;
+}

@@ -379,6 +379,15 @@ var galleryItems = [
     link: 'projects/14-Tic-Tac-Toe/index.html',
     gitLink: 'https://github.com/tdimnet/Tic-Tac-Toe'
   },
+  {
+    id: 'employeeDirectory',
+    imgSrc: 'img/project17.png',
+    imgAlt: 'Image of the Use a Public API to Create an Employee Directory project',
+    title: 'Use a Public API to Create an Employee Directory',
+    introduction: "Many sites — Twitter, Facebook, IMDB, and Wikipedia to name a few — offer a vast sea of data that you can access and display on your own web pages. Using JavaScript, I created an employee directory by communicating with a third-party API.",
+    link: 'projects/15-Use-a-Public-API-to-Create-an-Employee-Directory/index.html',
+    gitLink: 'https://github.com/tdimnet/Use-a-Public-API-to-Create-an-Employee-Directory'
+  },
 ];
 
 // Create the overlay and its relative elements.
