@@ -363,19 +363,19 @@ var galleryItems = [
   },
   {
     id: 'buildAnInteractiveForm',
-    imgSrc: 'img/project14.png',
+    imgSrc: 'img/project15.png',
     imgAlt: 'Image of the building interactive form project',
     title: 'Build An Interactive Form',
-    introduction: "Wording goes here",
+    introduction: "For this project, I used my skills to enhance a form so that it’s engaging, interactive, and easy to use. I also made the form more user-friendly by providing helpful error messages when the user enters invalid information into the form fields. ",
     link: 'projects/13-Build-an-Interactive-Form/index.html',
     gitLink: 'https://github.com/tdimnet/Build-an-Interactive-Form'
   },
   {
     id: 'ticTacToe',
-    imgSrc: 'img/project14.png',
+    imgSrc: 'img/project16.png',
     imgAlt: 'Image of the Tic Tac Toe project',
     title: 'Tic Tac Toe',
-    introduction: "Wording goes here",
+    introduction: "Here I used professional programming techniques to solve data-modeling problems, applied higher level concepts like object-oriented programming. I used the module pattern to create your Tic-Tac-Toe game.",
     link: 'projects/14-Tic-Tac-Toe/index.html',
     gitLink: 'https://github.com/tdimnet/Tic-Tac-Toe'
   },
