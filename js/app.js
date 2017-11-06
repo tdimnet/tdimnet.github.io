@@ -241,7 +241,7 @@ var galleryItems = [
     imgAlt: 'Image of the profile page project',
     title: 'Profile Page',
     introduction: 'In order to exhibit my new skills in HTML & CSS, I have created a simple but nice profile page with Treehouse.',
-    link: 'projects/01-Personal-Profile-Page/index.html',
+    link: 'https://tdimnet.github.io/Personal-Profile-Page',
     gitLink: 'https://github.com/tdimnet/personalProfilePage'
   },
   {
