@@ -250,7 +250,7 @@ var galleryItems = [
     imgAlt: 'Image of the online registration form project',
     title: 'Registration Form',
     introduction: "Web forms appear everywhere online. This project has challenged me to build a responsive, mobile-first registration form using a variety of HTML form elements.",
-    link: 'projects/02-Online-Registration-Form/index.html',
+    link: 'https://tdimnet.github.io/Online-Registration-Form',
     gitLink: 'https://github.com/tdimnet/onlineRegistrationForm'
   },
   {
