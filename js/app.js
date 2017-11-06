@@ -304,7 +304,7 @@ var galleryItems = [
     imgAlt: 'Image of the web app dashboard project',
     title: 'Web App Dashboard',
     introduction: "This project involves creating tables, charts, graphics and other user interface components in a manner that promotes interactivity and usability. To build it, I have used advanced CSS, SVG graphics and JavaScript programming.",
-    link: 'projects/08-Web-App-Dashboard/index.html',
+    link: 'https://tdimnet.github.io/Web-App-Dashboard',
     gitLink: 'https://github.com/tdimnet/Web-App-Dashboard'
   },
   {
