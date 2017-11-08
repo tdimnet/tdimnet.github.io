@@ -326,15 +326,6 @@ var galleryItems = [
     gitLink: 'https://github.com/tdimnet/Optimizing-a-Site-for-Performance'
   },
   {
-    id: 'cityWebsite',
-    imgSrc: 'img/project11.png',
-    imgAlt: 'Image of the city web site project',
-    title: 'City Website',
-    introduction: "WordPress is everywhere and a lot of people want to use it to manage their website. We use WordPress to create blogs, company web sites and do e-commerce. With this project, I have created a complete web site where people can manage their content and their events easily.",
-    link: 'http://pontarion.themecloud.me/',
-    gitLink: null
-  },
-  {
     id: 'birdwatching',
     imgSrc: 'img/project12.png',
     imgAlt: 'Image of the birdwatching project',
