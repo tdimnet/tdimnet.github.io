@@ -277,7 +277,7 @@ var galleryItems = [
     imgAlt: 'Image of the tribute page with SVG project',
     title: 'Tribute Page With SVG',
     introduction: "SVG graphics are quickly becoming one of the most widely used graphic formats on the Web. With SVGs, I have modernized the user interface of this tribute page.",
-    link: 'projects/05-SVG-Site-Update/index.html',
+    link: 'https://tdimnet.github.io/SVG-Site-Update',
     gitLink: 'https://github.com/tdimnet/SVG-Site-Update'
   },
   {
