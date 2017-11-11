@@ -340,7 +340,7 @@ var galleryItems = [
     imgAlt: 'Image of the Random Quote Generator project',
     title: 'Random Quote Generator',
     introduction: "By building a program that displays a randomly selected quote each time the user clicks a button, I have put my knowledge of basic JavaScript syntax and data structures into practice.",
-    link: 'projects/11-Random-Quote-Generator/index.html',
+    link: 'https://tdimnet.github.io/Random-Quote-Generator',
     gitLink: 'https://github.com/tdimnet/Random-Quote-Generator'
   },
   {
