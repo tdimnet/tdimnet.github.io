@@ -259,8 +259,8 @@ var galleryItems = [
     imgAlt: 'Image of the photo gallery project',
     title: 'Photo Gallery',
     introduction: "Nowadays Interactive image galleries are a common feature of many websites, from photo sites to e-commerce applications. Using HTML, CSS and JavaScript, I have created an interactive and searchable gallery of photos.",
-    link: 'projects/03-Interactive-Photo-Gallery/index.html',
-    gitLink: 'https://github.com/tdimnet/interactivePhotoGallery'
+    link: 'https://tdimnet.github.io/Interactive-Photo-Gallery',
+    gitLink: 'https://github.com/tdimnet/Interactive-Photo-Gallery'
   },
   {
     id: 'responsiveLayoutWithSass',
