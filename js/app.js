@@ -367,7 +367,7 @@ var galleryItems = [
     imgAlt: 'Image of the Tic Tac Toe project',
     title: 'Tic Tac Toe',
     introduction: "Here I used professional programming techniques to solve data-modeling problems, applied higher level concepts like object-oriented programming. I used the module pattern to create your Tic-Tac-Toe game.",
-    link: 'projects/14-Tic-Tac-Toe/index.html',
+    link: 'https://tdimnet.github.io/Tic-Tac-Toe',
     gitLink: 'https://github.com/tdimnet/Tic-Tac-Toe'
   },
   {
