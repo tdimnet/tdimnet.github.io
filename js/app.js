@@ -358,7 +358,7 @@ var galleryItems = [
     imgAlt: 'Image of the building interactive form project',
     title: 'Build An Interactive Form',
     introduction: "For this project, I used my skills to enhance a form so that it’s engaging, interactive, and easy to use. I also made the form more user-friendly by providing helpful error messages when the user enters invalid information into the form fields. ",
-    link: 'projects/13-Build-an-Interactive-Form/index.html',
+    link: 'https://tdimnet.github.io/Build-an-Interactive-Form',
     gitLink: 'https://github.com/tdimnet/Build-an-Interactive-Form'
   },
   {
