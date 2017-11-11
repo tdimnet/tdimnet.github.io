@@ -286,7 +286,7 @@ var galleryItems = [
     imgAlt: 'Image of the custom video player project',
     title: 'Custom Video Player',
     introduction: "Video, and the interface used to control the video, is increasingly important for many different kinds of web applications, including web site landing pages, blogs, podcasts, product marketing and training. With this project, I have built an HTML5 video player using JavaScript and the HTML5 Video API.",
-    link: 'projects/06-Interactive-Video-Player/index.html',
+    link: 'https://tdimnet.github.io/Interactive-Video-Player',
     gitLink: 'https://github.com/tdimnet/Interactive-Video-Player'
   },
   {
