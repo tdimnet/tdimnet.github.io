@@ -349,7 +349,7 @@ var galleryItems = [
     imgAlt: 'Image of the pagination and content filter project',
     title: 'Pagination & Content Filter',
     introduction: "In this project, I've enhanced the usability of a web page containing an overly long listing of students. By using JavaScript, I've dynamically divided the contents into pages and added a search function to list only the students that match that search.",
-    link: 'projects/12-pagination-filter/index.html',
+    link: 'https://tdimnet.github.io/Pagination-And-Content-Filter',
     gitLink: 'https://github.com/tdimnet/Pagination-And-Content-Filter'
   },
   {
