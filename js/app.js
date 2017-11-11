@@ -384,7 +384,7 @@ var galleryItems = [
     imgSrc: 'img/project18.png',
     imgAlt: 'Image of the author blog project',
     title: 'Create a Blog for an Author',
-    introduction: "Lorem ispum",
+    introduction: "Learning how CRUD operations and MVC work is an essential skill for every developper: it lets the developper knows how to build strong and reusable web sites. In this project I built a blog from scratch using OOP, database and design patterns.",
     link: 'http://billet-simple-pour-alaska.tdimnet.com/',
     gitLink: 'https://github.com/tdimnet/Projet-Blog-MVC'
   },
@@ -393,7 +393,7 @@ var galleryItems = [
     imgSrc: 'img/project19.png',
     imgAlt: 'Image of the online ticketing system project',
     title: 'Online Ticketing System',
-    introduction: "Lorem ispum",
+    introduction: "Knowing how modern frameworks are built and work is a must have skill. In this project, with Symfony 3, a famous PHP framework, I built an online ticketing system which integrates Stripe payment system and sends emails to the user.",
     link: 'http://billetterie-du-louvre.tdimnet.com/',
     gitLink: 'https://github.com/tdimnet/Projet_Louvre'
   },
