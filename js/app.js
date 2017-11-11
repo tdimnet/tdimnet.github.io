@@ -313,7 +313,7 @@ var galleryItems = [
     imgAlt: 'Image of the Gallery with API project',
     title: 'Gallery With API',
     introduction: "Many sites — Twitter, Facebook, IMDB, and Wikipedia to name a few — offer a vast sea of data that you can access and display on your own web pages. Using JavaScript programming I have created a gallery of information and images by communicating with a third-party API (Application Programming Interface).",
-    link: 'projects/09-Use-a-Public-API-to-Create-a-Gallery/index.html',
+    link: 'https://tdimnet.github.io/Use-a-Public-API-to-Create-a-Gallery',
     gitLink: 'https://github.com/tdimnet/Use-a-Public-API-to-Create-a-Gallery'
   },
   {
@@ -322,7 +322,7 @@ var galleryItems = [
     imgAlt: 'Image of the front end automation project',
     title: 'Front End Automation',
     introduction: "Web site performance is often a live-or-die metric for web sites and apps. Sites and apps that load, or appear to load, quickly are usually seen as being better built and more useful. Thanks to Gulp, I have significantly increased the number of requests and the web site is now loading faster.",
-    link: 'projects/10-Optimizing-a-Site-for-Performance/index.html',
+    link: 'https://tdimnet.github.io/Optimizing-a-Site-for-Performance',
     gitLink: 'https://github.com/tdimnet/Optimizing-a-Site-for-Performance'
   },
   {
