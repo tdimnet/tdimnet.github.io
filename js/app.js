@@ -203,11 +203,11 @@ $('.skills li').click(function() {
       $(this).addClass('selected');
       $('.javascript').show();
       break;
-    case 'wordpress':
+    case 'php':
       $('.skills li').removeClass('selected');
       $('.thumbnails').hide();
       $(this).addClass('selected');
-      $('.wordpress').show();
+      $('.php').show();
       break;
     case 'symfony':
       $('.skills li').removeClass('selected');
@@ -387,6 +387,15 @@ var galleryItems = [
     introduction: "Lorem ispum",
     link: 'http://billet-simple-pour-alaska.tdimnet.com/',
     gitLink: 'https://github.com/tdimnet/Projet-Blog-MVC'
+  },
+  {
+    id: 'ticketingSystem',
+    imgSrc: 'img/project19.png',
+    imgAlt: 'Image of the online ticketing system project',
+    title: 'Online Ticketing System',
+    introduction: "Lorem ispum",
+    link: 'http://billetterie-du-louvre.tdimnet.com/',
+    gitLink: 'https://github.com/tdimnet/Projet_Louvre'
   },
 ];
 
