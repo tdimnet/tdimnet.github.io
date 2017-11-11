@@ -379,6 +379,15 @@ var galleryItems = [
     link: 'https://tdimnet.github.io/Use-a-Public-API-to-Create-an-Employee-Directory',
     gitLink: 'https://github.com/tdimnet/Use-a-Public-API-to-Create-an-Employee-Directory'
   },
+  {
+    id: 'blogForAnAuthor',
+    imgSrc: 'img/project18.png',
+    imgAlt: 'Image of the author blog project',
+    title: 'Create a Blog for an Author',
+    introduction: "Lorem ispum",
+    link: 'http://billet-simple-pour-alaska.tdimnet.com/',
+    gitLink: 'https://github.com/tdimnet/Projet-Blog-MVC'
+  },
 ];
 
 // Create the overlay and its relative elements.
