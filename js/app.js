@@ -295,7 +295,7 @@ var galleryItems = [
     imgAlt: 'Image of the accesible web site project',
     title: 'Accessible Website For A Local Band',
     introduction: "Accessible web sites allow anyone and everyone to use the web, regardless of physical or hardware differences. They also, generally, make sites faster to download and improve a site's search engine friendliness. In this project, I have changed a website to make it more accessible for users and search engines.",
-    link: 'projects/07-Accessibility-Refactor/index.html',
+    link: 'https://tdimnet.github.io/Accessibility-Refactor',
     gitLink: 'https://github.com/tdimnet/Accessibility-Refactor'
   },
   {
