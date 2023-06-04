@@ -1,4 +1,5 @@
 import Heading from '../../components/Heading'
+import Paragraph from '../../components/Paragraph'
 
 function Page() {
   return (
@@ -9,9 +10,17 @@ function Page() {
         as='h1'
       />
       <Heading
-        css='text-customGrey'
+        css='text-customGrey mb-12'
         content='Thank you for visiting!'
         as='h2'
+      />
+      <Paragraph
+        color='text-customGrey'
+        content='This website is under construction.'
+      />
+      <Paragraph
+        color='text-customGrey'
+        content='Released date: June 2023'
       />
     </div>
   );
