@@ -3,7 +3,7 @@ import Paragraph from "../../components/Paragraph";
 
 function Page() {
   return (
-    <div className="bg-primay h-screen w-screen flex justify-center items-center flex-col">
+    <div className="bg-primay h-screen w-screen flex justify-center items-center flex-col px-6">
       <Heading
         css="text-customGrey mb-5"
         content="Hi Frendly visitor 👋"
