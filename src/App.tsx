@@ -1,12 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+import Home from './pages/Home'
+
 function App() {
-  return (
-    <div className="bg-primay">
-      <h1 className="text-customGrey">Foo</h1>
-    </div>
-  )
+  return <Home />
 }
 
 const container = document.querySelector("#root");
