@@ -5,7 +5,7 @@ import Header from "../../components/Header";
 function Page() {
   return (
     <main className="bg-primay h-screen w-screen">
-      <div className="max-w-screen-lg mx-auto pt-5 px-5 lg:px-0">
+      <div className="max-w-screen-lg mx-auto pt-5 px-5 lg:px-0 h-full">
         <Header />
         <section className="flex justify-center items-center flex-col h-5/6">
           <Heading

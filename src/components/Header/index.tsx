@@ -6,8 +6,20 @@ function Component() {
   return (
     <header className="flex">
       <Heading css="text-white" content="tom" as="h3" />
-      <GithubIcon css="ml-auto mr-5" />
-      <MediumIcon />
+      <a
+        className="ml-auto mr-5 opacity-80 hover:opacity-100 ease-in duration-200 hover:scale-125"
+        href="https://github.com/tdimnet"
+        target="_blank"
+      >
+        <GithubIcon />
+      </a>
+      <a
+        className="opacity-80 hover:opacity-100 ease-in duration-200 hover:scale-125"
+        href="https://tdimnet.medium.com/"
+        target="_blank"
+      >
+        <MediumIcon />
+      </a>
     </header>
   );
 }
