@@ -36,9 +36,9 @@ jobs:
           node-version: 18
           cache: 'npm'
       - name: Install dependencies
-        run: npm install
+        run: yarn install
       - name: Build
-        run: npm run build
+        run: yarn build
       - name: Copy index.html to 404.html
         run: cp ./dist/index.html ./dist/404.html
       - name: Setup Pages
