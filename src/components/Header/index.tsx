@@ -4,9 +4,9 @@ import MediumIcon from "../../icons/Medium";
 
 function Component() {
   return (
-    <header>
+    <header className="flex">
       <Heading css="text-white" content="tom" as="h3" />
-      <GithubIcon />
+      <GithubIcon css="ml-auto mr-5" />
       <MediumIcon />
     </header>
   );

@@ -5,12 +5,12 @@ import Header from "../../components/Header";
 function Page() {
   return (
     <main className="bg-primay h-screen w-screen">
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-screen-lg mx-auto pt-5 px-5 lg:px-0">
         <Header />
-        <section className="flex justify-center items-center flex-col">
+        <section className="flex justify-center items-center flex-col h-5/6">
           <Heading
             css="text-white mb-5"
-            content="Hi Frendly visitor 👋"
+            content="Hi Friendly Visitor 👋"
             as="h1"
           />
           <Heading
