@@ -32,8 +32,13 @@ function Page() {
         </section>
         <section>
           <Heading css="text-white mb-10 underline underline-offset-4" content="Hard Skills" as="h2" />
-          <ul>
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-y-5">
             <Skill title="HTML" content="7 Years Experience" />
+            <Skill title="CSS" content="7 Years Experience" />
+            <Skill title="JavaScript" content="7 Years Experience" />
+            <Skill title="TypeScript" content="4 Years Experience" />
+            <Skill title="Accessibility" content="5 Years Experience" />
+            <Skill title="React/Next" content="5 Years Experience" />
           </ul>
         </section>
       </div>
