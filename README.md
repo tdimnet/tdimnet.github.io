@@ -14,4 +14,5 @@ My professional portfolio built with React, TypeScript, Vite, and Tailwind.
 - Install the dependencies with `yarn`
 - Lauch the dev server with `yarn dev`
 
+Easy, right?
 
