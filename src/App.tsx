@@ -2,9 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import Home from "./pages/Home";
+import UnderConstruction from "./pages/UnderConstruction";
 
 function App() {
-  return <Home />;
+  return <UnderConstruction />;
 }
 
 const container = document.querySelector("#root");

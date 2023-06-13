@@ -105,4 +105,4 @@ typings/
 # Global
 .*.swp
 .DS_STORE
-
+dist
