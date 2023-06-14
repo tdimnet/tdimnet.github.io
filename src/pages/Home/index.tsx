@@ -52,7 +52,12 @@ function Page() {
             content="Projects"
             as="h2"
           />
-          <Project title="SensCritique" skills={["NextJS", "React Native", "Python"]} />
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <Project
+              title="SensCritique"
+              skills={["NextJS", "React Native", "Python"]}
+            />
+          </div>
         </section>
       </div>
     </main>
