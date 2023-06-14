@@ -2,6 +2,7 @@ import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
 import Header from "../../components/Header";
 import Skill from "../../components/Skill";
+import Project from "../../components/Project";
 
 function Page() {
   return (
@@ -30,7 +31,7 @@ function Page() {
             content="Released date: <strong>June 2023</strong>."
           />
         </section>
-        <section>
+        <section className="mb-12">
           <Heading
             css="text-white mb-10 underline underline-offset-4"
             content="Hard Skills"
@@ -44,6 +45,14 @@ function Page() {
             <Skill title="Accessibility" content="5 Years Experience" />
             <Skill title="React/Next" content="5 Years Experience" />
           </ul>
+        </section>
+        <section>
+          <Heading
+            css="text-white mb-10 underline underline-offset-4"
+            content="Projects"
+            as="h2"
+          />
+          <Project title="SensCritique" skills={["NextJS", "React Native", "Python"]} />
         </section>
       </div>
     </main>
