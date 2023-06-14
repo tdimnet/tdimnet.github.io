@@ -3,14 +3,14 @@
 My portfolio built with React, TypeScript, Vite, and Tailwind.
 
 
-## Prerequisites
+## 1. Prerequisites
 
 - Node (>=18.14)
 
 
-## Setting Up
+## 2. Setting Up
 
-### Cloning the repo
+### 2.1. Cloning the repo
 
 - with ssh
 
@@ -25,28 +25,28 @@ https://github.com/tdimnet/tdimnet.github.io.git
 ```
 
 
-### Installing the dependencies 
+### 2.2. Installing the dependencies 
 
 ```
 yarn
 ```
 
 
-### Lauching the dev server
+### 2.3. Lauching the dev server
 
 ```
 yarn dev
 ```
 
 
-### Building for production
+### 2.4. Building for production
 
 ```
 yarn build
 ```
 
 
-### Previewing the build artifact
+### 2.5. Previewing the build artifact
 
 ```
 yarn preview
@@ -55,7 +55,7 @@ yarn preview
 **Easy, right?**
 
 
-## Workflow
+## 3. Workflow
 
 This project uses GitHub Actions and has an automated deployment process.
 The automated building process occurs only when something changes on `master`.
@@ -64,8 +64,10 @@ The automated building process occurs only when something changes on `master`.
 - The dev (local devevelopment) branch is `dev`.
 - Each branch starts from `dev`, then is merged to `dev`, and finally `dev` is
   merged to `master`.
+- I am using a GitHub flow approach. Each branch contains a theme: `core`,
+  `feat`, `fix`.
 
-## Architecture
+## 4. Architecture
 
 All the code belongs in the `src` folder.
 
