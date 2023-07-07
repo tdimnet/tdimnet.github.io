@@ -13,25 +13,29 @@ function Page() {
           <Header />
         </div>
         <main className="mb-10">
-          <section className="flex justify-center items-center flex-col mb-48">
-            <Heading
-              css="text-white mb-5"
-              content="Hi Friendly Visitor 👋"
-              as="h1"
+          <section className="flex justify-center items-center flex-col mb-4 md:flex-row-reverse">
+            <img
+              src="/assets/profil-picture.png"
+              className="mb-5 w-96"
+              alt="Someone wearing a baseball cap in pixel art"
             />
-            <Heading
-              css="text-white mb-12"
-              content="Thank you for visiting!"
-              as="h2"
-            />
-            <Paragraph
-              color="text-white"
-              content="This website is under construction."
-            />
-            <Paragraph
-              color="text-white"
-              content="Released date: <strong>June 2023</strong>."
-            />
+            <div>
+              <Heading
+                css="text-white mb-5 lg:mr-8"
+                content="Hi Friendly Visitor 👋"
+                as="h1"
+              />
+              <Heading
+                css="text-white mb-12"
+                content="Thank you for visiting!"
+                as="h2"
+              />
+              <Paragraph
+                color="text-white"
+                content="Ny name is Tom. I'm French."
+              />
+              <Paragraph color="text-white" content="Learn more" />
+            </div>
           </section>
           <section className="mb-12">
             <Heading
