@@ -56,37 +56,37 @@ function Page() {
             <Project
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
-              projectUrl='https://www.senscritique.com'
+              projectUrl="https://www.senscritique.com"
               codeUrl="https://www.senscritique.com"
             />
             <Project
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
-              projectUrl='https://www.senscritique.com'
+              projectUrl="https://www.senscritique.com"
               codeUrl="https://www.senscritique.com"
             />
             <Project
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
-              projectUrl='https://www.senscritique.com'
+              projectUrl="https://www.senscritique.com"
               codeUrl="https://www.senscritique.com"
             />
             <Project
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
-              projectUrl='https://www.senscritique.com'
+              projectUrl="https://www.senscritique.com"
               codeUrl="https://www.senscritique.com"
             />
             <Project
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
-              projectUrl='https://www.senscritique.com'
+              projectUrl="https://www.senscritique.com"
               codeUrl="https://www.senscritique.com"
             />
             <Project
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
-              projectUrl='https://www.senscritique.com'
+              projectUrl="https://www.senscritique.com"
               codeUrl="https://www.senscritique.com"
             />
           </div>
