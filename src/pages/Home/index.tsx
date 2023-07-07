@@ -37,7 +37,7 @@ function Page() {
             content="Hard Skills"
             as="h2"
           />
-          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-y-5">
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5">
             <Skill title="HTML" content="7 Years Experience" />
             <Skill title="CSS" content="7 Years Experience" />
             <Skill title="JavaScript" content="7 Years Experience" />
@@ -52,7 +52,19 @@ function Page() {
             content="Projects"
             as="h2"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-5">
+            <Project
+              title="SensCritique"
+              skills={["NextJS", "React Native", "Python"]}
+            />
+            <Project
+              title="SensCritique"
+              skills={["NextJS", "React Native", "Python"]}
+            />
+            <Project
+              title="SensCritique"
+              skills={["NextJS", "React Native", "Python"]}
+            />
             <Project
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
