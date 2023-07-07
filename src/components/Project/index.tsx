@@ -14,14 +14,20 @@ function Component({ title, skills, projectUrl, codeUrl }: { title: string; skil
           </div>
         ))}
       </div>
-      <ul>
+      <ul className="grid grid-cols-2">
         <li>
-          <Link />
+          <Link
+            url={projectUrl}
+            content="View project"
+          />
         </li>
         {
           codeUrl && (
           <li>
-            <Link />
+            <Link
+              url={codeUrl}
+              content="View code"
+            />
           </li>
           ) 
         }

@@ -6,7 +6,7 @@ import Project from "../../components/Project";
 
 function Page() {
   return (
-    <main className="bg-primay">
+    <main className="bg-primay pb-16">
       <div className="max-w-screen-lg mx-auto pt-5 px-5 lg:px-0 min-h-screen">
         <div className="mb-36">
           <Header />
@@ -56,26 +56,38 @@ function Page() {
             <Project
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
+              projectUrl='https://www.senscritique.com'
+              codeUrl="https://www.senscritique.com"
             />
             <Project
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
+              projectUrl='https://www.senscritique.com'
+              codeUrl="https://www.senscritique.com"
             />
             <Project
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
+              projectUrl='https://www.senscritique.com'
+              codeUrl="https://www.senscritique.com"
             />
             <Project
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
+              projectUrl='https://www.senscritique.com'
+              codeUrl="https://www.senscritique.com"
             />
             <Project
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
+              projectUrl='https://www.senscritique.com'
+              codeUrl="https://www.senscritique.com"
             />
             <Project
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
+              projectUrl='https://www.senscritique.com'
+              codeUrl="https://www.senscritique.com"
             />
           </div>
         </section>
