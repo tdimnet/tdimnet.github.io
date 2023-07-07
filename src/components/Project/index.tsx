@@ -2,7 +2,7 @@ import Heading from "../Heading";
 import Paragraph from "../Paragraph";
 import Link from "../Link";
 
-function Component({ title, skills }: { title: string; skills: string[] }) {
+function Component({ title, skills, projectUrl, codeUrl }: { title: string; skills: string[]; projectUrl: string; codeUrl?: string }) {
   return (
     <div className="bg-teriary">
       <img src="/assets/sample-img.png" />
@@ -18,9 +18,13 @@ function Component({ title, skills }: { title: string; skills: string[] }) {
         <li>
           <Link />
         </li>
-        <li>
-          <Link />
-        </li>
+        {
+          codeUrl && (
+          <li>
+            <Link />
+          </li>
+          ) 
+        }
       </ul>
     </div>
   );

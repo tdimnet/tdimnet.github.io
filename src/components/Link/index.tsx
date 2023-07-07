@@ -1,6 +1,6 @@
 function Component({}) {
   return (
-    <a href="#">view project</a>
+    <a className="text-white uppercase font-space-grotest font-bold text-base tracking-wider border-b-2 border-secondary" href="#">view project</a>
   )
 }
 
