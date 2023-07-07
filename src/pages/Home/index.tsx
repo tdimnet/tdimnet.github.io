@@ -69,6 +69,14 @@ function Page() {
               title="SensCritique"
               skills={["NextJS", "React Native", "Python"]}
             />
+            <Project
+              title="SensCritique"
+              skills={["NextJS", "React Native", "Python"]}
+            />
+            <Project
+              title="SensCritique"
+              skills={["NextJS", "React Native", "Python"]}
+            />
           </div>
         </section>
       </div>
