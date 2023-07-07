@@ -4,9 +4,9 @@ import MediumIcon from "../../icons/Medium";
 
 function Component() {
   return (
-    <footer className="flex flex-col justify-center items-center">
+    <footer className="flex flex-col justify-center items-center border-t-2 border-white pt-5 md:flex-row">
       <Heading css="text-white mb-5" content="tom" as="h3" />
-      <ul className="grid grid-cols-2">
+      <ul className="grid grid-cols-2 md:ml-auto">
         <li>
           <a
             className="ml-auto mr-5 opacity-80 hover:opacity-100 ease-in duration-200 hover:scale-125"
