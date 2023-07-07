@@ -14,7 +14,7 @@ function Component({
   codeUrl?: string;
 }) {
   return (
-    <div>
+    <div className="bg-teriary">
       <img src="/assets/sample-img.png" />
       <Heading css="text-white" content={title} as="h3" />
       <div className="flex flex-wrap">
