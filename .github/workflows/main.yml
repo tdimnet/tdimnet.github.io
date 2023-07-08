@@ -41,6 +41,8 @@ jobs:
         run: yarn build
       - name: Setup Pages
         uses: actions/configure-pages@v3
+      - name: copy images to dist
+        run: cp ./src/assets/* ./src/dist/assets/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
