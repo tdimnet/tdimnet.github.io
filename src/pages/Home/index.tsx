@@ -55,7 +55,7 @@ function Page() {
           content="Projects"
           as="h2"
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-5 mb-10">
           <Project
             id={1}
             title="NX Acadamy"
@@ -98,6 +98,35 @@ function Page() {
             projectUrl="https://www.senscritique.com"
             codeUrl="https://www.senscritique.com"
           />
+          <Project
+            id={7}
+            title="Tiller Systems"
+            skills={["NextJS", "React Native", "Python"]}
+            projectUrl="https://www.senscritique.com"
+            codeUrl="https://www.senscritique.com"
+          />
+          <Project
+            id={6}
+            title="Simplon"
+            skills={["NextJS", "React Native", "Python"]}
+            projectUrl="https://www.senscritique.com"
+            codeUrl="https://www.senscritique.com"
+          />
+          <Project
+            id={6}
+            title="IronHack"
+            skills={["NextJS", "React Native", "Python"]}
+            projectUrl="https://www.senscritique.com"
+            codeUrl="https://www.senscritique.com"
+          />
+        </div>
+        <div className="flex justify-center items-center">
+          <Link
+            className="text-white font-space-grotest font-medium text-base tracking-wider hover:underlin"
+            to="/projects"
+          >
+            See All Projects
+          </Link>
         </div>
       </section>
     </main>

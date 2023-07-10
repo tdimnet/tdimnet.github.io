@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
+import AllProjects from "./pages/AllProjects";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/about" element={<About />} />
             <Route path="/project/:id" element={<Project />} />
+            <Route path="/projects" element={<AllProjects />} />
             <Route path="/" element={<Home />} />
           </Routes>
           <Footer />
