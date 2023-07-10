@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Heading from "../../components/Heading";
@@ -34,7 +36,9 @@ function Page() {
                 color="text-white"
                 content="Ny name is Tom. I'm French."
               />
-              <Paragraph color="text-white" content="Learn more" />
+              <Link to="/about">
+                <Paragraph color="text-white" content="Learn more" />
+              </Link>
             </div>
           </section>
           <section className="mb-12">
@@ -60,36 +64,42 @@ function Page() {
             />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-5">
               <Project
+                id={1}
                 title="NX Acadamy"
                 skills={["NextJS", "React Native", "Python"]}
                 projectUrl="https://www.senscritique.com"
                 codeUrl="https://www.senscritique.com"
               />
               <Project
+                id={2}
                 title="Datadog"
                 skills={["NextJS", "React Native", "Python"]}
                 projectUrl="https://www.senscritique.com"
                 codeUrl="https://www.senscritique.com"
               />
               <Project
+                id={3}
                 title="OpenClassrooms"
                 skills={["NextJS", "React Native", "Python"]}
                 projectUrl="https://www.senscritique.com"
                 codeUrl="https://www.senscritique.com"
               />
               <Project
+                id={4}
                 title="SensCritique"
                 skills={["NextJS", "React Native", "Python"]}
                 projectUrl="https://www.senscritique.com"
                 codeUrl="https://www.senscritique.com"
               />
               <Project
+                id={5}
                 title="Popcorns"
                 skills={["NextJS", "React Native", "Python"]}
                 projectUrl="https://www.senscritique.com"
                 codeUrl="https://www.senscritique.com"
               />
               <Project
+                id={6}
                 title="Foodle"
                 skills={["NextJS", "React Native", "Python"]}
                 projectUrl="https://www.senscritique.com"

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 import Heading from "../Heading";
 import GithubIcon from "../../icons/Github";
