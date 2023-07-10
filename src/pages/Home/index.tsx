@@ -26,8 +26,11 @@ function Page() {
             as="h2"
           />
           <Paragraph color="text-white" content="Ny name is Tom. I'm French." />
-          <Link to="/about">
-            <Paragraph color="text-white" content="Learn more" />
+          <Link
+            className="text-white font-space-grotest font-bold text-base tracking-wider border-b-2 border-secondary"
+            to="/about"
+          >
+            Learn more
           </Link>
         </div>
       </section>

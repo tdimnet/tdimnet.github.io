@@ -16,7 +16,7 @@ function Component({
 }) {
   return (
     <div>
-      <img src="/assets/sample-img.png" />
+      <img src="/assets/sample-img.png" alt="Just a sample image" />
       <Heading css="text-white" content={title} as="h3" />
       <div className="flex flex-wrap">
         {skills.map((skill) => (
@@ -27,7 +27,7 @@ function Component({
       </div>
       <h4>
         <Link
-          className="text-white uppercase font-space-grotest font-bold text-base tracking-wider border-b-2 border-secondary"
+          className="text-white font-space-grotest font-bold text-base tracking-wider border-b-2 border-secondary"
           to={`/project/${id}`}
         >
           Learn more
