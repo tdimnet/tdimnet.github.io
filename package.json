@@ -12,7 +12,8 @@
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "lint": "eslint \"src/**/*.{ts,tsx}\" --quiet",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -31,6 +32,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
     "tailwindcss": "^3.3.2",
