@@ -9,7 +9,7 @@ function Component({
   title,
 }: {
   codeUrl?: string;
-  id: number,
+  id: number;
   projectUrl: string;
   skills: string[];
   title: string;
@@ -26,7 +26,12 @@ function Component({
         ))}
       </div>
       <h4>
-        <Link className="text-white uppercase font-space-grotest font-bold text-base tracking-wider border-b-2 border-secondary" to={`/project/${id}`}>Learn more</Link>
+        <Link
+          className="text-white uppercase font-space-grotest font-bold text-base tracking-wider border-b-2 border-secondary"
+          to={`/project/${id}`}
+        >
+          Learn more
+        </Link>
       </h4>
     </div>
   );
