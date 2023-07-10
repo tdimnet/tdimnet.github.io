@@ -25,10 +25,7 @@ function Page() {
             content="Thank you for visiting!"
             as="h2"
           />
-          <Paragraph
-            color="text-white"
-            content="Ny name is Tom. I'm French."
-          />
+          <Paragraph color="text-white" content="Ny name is Tom. I'm French." />
           <Link to="/about">
             <Paragraph color="text-white" content="Learn more" />
           </Link>
