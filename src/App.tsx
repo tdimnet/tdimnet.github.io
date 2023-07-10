@@ -1,10 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Home from "./pages/Home";
+import About from "./pages/About";
+import Project from "./pages/Project";
 
 function App() {
-  return <Home />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/project/:id" element={<Project />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 const container = document.querySelector("#root");
