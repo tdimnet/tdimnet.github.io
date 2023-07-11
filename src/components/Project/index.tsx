@@ -1,21 +1,22 @@
+import { Link } from "react-router-dom";
+
 import Heading from "../Heading";
 import Paragraph from "../Paragraph";
-import Link from "../Link";
 
 function Component({
-  title,
+  id,
   skills,
-  projectUrl,
-  codeUrl,
+  title,
 }: {
-  title: string;
-  skills: string[];
-  projectUrl: string;
   codeUrl?: string;
+  id: number;
+  projectUrl: string;
+  skills: string[];
+  title: string;
 }) {
   return (
     <div>
-      <img src="/assets/sample-img.png" />
+      <img src="/assets/sample-img.png" alt="Just a sample image" />
       <Heading css="text-white" content={title} as="h3" />
       <div className="flex flex-wrap">
         {skills.map((skill) => (
@@ -24,16 +25,14 @@ function Component({
           </div>
         ))}
       </div>
-      <ul className="grid grid-cols-2">
-        <li>
-          <Link url={projectUrl} content="View project" />
-        </li>
-        {codeUrl && (
-          <li>
-            <Link url={codeUrl} content="View code" />
-          </li>
-        )}
-      </ul>
+      <h4>
+        <Link
+          className="text-white font-space-grotest font-bold text-base tracking-wider border-b-2 border-secondary"
+          to={`/project/${id}`}
+        >
+          Learn more
+        </Link>
+      </h4>
     </div>
   );
 }
