@@ -14,9 +14,9 @@ function Page() {
           className="mb-5 w-96"
           alt="Someone wearing a baseball cap in pixel art"
         />
-        <div>
+        <div className="lg:mr-8">
           <Heading
-            css="text-white mb-5 lg:mr-8"
+            css="text-white mb-5"
             content="Hi Friendly Visitor 👋"
             as="h1"
           />
