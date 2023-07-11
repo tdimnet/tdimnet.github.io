@@ -5,7 +5,11 @@ import Paragraph from "../../components/Paragraph";
 import Project from "../../components/Project";
 import Skill from "../../components/Skill";
 
+import { projects } from "../../data/projects";
+
 function Page() {
+  const topSixProjects = projects.slice(0, 6);
+
   return (
     <main className="mb-10">
       <section className="flex justify-center items-center flex-col mb-4 md:flex-row-reverse">
@@ -56,69 +60,15 @@ function Page() {
           as="h2"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-5 mb-10">
-          <Project
-            id={1}
-            title="NX Acadamy"
-            skills={["NextJS", "React Native", "Python"]}
-            projectUrl="https://www.senscritique.com"
-            codeUrl="https://www.senscritique.com"
-          />
-          <Project
-            id={2}
-            title="Datadog"
-            skills={["NextJS", "React Native", "Python"]}
-            projectUrl="https://www.senscritique.com"
-            codeUrl="https://www.senscritique.com"
-          />
-          <Project
-            id={3}
-            title="OpenClassrooms"
-            skills={["NextJS", "React Native", "Python"]}
-            projectUrl="https://www.senscritique.com"
-            codeUrl="https://www.senscritique.com"
-          />
-          <Project
-            id={4}
-            title="SensCritique"
-            skills={["NextJS", "React Native", "Python"]}
-            projectUrl="https://www.senscritique.com"
-            codeUrl="https://www.senscritique.com"
-          />
-          <Project
-            id={5}
-            title="Popcorns"
-            skills={["NextJS", "React Native", "Python"]}
-            projectUrl="https://www.senscritique.com"
-            codeUrl="https://www.senscritique.com"
-          />
-          <Project
-            id={6}
-            title="Foodle"
-            skills={["NextJS", "React Native", "Python"]}
-            projectUrl="https://www.senscritique.com"
-            codeUrl="https://www.senscritique.com"
-          />
-          <Project
-            id={7}
-            title="Tiller Systems"
-            skills={["NextJS", "React Native", "Python"]}
-            projectUrl="https://www.senscritique.com"
-            codeUrl="https://www.senscritique.com"
-          />
-          <Project
-            id={6}
-            title="Simplon"
-            skills={["NextJS", "React Native", "Python"]}
-            projectUrl="https://www.senscritique.com"
-            codeUrl="https://www.senscritique.com"
-          />
-          <Project
-            id={6}
-            title="IronHack"
-            skills={["NextJS", "React Native", "Python"]}
-            projectUrl="https://www.senscritique.com"
-            codeUrl="https://www.senscritique.com"
-          />
+          {topSixProjects.map((project) => (
+            <Project
+              id={project.id}
+              title={project.name}
+              skills={project.technologies}
+              projectUrl=""
+              codeUrl=""
+            />
+          ))}
         </div>
         <div className="flex justify-center items-center">
           <Link
