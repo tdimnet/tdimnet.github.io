@@ -44,8 +44,8 @@ function Page() {
       <section>
         <Heading css="text-white mb-5" content="Technologies" as="h2" />
         <SkillsGrid>
-          <Skill title="Docker" content="5 Years Experience" />
-          <Skill title="TypeScript" content="5 Years Experience" />
+          <Skill title="Docker" />
+          <Skill title="TypeScript" />
         </SkillsGrid>
       </section>
     </main>
