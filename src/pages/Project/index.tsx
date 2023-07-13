@@ -15,7 +15,7 @@ function Page() {
   if (!project) return null;
 
   return (
-    <main>
+    <main className="mb-10">
       <section className="mb-5">
         <div className="h-96 mb-4">
           <img
