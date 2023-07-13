@@ -15,7 +15,7 @@ function Page() {
   if (!project) return null;
 
   return (
-    <main>
+    <main className="mb-10">
       <section className="mb-5">
         <div className="h-96 mb-4">
           <img
@@ -44,8 +44,8 @@ function Page() {
       <section>
         <Heading css="text-white mb-5" content="Technologies" as="h2" />
         <SkillsGrid>
-          <Skill title="Docker" content="5 Years Experience" />
-          <Skill title="TypeScript" content="5 Years Experience" />
+          <Skill title="Docker" />
+          <Skill title="TypeScript" />
         </SkillsGrid>
       </section>
     </main>
