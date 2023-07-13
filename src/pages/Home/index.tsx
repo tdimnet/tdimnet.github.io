@@ -5,6 +5,7 @@ import Paragraph from "../../components/Paragraph";
 import Project from "../../components/Project";
 import Skill from "../../components/Skill";
 import SkillsGrid from "../../layouts/SkillsGrid";
+import ProjectsGrid from "../../layouts/ProjectsGrid";
 
 import { projects } from "../../data/projects";
 
@@ -60,7 +61,7 @@ function Page() {
           content="Projects"
           as="h2"
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-5 mb-10">
+        <ProjectsGrid>
           {topSixProjects.map((project) => (
             <Project
               key={project.id}
@@ -71,7 +72,7 @@ function Page() {
               codeUrl=""
             />
           ))}
-        </div>
+        </ProjectsGrid>
         <div className="flex justify-center items-center">
           <Link
             className="text-white font-space-grotest font-medium text-base tracking-wider hover:underlin"
