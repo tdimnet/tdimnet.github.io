@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 
 import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
+import Skill from "../../components/Skill";
+import SkillsGrid from "../../layouts/SkillsGrid";
 
 import { projects } from "../../data/projects";
 
@@ -14,12 +16,14 @@ function Page() {
 
   return (
     <main>
-      <section className="flex justify-between flex-col mb-4 md:flex-row-reverse">
-        <img
-          src={project.img}
-          className="mb-5 w-96"
-          alt={`${project.jobTitle} at ${project.name}`}
-        />
+      <section className="mb-5">
+        <div className="h-96 mb-4">
+          <img
+            src={project.img}
+            className="absolute left-0 w-full h-96 object-cover"
+            alt={`${project.jobTitle} at ${project.name}`}
+          />
+        </div>
         <div className="md:mr-5">
           <Heading
             css="text-white mb-5 lg:mr-8 capitalize"
@@ -34,14 +38,15 @@ function Page() {
           <Paragraph color="text-white" content={project.description} />
         </div>
       </section>
-      <section>
+      <section className="mb-5">
         <Heading css="text-white" content="Highlights" as="h2" />
       </section>
       <section>
-        <Heading css="text-white" content="Objectives" as="h2" />
-      </section>
-      <section>
-        <Heading css="text-white" content="Technical Perspectives" as="h2" />
+        <Heading css="text-white mb-5" content="Technologies" as="h2" />
+        <SkillsGrid>
+          <Skill title="Docker" content="5 Years Experience" />
+          <Skill title="TypeScript" content="5 Years Experience" />
+        </SkillsGrid>
       </section>
     </main>
   );

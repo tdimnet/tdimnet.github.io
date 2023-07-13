@@ -4,6 +4,7 @@ import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
 import Project from "../../components/Project";
 import Skill from "../../components/Skill";
+import SkillsGrid from "../../layouts/SkillsGrid";
 
 import { projects } from "../../data/projects";
 
@@ -41,17 +42,17 @@ function Page() {
       <section className="mb-12">
         <Heading
           css="text-white mb-10 underline underline-offset-4"
-          content="Hard Skills"
+          content="Principal Technologies"
           as="h2"
         />
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5">
+        <SkillsGrid>
           <Skill title="HTML" content="7 Years Experience" />
           <Skill title="CSS" content="7 Years Experience" />
           <Skill title="JavaScript" content="7 Years Experience" />
           <Skill title="TypeScript" content="4 Years Experience" />
           <Skill title="Accessibility" content="5 Years Experience" />
           <Skill title="React/Next" content="5 Years Experience" />
-        </ul>
+        </SkillsGrid>
       </section>
       <section>
         <Heading
@@ -62,6 +63,7 @@ function Page() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-5 mb-10">
           {topSixProjects.map((project) => (
             <Project
+              key={project.id}
               id={project.id}
               title={project.name}
               skills={project.technologies}
