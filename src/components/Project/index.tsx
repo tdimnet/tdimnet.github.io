@@ -21,7 +21,7 @@ function Component({
       <div className="flex flex-wrap">
         {skills.map((skill) => (
           <div key={skill} className="mr-2 mb-1">
-            <Paragraph color="text-customGrey" content={skill} />
+            <Paragraph>{skill}</Paragraph>
           </div>
         ))}
       </div>

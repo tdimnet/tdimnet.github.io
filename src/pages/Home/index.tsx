@@ -31,7 +31,7 @@ function Page() {
             content="Thank you for visiting!"
             as="h2"
           />
-          <Paragraph color="text-white" content="Ny name is Tom. I'm French." />
+          <Paragraph>Ny name is Tom. I'm French.</Paragraph>
           <Link
             className="text-white font-space-grotest font-bold text-base tracking-wider border-b-2 border-secondary"
             to="/about"
