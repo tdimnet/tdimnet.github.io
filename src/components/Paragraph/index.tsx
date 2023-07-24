@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
-function Component({ children }: { children: ReactNode }) {
+function Component({ css, children }: { css?: string, children: ReactNode }) {
   return (
-    <p className={`text-white font-space-grotest font-medium text-base`}>
+    <p className={`${css} text-white font-space-grotest font-medium text-base`}>
       {children}
     </p>
   );

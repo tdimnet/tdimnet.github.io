@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
-
 import Heading from "../../components/Heading";
+import Link from "../../components/Link";
 import Paragraph from "../../components/Paragraph";
 import Project from "../../components/Project";
+import ProjectsGrid from "../../layouts/ProjectsGrid";
 import Skill from "../../components/Skill";
 import SkillsGrid from "../../layouts/SkillsGrid";
-import ProjectsGrid from "../../layouts/ProjectsGrid";
 
 import { projects } from "../../data/projects";
 
@@ -31,13 +30,15 @@ function Page() {
             content="Thank you for visiting!"
             as="h2"
           />
-          <Paragraph>Ny name is Tom. I'm French.</Paragraph>
-          <Link
-            className="text-white font-space-grotest font-bold text-base tracking-wider border-b-2 border-secondary"
-            to="/about"
-          >
-            Learn more
-          </Link>
+          <Paragraph css="mb-1">
+            My name is Tom. I'm French and I'm based in Paris.
+          </Paragraph>
+          <Paragraph css="mb-5">
+            I love <Link content="programming" to="/programming" />,{" "}
+            <Link content="teaching" to="/teaching" /> and{" "}
+            <Link content="writing" to="/writing" />.
+          </Paragraph>
+          <Link content="Learn more" to="/about" />
         </div>
       </section>
       <section className="mb-12">
@@ -74,12 +75,7 @@ function Page() {
           ))}
         </ProjectsGrid>
         <div className="flex justify-center items-center">
-          <Link
-            className="text-white font-space-grotest font-medium text-base tracking-wider hover:underlin"
-            to="/projects"
-          >
-            See All Projects
-          </Link>
+          <Link content="See All Projects" to="/projects" />
         </div>
       </section>
     </main>
