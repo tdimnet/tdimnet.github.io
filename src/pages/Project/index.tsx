@@ -31,11 +31,11 @@ function Page() {
             as="h1"
           />
           <Heading
-            css="text-white mb-8 capitalize"
+            css="text-white mb-5 capitalize"
             content={project.jobTitle}
             as="h2"
           />
-          <Paragraph color="text-white" content={project.description} />
+          <Paragraph>{project.description}</Paragraph>
         </div>
       </section>
       <section className="mb-5">

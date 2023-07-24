@@ -39,13 +39,12 @@ function Page() {
             <Link content="teaching" to="/teaching" /> and{" "}
             <Link content="writing" to="/writing" />.
           </Paragraph>
-          <Link content="Learn more" to="/about" />
         </div>
       </section>
       <section className="mb-12">
         <Heading
           css="text-white mb-10 underline underline-offset-4"
-          content="Principal Technologies"
+          content="Technologies"
           as="h2"
         />
         <SkillsGrid>
