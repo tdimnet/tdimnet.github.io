@@ -4,6 +4,7 @@ import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
 import Skill from "../../components/Skill";
 import SkillsGrid from "../../layouts/SkillsGrid";
+import Banner from "../../components/Banner";
 
 import { projects } from "../../data/projects";
 
@@ -18,9 +19,8 @@ function Page() {
     <main className="mb-10">
       <section className="mb-5">
         <div className="h-96 mb-4">
-          <img
+          <Banner
             src={project.img}
-            className="absolute left-0 w-full h-96 object-cover"
             alt={`${project.jobTitle} at ${project.name}`}
           />
         </div>

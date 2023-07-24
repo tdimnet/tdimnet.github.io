@@ -1,5 +1,6 @@
-import Link from "../Link";
 import Heading from "../Heading";
+import Image from "../Image";
+import Link from "../Link";
 import Paragraph from "../Paragraph";
 
 function Component({
@@ -15,7 +16,7 @@ function Component({
 }) {
   return (
     <div>
-      <img src="/assets/sample-img.png" alt="Just a sample image" />
+      <Image src="/assets/sample-img.png" alt="Just a sample image" />
       <Heading css="text-white" content={title} as="h3" />
       <div className="flex flex-wrap">
         {skills.map((skill) => (

@@ -1,4 +1,5 @@
 import Heading from "../../components/Heading";
+import Image from "../../components/Image";
 import Link from "../../components/Link";
 import Paragraph from "../../components/Paragraph";
 import Project from "../../components/Project";
@@ -15,9 +16,9 @@ function Page() {
   return (
     <main className="mb-10">
       <section className="flex justify-center items-center flex-col mb-4 md:flex-row-reverse">
-        <img
+        <Image
           src="/assets/profil-picture.png"
-          className="mb-5 w-96"
+          css="mb-5 w-96"
           alt="Someone wearing a baseball cap in pixel art"
         />
         <div className="lg:mr-8">
