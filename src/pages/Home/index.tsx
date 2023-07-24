@@ -7,6 +7,7 @@ import Skill from "../../components/Skill";
 import SkillsGrid from "../../layouts/SkillsGrid";
 
 import { projects } from "../../data/projects";
+import { calculateYears } from "../../utils/calculateYears";
 
 function Page() {
   const topSixProjects = projects.slice(0, 6);
@@ -48,12 +49,12 @@ function Page() {
           as="h2"
         />
         <SkillsGrid>
-          <Skill title="HTML" content="7 Years Experience" />
-          <Skill title="CSS" content="7 Years Experience" />
-          <Skill title="JavaScript" content="7 Years Experience" />
+          <Skill title="HTML" content={`${calculateYears(2015)}`} />
+          <Skill title="CSS" content={`${calculateYears(2015)}`} />
+          <Skill title="JavaScript" content={`${calculateYears(2015)}`} />
           <Skill title="TypeScript" content="4 Years Experience" />
           <Skill title="Accessibility" content="5 Years Experience" />
-          <Skill title="React/Next" content="5 Years Experience" />
+          <Skill title="React/Next" content={`${calculateYears(2017)}`} />
         </SkillsGrid>
       </section>
       <section>
