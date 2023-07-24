@@ -1,12 +1,13 @@
-function Component({ url, content }: { url: string; content: string }) {
+import { Link } from "react-router-dom";
+
+function Component({ content, to }: { content: string; to: string }) {
   return (
-    <a
-      className="text-white uppercase font-space-grotest font-bold text-base tracking-wider border-b-2 border-secondary"
-      href={url}
-      target="_blank"
+    <Link
+      className="text-white font-space-grotest font-bold text-base tracking-wider border-b-2 border-secondary"
+      to={to}
     >
       {content}
-    </a>
+    </Link>
   );
 }
 

@@ -1,39 +1,32 @@
+import Link from "../Link";
 import Heading from "../Heading";
 import Paragraph from "../Paragraph";
-import Link from "../Link";
 
 function Component({
-  title,
+  id,
   skills,
-  projectUrl,
-  codeUrl,
+  title,
 }: {
-  title: string;
-  skills: string[];
-  projectUrl: string;
   codeUrl?: string;
+  id: number;
+  projectUrl: string;
+  skills: string[];
+  title: string;
 }) {
   return (
     <div>
-      <img src="/assets/sample-img.png" />
+      <img src="/assets/sample-img.png" alt="Just a sample image" />
       <Heading css="text-white" content={title} as="h3" />
       <div className="flex flex-wrap">
         {skills.map((skill) => (
           <div key={skill} className="mr-2 mb-1">
-            <Paragraph color="text-customGrey" content={skill} />
+            <Paragraph>{skill}</Paragraph>
           </div>
         ))}
       </div>
-      <ul className="grid grid-cols-2">
-        <li>
-          <Link url={projectUrl} content="View project" />
-        </li>
-        {codeUrl && (
-          <li>
-            <Link url={codeUrl} content="View code" />
-          </li>
-        )}
-      </ul>
+      <h4>
+        <Link content="Learn more" to={`/project/${id}`} />
+      </h4>
     </div>
   );
 }

@@ -1,9 +1,10 @@
-function Component({ content, color }: { content: string; color: string }) {
+import { ReactNode } from "react";
+
+function Component({ css, children }: { css?: string; children: ReactNode }) {
   return (
-    <p
-      className={`${color} font-space-grotest font-medium text-base`}
-      dangerouslySetInnerHTML={{ __html: content }}
-    />
+    <p className={`${css} text-white font-space-grotest font-medium text-base`}>
+      {children}
+    </p>
   );
 }
 
