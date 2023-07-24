@@ -5,7 +5,7 @@ function Component({ title, content }: { title: string; content?: string }) {
   return (
     <li>
       <Heading css="text-white" content={title} as="h3" />
-      {content && <Paragraph color="text-customGrey" content={content} />}
+      {content && <Paragraph>{content}</Paragraph>}
     </li>
   );
 }

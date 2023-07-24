@@ -2,12 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import About from "./pages/About";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Home from "./pages/Home";
-import Project from "./pages/Project";
+
+import About from "./pages/About";
 import AllProjects from "./pages/AllProjects";
+import Home from "./pages/Home";
+import Programming from "./pages/Programming";
+import Project from "./pages/Project";
+import Teaching from "./pages/Teaching";
+import Writing from "./pages/Writing";
 
 function App() {
   return (
@@ -19,8 +23,11 @@ function App() {
           </div>
           <Routes>
             <Route path="/about" element={<About />} />
+            <Route path="/programming" element={<Programming />} />
             <Route path="/project/:id" element={<Project />} />
             <Route path="/projects" element={<AllProjects />} />
+            <Route path="/teaching" element={<Teaching />} />
+            <Route path="/writing" element={<Writing />} />
             <Route path="/" element={<Home />} />
           </Routes>
           <Footer />
