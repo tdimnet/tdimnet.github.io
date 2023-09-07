@@ -11,7 +11,7 @@ function Component({
 }) {
   if (as === "h1") {
     return (
-      <h1 className={`${css} font-bold font-space-grotest text-7xl`}>
+      <h1 className={`${css} font-bold font-space-grotest text-5xl`}>
         {content}
       </h1>
     );
@@ -19,14 +19,14 @@ function Component({
 
   if (as === "h2") {
     return (
-      <h2 className={`${css} font-bold font-space-grotest text-5xl`}>
+      <h2 className={`${css} font-bold font-space-grotest text-2xl`}>
         {content}
       </h2>
     );
   }
 
   return (
-    <h3 className={`${css} font-bold font-space-grotest text-2xl`}>
+    <h3 className={`${css} font-bold font-space-grotest text-xl`}>
       {content}
     </h3>
   );

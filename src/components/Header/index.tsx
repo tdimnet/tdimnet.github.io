@@ -6,7 +6,7 @@ import MediumIcon from "../../icons/Medium";
 
 function Component() {
   return (
-    <header className="flex">
+    <header className="row-span-1 flex">
       <Link to="/">
         <Heading css="text-white" content="tom" as="h3" />
       </Link>

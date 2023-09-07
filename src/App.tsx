@@ -16,8 +16,8 @@ import Writing from "./pages/Writing";
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-primay pb-16">
-        <div className="max-w-screen-lg mx-auto pt-5 px-5 lg:px-0 min-h-screen">
+      <div className="bg-primay">
+        <div className="max-w-screen-lg mx-auto pt-5 px-5 lg:px-0 min-h-screen grid">
           <div className="mb-5">
             <Header />
           </div>
