@@ -39,12 +39,6 @@ function Page() {
             interested in many subjects, such as Computer Science, Data Science,
             Learning and Teaching Science, Psychology and Phylosophy.
           </Paragraph>
-          <Paragraph>
-            Based in Paris, I am the founder of NX Academy. My goal is to help
-            developpers to meet their objectives, whatever they are. I am
-            interested in many subjects, such as Computer Science, Data Science,
-            Learning and Teaching Science, Psychology and Phylosophy.
-          </Paragraph>
         </div>
       </section>
     </main>

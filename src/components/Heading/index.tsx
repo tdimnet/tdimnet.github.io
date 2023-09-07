@@ -26,9 +26,7 @@ function Component({
   }
 
   return (
-    <h3 className={`${css} font-bold font-space-grotest text-xl`}>
-      {content}
-    </h3>
+    <h3 className={`${css} font-bold font-space-grotest text-xl`}>{content}</h3>
   );
 }
 
