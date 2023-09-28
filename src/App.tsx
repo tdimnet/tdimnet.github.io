@@ -5,13 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
-import About from "./pages/About";
-import AllProjects from "./pages/AllProjects";
 import Home from "./pages/Home";
-import Programming from "./pages/Programming";
-import Project from "./pages/Project";
-import Teaching from "./pages/Teaching";
-import Writing from "./pages/Writing";
+import Publications from "./pages/Publications";
 
 function App() {
   return (
@@ -22,12 +17,7 @@ function App() {
             <Header />
           </div>
           <Routes>
-            <Route path="/about" element={<About />} />
-            <Route path="/programming" element={<Programming />} />
-            <Route path="/project/:id" element={<Project />} />
-            <Route path="/projects" element={<AllProjects />} />
-            <Route path="/teaching" element={<Teaching />} />
-            <Route path="/writing" element={<Writing />} />
+            <Route path="/publications" element={<Publications />} />
             <Route path="/" element={<Home />} />
           </Routes>
           <Footer />

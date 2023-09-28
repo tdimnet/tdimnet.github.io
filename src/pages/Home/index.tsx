@@ -40,12 +40,12 @@ function Page() {
             gave conferences and lessons at On-Train, IronHack, and some other
             local bootcamps.
           </Paragraph>
-          <Paragraph css="mb-3">
+          {/* <Paragraph css="mb-3">
             Depending on your objective, you might have a look on{" "}
             <Link content="Link one" to="#" />,{" "}
             <Link content="Link two" to="#" />, or{" "}
             <Link content="Link three" to="#" />.
-          </Paragraph>
+          </Paragraph> */}
         </div>
       </section>
     </main>
