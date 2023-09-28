@@ -15,7 +15,11 @@ function Page() {
           <Banner src="/assets/sample-img.png" alt="" />
         </div>
         <article className="mb-8">
-          <Heading css="text-white mb-5" content="Trials" as="h1" />
+          <Heading
+            css="text-white mb-5"
+            content="Having Fun with Code"
+            as="h1"
+          />
           <Paragraph css="mb-3">
             I always enjoy experimenting with new technologies and concepts.
             Often, these explorations evolve into projects for my students or

@@ -13,12 +13,12 @@ function Component() {
     <header className="row-span-1">
       <nav>
         <ul className="flex flex-row items-end mb-3">
-          <li className="mr-2">
+          <li className="mr-2 lg:mr-5">
             <Link to="/">
               <Heading css="text-white" content="tom" as="h3" />
             </Link>
           </li>
-          <li className="mr-2">
+          <li className="mr-2 lg:mr-5">
             <Link to="/publications">
               <Paragraph
                 css={
@@ -44,7 +44,7 @@ function Component() {
               </Paragraph>
             </Link>
           </li>
-          <li className="ml-auto mr-2">
+          <li className="ml-auto mr-2 lg:mr-5">
             <a
               className="opacity-80 hover:opacity-100 ease-in duration-200 hover:scale-125"
               href="https://github.com/tdimnet"

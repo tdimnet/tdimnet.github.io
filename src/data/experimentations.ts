@@ -12,4 +12,10 @@ export const experimentations: Experimentation[] = [
     img: "/assets/calculator-app.jpg",
     technologies: ["TypeScript", "TailWind", "Vitest"],
   },
+  {
+    id: 2,
+    name: "E-Commerce Product Page",
+    img: "/assets/e-commerce-app.jpg",
+    technologies: ["React", "TypeScript", "TailWind", "Vite", "Vitest"],
+  },
 ];
