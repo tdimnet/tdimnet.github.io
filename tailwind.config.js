@@ -14,9 +14,6 @@ module.exports = {
       teriary: MINE_SHAFT,
       customGrey: ALTO,
       white: WHITE
-    },
-    fontFamily: {
-      'space-grotest': ['Space Grotesk', 'sans-serif']
     }
   },
   plugins: [],
