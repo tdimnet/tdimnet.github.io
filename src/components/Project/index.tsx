@@ -4,30 +4,19 @@ import Link from "../Link";
 import Paragraph from "../Paragraph";
 
 function Component({
-  id,
   skills,
   title,
+  img,
 }: {
-  codeUrl?: string;
-  id: number;
-  projectUrl: string;
   skills: string[];
   title: string;
+  img: string;
 }) {
   return (
     <div>
-      <Image src="/assets/sample-img.png" alt="Just a sample image" />
-      <Heading css="text-white" content={title} as="h3" />
-      <div className="flex flex-wrap">
-        {skills.map((skill) => (
-          <div key={skill} className="mr-2 mb-1">
-            <Paragraph>{skill}</Paragraph>
-          </div>
-        ))}
-      </div>
-      <h4>
-        <Link content="Learn more" to={`/project/${id}`} />
-      </h4>
+      <Image css="mb-5" src={img} alt={title} />
+      <Heading css="text-white mb-1" content={title} as="h3" />
+      <Paragraph>{skills.join(", ")}</Paragraph>
     </div>
   );
 }

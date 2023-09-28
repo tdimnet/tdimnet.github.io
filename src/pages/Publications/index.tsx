@@ -17,7 +17,11 @@ function Page() {
         </div>
         <div className="grid lg:grid-cols-3 gap-8">
           <article className="lg:col-span-2">
-            <Heading css="text-white mb-5" content="Publications" as="h1" />
+            <Heading
+              css="text-white mb-5"
+              content="The Pen is Mightier than the Sword"
+              as="h1"
+            />
             <Paragraph css="mb-3">
               Writing holds a special place in my heart as it forms a
               significant part of my learning and teaching process. I take
