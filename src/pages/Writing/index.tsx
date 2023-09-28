@@ -1,8 +1,12 @@
+import Heading from "../../components/Heading";
+import Paragraph from "../../components/Paragraph";
+
 function Page() {
   return (
-    <div>
-      <h1 className="text-white">This is the Writing Page</h1>
-    </div>
+    <main>
+      <Heading css="text-white" as="h1" content="Writing Heading" />
+      <Paragraph>Programming and Teaching have in common Writing.</Paragraph>
+    </main>
   );
 }
 
