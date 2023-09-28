@@ -10,7 +10,10 @@ function Page() {
     <main className="mb-8">
       <section>
         <div className="h-96 mb-12">
-          <Banner src="/assets/sample-img.png" alt="" />
+          <Banner
+            src="/assets/software-engineer.png"
+            alt="A software engineer in pixel art"
+          />
         </div>
         <div className="grid lg:grid-cols-3 gap-8">
           <article className="lg:col-span-2">

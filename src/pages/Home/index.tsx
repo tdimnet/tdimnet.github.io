@@ -34,12 +34,12 @@ function Page() {
             topics but also about sharing this knowledge.
           </Paragraph>
           <Paragraph css="mb-3">
-            Though I occasionally grace the stage at conferences, my true
-            strengths shine through in personal coaching and hands-on coding.
-            Over the years, I’ve honed my skills and expertise across various
-            roles and organizations. My journey includes roles as a Software
-            Engineer and Developer Advocate at Datadog, a Lead Teacher at
-            OpenClassrooms, and a Lead Developer/CTO at SensCritique.
+            Though I occasionally speak at conferences, my true strengths shine
+            through in personal coaching and hands-on coding. Over the years,
+            I’ve honed my skills and expertise across various roles and
+            organizations. My journey includes roles as a Software Engineer and
+            Developer Advocate at Datadog, a Lead Teacher at OpenClassrooms, and
+            a Lead Developer/CTO at SensCritique.
           </Paragraph>
           <Paragraph css="mb-5">
             My commitment to fostering learning and development extends beyond
