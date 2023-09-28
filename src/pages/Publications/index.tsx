@@ -37,9 +37,14 @@ function Page() {
               inspires.
             </Paragraph>
             <Paragraph css="mb-3">
-              You can explore most of my writings on my Medium account, a space
-              where education meets insight, complexity is unraveled, and
-              knowledge is shared generously.
+              You can explore most of my writings on{" "}
+              <Link
+                content="my Medium account"
+                external
+                to="https://tdimnet.medium.com/"
+              />
+              , a space where education meets insight, complexity is unraveled,
+              and knowledge is shared generously.
             </Paragraph>
           </article>
           <aside>
