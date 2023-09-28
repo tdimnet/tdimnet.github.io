@@ -7,6 +7,7 @@ import Header from "./components/Header";
 
 import Home from "./pages/Home";
 import Publications from "./pages/Publications";
+import Project from "./pages/Project";
 
 function App() {
   return (

@@ -9,7 +9,7 @@ function Page() {
       <section className="flex flex-col md:flex-row-reverse">
         <Image
           src="/assets/profil-picture.png"
-          css="mb-5 w-96"
+          css="mb-5 w-96 object-cover"
           alt="Someone wearing a baseball cap in pixel art"
         />
         <div className="mr-10">
@@ -27,18 +27,26 @@ function Page() {
           <Paragraph css="mb-3">
             Based in Paris, I am the founder of{" "}
             <Link content="NX Academy" to="https://beta.nx.academy/" external />
-            . My goal is to help developers achieve their objectives, whatever
-            they may be. I have a keen interest in various subjects, including
-            Computer Science, Data Science, Learning and Teaching Sciences,
-            Psychology, and Philosophy. I sometimes speak at conferences but I
-            trully shine when I coach people and write code.
+            , where my mission is to empower developers to reach their goals,
+            whatever they may be. With a diverse interest in Computer Science,
+            Data Science, Learning and Teaching Sciences, Psychology, and
+            Philosophy, I’m not only passionate about delving into complex
+            topics but also about sharing this knowledge.
           </Paragraph>
           <Paragraph css="mb-3">
-            Among the years, I've worked for various companies. I've been a
-            Software Enginner and Developer Advocate at Datadog, a Lead Teacher
-            at OpenClassrooms, a Lead Developer / CTO at SensCritique. I also
-            gave conferences and lessons at On-Train, IronHack, and some other
-            local bootcamps.
+            Though I occasionally grace the stage at conferences, my true
+            strengths shine through in personal coaching and hands-on coding.
+            Over the years, I’ve honed my skills and expertise across various
+            roles and organizations. My journey includes roles as a Software
+            Engineer and Developer Advocate at Datadog, a Lead Teacher at
+            OpenClassrooms, and a Lead Developer/CTO at SensCritique.
+          </Paragraph>
+          <Paragraph css="mb-5">
+            My commitment to fostering learning and development extends beyond
+            traditional roles - I've been a speaker and instructor at On-Train,
+            IronHack, and several other local bootcamps, where I’ve shared
+            insights and knowledge that bridge the gap between learning and
+            practical application.
           </Paragraph>
           {/* <Paragraph css="mb-3">
             Depending on your objective, you might have a look on{" "}
