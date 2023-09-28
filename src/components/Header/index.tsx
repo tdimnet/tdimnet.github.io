@@ -31,6 +31,19 @@ function Component() {
               </Paragraph>
             </Link>
           </li>
+          <li className="mr-4">
+            <Link to="/experimentations">
+              <Paragraph
+                css={
+                  pathname === "/experimentations"
+                    ? "border-b border-b-secondary"
+                    : ""
+                }
+              >
+                Experimentations
+              </Paragraph>
+            </Link>
+          </li>
           <li className="ml-auto mr-4">
             <a
               className="opacity-80 hover:opacity-100 ease-in duration-200 hover:scale-125"

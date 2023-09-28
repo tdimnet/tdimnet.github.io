@@ -7,7 +7,7 @@ import Header from "./components/Header";
 
 import Home from "./pages/Home";
 import Publications from "./pages/Publications";
-import Project from "./pages/Project";
+import Experimentations from "./pages/Experimentations";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
           </div>
           <Routes>
             <Route path="/publications" element={<Publications />} />
+            <Route path="/experimentations" element={<Experimentations />} />
             <Route path="/" element={<Home />} />
           </Routes>
           <Footer />
