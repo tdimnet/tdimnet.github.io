@@ -13,7 +13,11 @@ function Page() {
           alt="Someone wearing a baseball cap in pixel art"
         />
         <div className="mr-10">
-          <Paragraph css="mb-3 text-lg">Thomas "tom" Dimnet</Paragraph>
+          <Heading
+            css="text-white mb-2"
+            content="Thomas 'tom' Dimnet"
+            as="h3"
+          />
           <Heading
             css="text-white mb-2"
             content="Founder - NX Academy"
