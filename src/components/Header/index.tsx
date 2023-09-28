@@ -10,10 +10,15 @@ function Component() {
   return (
     <header className="row-span-1">
       <nav>
-        <ul className="flex flex-row items-end">
+        <ul className="flex flex-row items-end mb-3">
           <li className="mr-4">
             <Link to="/">
               <Heading css="text-white" content="tom" as="h3" />
+            </Link>
+          </li>
+          <li className="mr-4">
+            <Link to="/publications">
+              <Paragraph>Publications</Paragraph>
             </Link>
           </li>
           <li className="ml-auto mr-4">
