@@ -19,6 +19,19 @@ function Component() {
             </Link>
           </li>
           <li className="hidden md:block mr-2 lg:mr-5">
+            <Link to="/teaching">
+              <Paragraph
+                css={
+                  pathname === "/teaching"
+                    ? "underline decoration-secondary underline-offset-4"
+                    : ""
+                }
+              >
+                Teaching
+              </Paragraph>
+            </Link>
+          </li>
+          <li className="hidden md:block mr-2 lg:mr-5">
             <Link to="/publications">
               <Paragraph
                 css={
@@ -40,7 +53,7 @@ function Component() {
                     : ""
                 }
               >
-                Trials
+                Experimentations
               </Paragraph>
             </Link>
           </li>
@@ -65,6 +78,19 @@ function Component() {
         </ul>
         <ul className="flex">
           <li className="md:hidden mr-2 lg:mr-5">
+            <Link to="/teaching">
+              <Paragraph
+                css={
+                  pathname === "/teaching"
+                    ? "underline decoration-secondary underline-offset-4"
+                    : ""
+                }
+              >
+                Teaching
+              </Paragraph>
+            </Link>
+          </li>
+          <li className="md:hidden mr-2 lg:mr-5">
             <Link to="/publications">
               <Paragraph
                 css={
@@ -86,7 +112,7 @@ function Component() {
                     : ""
                 }
               >
-                Trials
+                Experimentations
               </Paragraph>
             </Link>
           </li>
