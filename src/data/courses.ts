@@ -42,4 +42,25 @@ export const courses: Course[] = [
     url: "https://openclassrooms.com/fr/courses/7159296-deboguez-l-interface-de-votre-site-internet",
     brand: "oc",
   },
+  {
+    id: 6,
+    language: "🇫🇷",
+    name: "Conteneurisez vos applications avec Docker",
+    url: "https://beta.nx.academy/p/conteneurisez-vos-applications-avec-docker",
+    brand: "nx",
+  },
+  {
+    id: 7,
+    language: "🇫🇷",
+    name: "Créez des pipelines CI/CD avec les GitHub Actions",
+    url: "https://beta.nx.academy/p/creez-des-pipelines-ci-cd-avec-les-github-actions",
+    brand: "nx",
+  },
+  {
+    id: 8,
+    language: "🇫🇷",
+    name: "Utilisez des paradigmes de programmation",
+    url: "https://beta.nx.academy/p/utilisez-des-paradigmes-de-programmation-avec-typescript",
+    brand: "nx",
+  },
 ];

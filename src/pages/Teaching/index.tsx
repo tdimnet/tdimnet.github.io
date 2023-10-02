@@ -57,7 +57,7 @@ function Page() {
           </article>
           <aside>
             <Heading css="text-white mb-4" content="Selected Courses" as="h2" />
-            <div>
+            <div className="pb-5 mb-5 border-b-2 border-b-secondary">
               <Heading
                 css="text-white mb-2"
                 content="With NX Academy"
