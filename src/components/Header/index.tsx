@@ -18,7 +18,7 @@ function Component() {
               <Heading css="text-white" content="tom" as="h3" />
             </Link>
           </li>
-          <li className="mr-2 lg:mr-5">
+          <li className="hidden md:block mr-2 lg:mr-5">
             <Link to="/publications">
               <Paragraph
                 css={
@@ -31,7 +31,7 @@ function Component() {
               </Paragraph>
             </Link>
           </li>
-          <li className="mr-3">
+          <li className="hidden md:block mr-3">
             <Link to="/experimentations">
               <Paragraph
                 css={
@@ -61,6 +61,34 @@ function Component() {
             >
               <MediumIcon />
             </a>
+          </li>
+        </ul>
+        <ul className="flex">
+          <li className="md:hidden mr-2 lg:mr-5">
+            <Link to="/publications">
+              <Paragraph
+                css={
+                  pathname === "/publications"
+                    ? "underline decoration-secondary underline-offset-4"
+                    : ""
+                }
+              >
+                Publications
+              </Paragraph>
+            </Link>
+          </li>
+          <li className="md:hidden mr-3">
+            <Link to="/experimentations">
+              <Paragraph
+                css={
+                  pathname === "/experimentations"
+                    ? "underline decoration-secondary underline-offset-4"
+                    : ""
+                }
+              >
+                Trials
+              </Paragraph>
+            </Link>
           </li>
         </ul>
       </nav>

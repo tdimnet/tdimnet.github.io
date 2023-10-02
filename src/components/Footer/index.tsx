@@ -8,7 +8,7 @@ function Component() {
   return (
     <footer className="flex flex-col justify-center items-center border-t-2 border-white pt-5 md:flex-row">
       <Link to="/">
-        <Heading css="text-white" content="tom" as="h3" />
+        <Heading css="text-white mb-5" content="tom" as="h3" />
       </Link>
       <ul className="grid grid-cols-2 md:ml-auto">
         <li>
