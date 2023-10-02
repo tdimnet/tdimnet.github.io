@@ -12,7 +12,7 @@ function Page() {
     <main className="mb-8">
       <section className="pr-3">
         <div className="h-96 mb-12">
-          <Banner src="/assets/sample-img.png" alt="" />
+          <Banner src="/assets/a-laboratory.png" alt="A laboratory" />
         </div>
         <article className="mb-8">
           <Heading
