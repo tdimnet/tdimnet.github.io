@@ -2,6 +2,7 @@ const CODGRAY = '#151515'
 const SHAMROCK = '#4EE1A0'
 const MINE_SHAFT = '#242424'
 const ALTO = '#d9d9d9'
+const PIZAZZ = "#FFA500"
 const WHITE = '#FFFFFF'
 
 
@@ -13,7 +14,8 @@ module.exports = {
       secondary: SHAMROCK,
       teriary: MINE_SHAFT,
       customGrey: ALTO,
-      white: WHITE
+      white: WHITE,
+      orange: PIZAZZ
     }
   },
   plugins: [],

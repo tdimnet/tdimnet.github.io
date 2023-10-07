@@ -32,6 +32,19 @@ function Component() {
             </Link>
           </li>
           <li className="hidden md:block mr-2 lg:mr-5">
+            <Link to="/projects">
+              <Paragraph
+                css={
+                  pathname === "/projects"
+                    ? "underline decoration-secondary underline-offset-4"
+                    : ""
+                }
+              >
+                Projects
+              </Paragraph>
+            </Link>
+          </li>
+          <li className="hidden md:block mr-2 lg:mr-5">
             <Link to="/publications">
               <Paragraph
                 css={
@@ -76,8 +89,8 @@ function Component() {
             </a>
           </li>
         </ul>
-        <ul className="flex">
-          <li className="md:hidden mr-2 lg:mr-5">
+        <ul className="md:hidden w-4/5 overflow-x-scroll">
+          <li className="mr-2">
             <Link to="/teaching">
               <Paragraph
                 css={
@@ -90,7 +103,7 @@ function Component() {
               </Paragraph>
             </Link>
           </li>
-          <li className="md:hidden mr-2 lg:mr-5">
+          <li className="mr-2">
             <Link to="/publications">
               <Paragraph
                 css={
@@ -103,7 +116,7 @@ function Component() {
               </Paragraph>
             </Link>
           </li>
-          <li className="md:hidden mr-3">
+          <li className="mr-3">
             <Link to="/experimentations">
               <Paragraph
                 css={

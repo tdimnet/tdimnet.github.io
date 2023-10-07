@@ -42,8 +42,9 @@ function Page() {
             through in personal coaching and hands-on coding. Over the years,
             I’ve honed my skills and expertise across various roles and
             organizations. My journey includes roles as a Software Engineer and
-            Developer Advocate at Datadog, a Lead Teacher at OpenClassrooms, and
-            a Lead Developer/CTO at SensCritique.
+            Developer Advocate at <span className="text-orange">Datadog</span>,
+            a Lead Teacher at OpenClassrooms, and a Lead Developer/CTO at
+            SensCritique.
           </Paragraph>
           <Paragraph css="mb-5">
             My commitment to fostering learning and development extends beyond
