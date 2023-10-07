@@ -14,7 +14,7 @@ function Page() {
         <div className="h-96 mb-12">
           <Banner src="/assets/a-laboratory.png" alt="A laboratory" />
         </div>
-        <article className="mb-8">
+        <article className="mb-12">
           <Heading
             css="text-white mb-5"
             content="Having Fun with Code"
@@ -45,6 +45,11 @@ function Page() {
             discussions that spur innovation and collaborative learning.
           </Paragraph>
         </article>
+        <Heading
+          css="text-white mb-5"
+          content="Enjoyable Experimentations"
+          as="h2"
+        />
         <ProjectsGrid>
           {experimentations.map((experimentation) => (
             <Project

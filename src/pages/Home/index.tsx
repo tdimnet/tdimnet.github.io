@@ -5,7 +5,7 @@ import Link from "../../components/Link";
 
 function Page() {
   return (
-    <main className="row-span-5 lg:mt-36">
+    <main className="row-span-5 lg:mt-20">
       <section className="flex flex-col md:flex-row-reverse">
         <Image
           src="/assets/profil-picture.png"
