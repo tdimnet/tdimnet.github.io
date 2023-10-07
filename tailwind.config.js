@@ -2,7 +2,7 @@ const CODGRAY = '#151515'
 const SHAMROCK = '#4EE1A0'
 const MINE_SHAFT = '#242424'
 const ALTO = '#d9d9d9'
-const PIZAZZ = "#FFA500"
+const PIZAZZ = "#F4AC45"
 const WHITE = '#FFFFFF'
 
 

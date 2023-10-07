@@ -11,11 +11,11 @@ import { calculateYears } from "../../utils/calculateYears";
 function Page() {
   return (
     <main className="mb-8">
-      <section>
+      <section className="mb-10">
         <div className="h-96 mb-12">
           <Banner
-            src="/assets/sample-img.png"
-            alt="A classroom with computers in pixel art"
+            src="/assets/people-working-in-an-office.png"
+            alt="People working in an office"
           />
         </div>
         <div className="grid lg:grid-cols-3 gap-8">
