@@ -21,4 +21,11 @@ export const projects: Project[] = [
     img: "/assets/sample-img.png",
     technologies: ["ReactJS", "Redux", "Sass"],
   },
+  {
+    id: 3,
+    name: "NX Academy",
+    url: "https://www.google.fr",
+    img: "/assets/sample-img.png",
+    technologies: ["Docker", "GitHub Actions", "TypeScript"],
+  },
 ];

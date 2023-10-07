@@ -104,6 +104,19 @@ function Component() {
             </Link>
           </li>
           <li className="mr-2">
+            <Link to="/projects">
+              <Paragraph
+                css={
+                  pathname === "/projects"
+                    ? "underline decoration-secondary underline-offset-4"
+                    : ""
+                }
+              >
+                Projects
+              </Paragraph>
+            </Link>
+          </li>
+          <li className="mr-2">
             <Link to="/publications">
               <Paragraph
                 css={

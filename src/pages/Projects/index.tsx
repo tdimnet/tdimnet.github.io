@@ -5,6 +5,8 @@ import ProjectsGrid from "../../layouts/ProjectsGrid";
 import Project from "../../components/Project";
 
 import { projects } from "../../data/projects";
+import { technologies } from "../../data/technologies";
+import { calculateYears } from "../../utils/calculateYears";
 
 function Page() {
   return (
@@ -38,6 +40,14 @@ function Page() {
               content="Technologies at a Glance"
               as="h2"
             />
+            <ul className="text-white pl-4">
+              {technologies.map((technology) => (
+                <li key={technology.id} className="flex items-center mb-3">
+                  <img src={technology.img} className="h-5 w-5 mr-3" alt="" />
+                  {technology.name} - {calculateYears(technology.yearStart)}
+                </li>
+              ))}
+            </ul>
           </aside>
         </div>
       </section>
