@@ -33,6 +33,22 @@ function Page() {
               our raw energies into passion and arouse interest in subjects we
               initially found inscrutable or unappealing.
             </Paragraph>
+            <Paragraph css="mb-3">
+              In life, I am driven by two passions: unraveling complex problems
+              through code and imparting the skills to others on how to navigate
+              such challenges. We all carry the imprint of great teachers from
+              our schooling years – individuals who had the alchemy to transmute
+              our raw energies into passion and arouse interest in subjects we
+              initially found inscrutable or unappealing.
+            </Paragraph>
+            <Paragraph css="mb-3">
+              In life, I am driven by two passions: unraveling complex problems
+              through code and imparting the skills to others on how to navigate
+              such challenges. We all carry the imprint of great teachers from
+              our schooling years – individuals who had the alchemy to transmute
+              our raw energies into passion and arouse interest in subjects we
+              initially found inscrutable or unappealing.
+            </Paragraph>
           </article>
           <aside>
             <Heading
