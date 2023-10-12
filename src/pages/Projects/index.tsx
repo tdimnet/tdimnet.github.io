@@ -22,32 +22,36 @@ function Page() {
           <article className="lg:col-span-2">
             <Heading
               css="text-white mb-5"
-              content="A Great Title for Projects"
+              content="Between the search for meaning and technical excellence"
               as="h1"
             />
             <Paragraph css="mb-3">
-              In life, I am driven by two passions: unraveling complex problems
-              through code and imparting the skills to others on how to navigate
-              such challenges. We all carry the imprint of great teachers from
-              our schooling years – individuals who had the alchemy to transmute
-              our raw energies into passion and arouse interest in subjects we
-              initially found inscrutable or unappealing.
+              I strive to focus my efforts on projects that carry a profound
+              sense of purpose and contribute positively to people's lives. This
+              commitment to meaningful work fuels my passion and motivation.
+              Whether it's designing solutions that enhance accessibility for
+              individuals with disabilities or developing secure platforms that
+              safeguard sensitive data, I find fulfillment in leveraging my
+              technical expertise to make a tangible impact on society.
             </Paragraph>
             <Paragraph css="mb-3">
-              In life, I am driven by two passions: unraveling complex problems
-              through code and imparting the skills to others on how to navigate
-              such challenges. We all carry the imprint of great teachers from
-              our schooling years – individuals who had the alchemy to transmute
-              our raw energies into passion and arouse interest in subjects we
-              initially found inscrutable or unappealing.
+              However, at my core, I remain a dedicated technician, drawn to the
+              challenges of projects characterized by their technical
+              intricacies. I relish the opportunity to tackle high-stake
+              projects that demand a high level of technical excellence. Whether
+              it's optimizing systems for scalability to handle high traffic
+              loads, ensuring robust security protocols to protect valuable
+              assets, or addressing complex technical constraints, I approach
+              these endeavors with a sense of excitement and dedication.
             </Paragraph>
             <Paragraph css="mb-3">
-              In life, I am driven by two passions: unraveling complex problems
-              through code and imparting the skills to others on how to navigate
-              such challenges. We all carry the imprint of great teachers from
-              our schooling years – individuals who had the alchemy to transmute
-              our raw energies into passion and arouse interest in subjects we
-              initially found inscrutable or unappealing.
+              In my professional journey, I've discovered a harmonious balance
+              between my quest for meaningful work and my unwavering dedication
+              to technical excellence. This equilibrium allows me to not only
+              create solutions that matter but also to refine and perfect them,
+              ensuring that they not only meet the highest technical standards
+              but also serve a greater purpose, making a lasting impact on the
+              world.
             </Paragraph>
           </article>
           <aside>
@@ -76,6 +80,7 @@ function Page() {
               title={project.name}
               skills={project.technologies}
               img={project.img}
+              withPixel={project.withPixel}
             />
           ))}
         </ProjectsGrid>

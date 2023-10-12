@@ -3,6 +3,7 @@ type Project = {
   name: string;
   url?: string;
   img: string;
+  withPixel?: string;
   technologies: string[];
 };
 
@@ -12,6 +13,7 @@ export const projects: Project[] = [
     name: "Popcorns",
     url: "https://www.google.fr",
     img: "/assets/popcorns-logo.png",
+    withPixel: "/assets/px-art-popcorns-logo.png",
     technologies: ["React Native", "Python", "Selenium"],
   },
   {
@@ -62,5 +64,12 @@ export const projects: Project[] = [
     url: "https://www.google.fr",
     img: "/assets/tiller-logo.png",
     technologies: ["React Native", "Redux", "Angular"],
+  },
+  {
+    id: 9,
+    name: "Nos Amis Les Oiseaux",
+    url: "https://www.google.fr",
+    img: "/assets/nao-logo.png",
+    technologies: ["Symfony", "Vanilla JS", "Sass"],
   },
 ];
