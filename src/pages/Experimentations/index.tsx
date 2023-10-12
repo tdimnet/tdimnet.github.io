@@ -57,6 +57,7 @@ function Page() {
               title={experimentation.name}
               skills={experimentation.technologies}
               img={experimentation.img}
+              withPixel={experimentation.pixelImg}
             />
           ))}
         </ProjectsGrid>

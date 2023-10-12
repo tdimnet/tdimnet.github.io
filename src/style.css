@@ -19,19 +19,24 @@
 }
 
 @layer components {
-  .project-imgs {
+  .project-img-wrapper {
     @apply relative mb-5;
   }
 
-  .project-imgs:hover .project-first-img {
-    @apply hover:opacity-0 duration-300;
+  .project-img {
+    @apply duration-300;
   }
+
+  .project-img-wrapper:hover .project-first-img {
+    @apply hover:opacity-0;
+  }
+
   .project-second-img {
     @apply absolute left-0 top-0 opacity-0;
   }
 
-  .project-imgs:hover .project-second-img {
-    @apply  hover:opacity-100 duration-300;
+  .project-img-wrapper:hover .project-second-img {
+    @apply  hover:opacity-100;
   }
 }
 
