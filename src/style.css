@@ -17,3 +17,21 @@
     font-family: 'Pixelify Sans', cursive;
   }
 }
+
+@layer components {
+  .project-imgs {
+    @apply relative mb-5;
+  }
+
+  .project-imgs:hover .project-first-img {
+    @apply hover:opacity-0 duration-300;
+  }
+  .project-second-img {
+    @apply absolute left-0 top-0 opacity-0;
+  }
+
+  .project-imgs:hover .project-second-img {
+    @apply  hover:opacity-100 duration-300;
+  }
+}
+

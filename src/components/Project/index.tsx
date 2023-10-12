@@ -14,7 +14,14 @@ function Component({
 }) {
   return (
     <div>
-      <Image css="mb-5" src={img} alt={title} />
+      <div className="project-imgs">
+        <Image css="project-first-img duration-300" src={img} alt={title} />
+        <Image
+          css="project-second-img duration-300"
+          src="/assets/pxArt.png"
+          alt={title}
+        />
+      </div>
       <Heading css="text-white mb-1" content={title} as="h3" />
       <Paragraph>{skills.join(", ")}</Paragraph>
     </div>
