@@ -9,9 +9,9 @@ function Page() {
   return (
     <main className="mb-8">
       <section>
-        <div className="h-96 mb-12">
+        <div className="h-80 md:h-[500px] 2xl:h-[700px] mb-8">
           <Banner
-            src="/assets/a-classrooms.png"
+            src="/assets/someone-teaching-computer-science-in-a-class.png"
             alt="A classroom with computers in pixel art"
           />
         </div>
