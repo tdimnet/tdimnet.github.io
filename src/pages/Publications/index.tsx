@@ -2,6 +2,7 @@ import Heading from "../../components/Heading";
 import Banner from "../../components/Banner";
 import Paragraph from "../../components/Paragraph";
 import Link from "../../components/Link";
+import BannerWrapper from "../../layouts/BannerWrapper";
 
 import { articles } from "../../data/articles";
 
@@ -9,12 +10,12 @@ function Page() {
   return (
     <main className="mb-8">
       <section>
-        <div className="h-96 mb-12">
+        <BannerWrapper>
           <Banner
-            src="/assets/software-engineer.png"
+            src="/assets/writter.png"
             alt="A software engineer in pixel art"
           />
-        </div>
+        </BannerWrapper>
         <div className="grid lg:grid-cols-3 gap-8">
           <article className="lg:col-span-2">
             <Heading
