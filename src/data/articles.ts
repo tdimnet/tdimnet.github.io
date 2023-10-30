@@ -42,4 +42,10 @@ export const articles: Article[] = [
     name: "A Tale of Two Engineers Discovering the Crystal Programming Language",
     url: "https://betterprogramming.pub/a-tale-of-two-engineers-discovering-the-crystal-programming-language-104b1fdbe525",
   },
+  {
+    id: 7,
+    language: "🇺🇸",
+    name: "Why do we Confuse Self-Confidence and Self-Esteem?",
+    url: "https://medium.com/@tdimnet/why-do-we-confuse-self-confidence-and-self-esteem-34c0f07ef18a",
+  },
 ];

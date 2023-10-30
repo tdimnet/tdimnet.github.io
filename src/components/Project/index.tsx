@@ -32,8 +32,25 @@ function Component({
       ) : (
         <Image css="mb-5" src={img} alt={title} />
       )}
-      <Heading css="text-white mb-1" content={title} as="h3" />
-      <Paragraph>{skills.join(", ")}</Paragraph>
+      <div className="mb-3">
+        <Heading css="text-white mb-1" content={title} as="h3" />
+        <Paragraph>{skills.join(", ")}</Paragraph>
+      </div>
+      {title === "Calculator App" ? (
+        <div>
+          <Link
+            to="https://tdimnet.github.io/Calculator-app/"
+            content="Live Project"
+            external
+          />
+          <span className="text-white"> - </span>
+          <Link
+            to="https://github.com/tdimnet/Calculator-app"
+            content="View code"
+            external
+          />
+        </div>
+      ) : null}
     </div>
   );
 }
