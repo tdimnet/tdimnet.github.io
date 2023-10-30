@@ -1,8 +1,9 @@
 import Banner from "../../components/Banner";
-import Paragraph from "../../components/Paragraph";
+import BannerWrapper from "../../layouts/BannerWrapper";
 import Heading from "../../components/Heading";
-import ProjectsGrid from "../../layouts/ProjectsGrid";
+import Paragraph from "../../components/Paragraph";
 import Project from "../../components/Project";
+import ProjectsGrid from "../../layouts/ProjectsGrid";
 
 import { projects } from "../../data/projects";
 import { technologies } from "../../data/technologies";
@@ -12,12 +13,12 @@ function Page() {
   return (
     <main className="mb-8">
       <section className="mb-10">
-        <div className="h-96 mb-12">
+        <BannerWrapper>
           <Banner
-            src="/assets/people-working-in-an-office.png"
-            alt="People working in an office"
+            src="/assets/small-office.png"
+            alt="A room with large windows and five people working diligently at their individual workstations, with a shared whiteboard on one wall."
           />
-        </div>
+        </BannerWrapper>
         <div className="grid lg:grid-cols-3 gap-8">
           <article className="lg:col-span-2">
             <Heading

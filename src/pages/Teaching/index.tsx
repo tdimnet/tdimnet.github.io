@@ -2,6 +2,7 @@ import Heading from "../../components/Heading";
 import Banner from "../../components/Banner";
 import Paragraph from "../../components/Paragraph";
 import Link from "../../components/Link";
+import BannerWrapper from "../../layouts/BannerWrapper";
 
 import { courses } from "../../data/courses";
 
@@ -9,12 +10,12 @@ function Page() {
   return (
     <main className="mb-8">
       <section>
-        <div className="h-96 mb-12">
+        <BannerWrapper>
           <Banner
-            src="/assets/a-classrooms.png"
-            alt="A classroom with computers in pixel art"
+            src="/assets/someone-teaching-computer-science-in-a-class.png"
+            alt="A classroom setting with a female teacher in front of a digital whiteboard displaying code, and students at desks with laptops."
           />
-        </div>
+        </BannerWrapper>
         <div className="grid lg:grid-cols-3 gap-8">
           <article className="lg:col-span-2">
             <Heading
