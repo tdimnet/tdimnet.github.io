@@ -4,6 +4,7 @@ import Heading from "../../components/Heading";
 import ProjectsGrid from "../../layouts/ProjectsGrid";
 import Project from "../../components/Project";
 import Link from "../../components/Link";
+import BannerWrapper from "../../layouts/BannerWrapper";
 
 import { experimentations } from "../../data/experimentations";
 
@@ -11,9 +12,9 @@ function Page() {
   return (
     <main className="mb-8">
       <section className="pr-3">
-        <div className="h-96 mb-12">
-          <Banner src="/assets/a-laboratory.png" alt="A laboratory" />
-        </div>
+        <BannerWrapper>
+          <Banner src="/assets/small-lab.png" alt="A laboratory" />
+        </BannerWrapper>
         <article className="mb-12">
           <Heading
             css="text-white mb-5"
