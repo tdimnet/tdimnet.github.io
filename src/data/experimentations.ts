@@ -12,13 +12,20 @@ export const experimentations: Experimentation[] = [
     name: "Calculator App",
     img: "/assets/calculator-app.jpg",
     pixelImg: "/assets/px-art-calculator-app.jpg",
-    technologies: ["TypeScript", "TailWind", "Vitest"],
+    technologies: ["TypeScript", "Tailwind", "Vitest"],
   },
   {
     id: 2,
     name: "E-Commerce Product Page",
     img: "/assets/e-commerce-app.jpg",
     pixelImg: "/assets/px-art-e-commerce-app.jpg",
-    technologies: ["React", "TypeScript", "TailWind", "Vite", "Vitest"],
+    technologies: ["React", "TypeScript", "Tailwind", "Storybook"],
+  },
+  {
+    id: 3,
+    name: "Age Calculator App",
+    img: "/assets/age-calculator-app.jpg",
+    pixelImg: "/assets/px-art-age-calculator-app.jpg",
+    technologies: ["HTML", "CSS", "JavaScript", "No framework"],
   },
 ];
