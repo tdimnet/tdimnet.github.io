@@ -51,6 +51,21 @@ function Component({
           />
         </div>
       ) : null}
+      {title === "Age Calculator App" ? (
+        <div>
+          <Link
+            to="https://tdimnet.github.io/Age-calculator-app/"
+            content="Live Project"
+            external
+          />
+          <span className="text-white"> - </span>
+          <Link
+            to="https://github.com/tdimnet/Age-calculator-app"
+            content="View code"
+            external
+          />
+        </div>
+      ) : null}
     </div>
   );
 }
