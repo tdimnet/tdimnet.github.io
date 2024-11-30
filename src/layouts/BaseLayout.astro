@@ -1,5 +1,11 @@
 ---
-import Header from "../components/Header.astro"
+import "../styles/normalize.css";
+import "../styles/reset.css";
+
+import "@fontsource/pixelify-sans";
+import "@fontsource/space-grotesk";
+
+import Header from "../components/Header.astro";
 ---
 
 <html lang="en">
@@ -9,7 +15,7 @@ import Header from "../components/Header.astro"
     <meta name="generator" content={Astro.generator} />
 
     <link rel="icon" type="image/png" href="/icon-nx.png" />
-    
+
     <title>Thomas Dimnet</title>
   </head>
   <body>
@@ -17,3 +23,11 @@ import Header from "../components/Header.astro"
     <slot />
   </body>
 </html>
+
+<style>
+  body {
+    background-color: #151515;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+  }
+</style>
