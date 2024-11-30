@@ -8,10 +8,12 @@ import profilPicture from "../images/profil-picture.png"
 
 <BaseLayout>
 	<main>
-		<Image src={profilPicture} alt="Someone wearing a baseball cap in pixel art" />
-		<h1>Thomas `tom` Dimnet</h1>
-		<h2>Software Engineer - NX Academy</h2>
-		<h2>Computer Science Teacher - Eden School</h2>
+		<Image src={profilPicture} alt="Someone wearing a baseball cap in pixel art" class="hero-img" />
+		<div class="titles-wrapper">
+			<h1 class="main-title">Thomas `tom` Dimnet</h1>
+			<h2 class="secondary-title">Software Engineer - NX Academy</h2>
+			<h2 class="secondary-title">Computer Science Teacher - Eden School</h2>
+		</div>
 		<article>
 			<section>
 				Based in Paris, I am the founder of NX Academy, where my mission is to empower developers to reach their goals, whatever they may be. With a diverse interest in Computer Science, Data Science, Learning and Teaching Sciences, Psychology, and Philosophy, I’m not only passionate about delving into complex topics but also about sharing this knowledge.
@@ -25,3 +27,33 @@ import profilPicture from "../images/profil-picture.png"
 		</article>
 	</main>
 </BaseLayout>
+
+<style>
+	.hero-img {
+		height: 335px;
+		width: auto;
+		object-fit: cover;
+	}
+
+	.titles-wrapper {
+		margin-bottom: 1rem;
+	}
+
+	.main-title {
+		font-size: 1.25rem;
+		font-family: var(--pixelify-ff);
+	}
+
+	.secondary-title {
+		font-size: 1.75rem;
+		font-family: var(--pixelify-ff);
+	}
+
+	article {
+		color: var(--silver);
+	}
+
+	section {
+		margin-bottom: 1rem;
+	}
+</style>
