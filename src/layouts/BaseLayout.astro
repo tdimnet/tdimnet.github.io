@@ -1,11 +1,13 @@
 ---
 import "../styles/normalize.css";
 import "../styles/reset.css";
+import "../styles/variables.css";
 
 import "@fontsource/pixelify-sans";
 import "@fontsource/space-grotesk";
 
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro"
 ---
 
 <html lang="en">
@@ -19,8 +21,11 @@ import Header from "../components/Header.astro";
     <title>Thomas Dimnet</title>
   </head>
   <body>
-    <Header />
-    <slot />
+    <div class="wrapper">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
   </body>
 </html>
 
@@ -29,5 +34,13 @@ import Header from "../components/Header.astro";
     background-color: #151515;
     color: #fff;
     font-family: "Space Grotesk", sans-serif;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .wrapper {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 </style>
