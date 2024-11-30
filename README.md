@@ -1,86 +1,47 @@
-# tdimnet.github.io
+# Astro Starter Kit: Minimal
 
-My portfolio built with React, TypeScript, Vite, and Tailwind.
-
-
-## 1. Prerequisites
-
-- Node (>=18.14)
-
-
-## 2. Setting Up
-
-### 2.1. Cloning the repo
-
-- with ssh
-
-```
-git@github.com:tdimnet/tdimnet.github.io.git
+```sh
+npm create astro@latest -- --template minimal
 ```
 
-- with https
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
 
-```
-https://github.com/tdimnet/tdimnet.github.io.git
-```
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
+## 🚀 Project Structure
 
-### 2.2. Installing the dependencies 
+Inside of your Astro project, you'll see the following folders and files:
 
-```
-yarn
-```
-
-
-### 2.3. Lauching the dev server
-
-```
-yarn dev
-```
-
-
-### 2.4. Building for production
-
-```
-yarn build
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-### 2.5. Previewing the build artifact
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-```
-yarn preview
-```
+Any static assets, like images, can be placed in the `public/` directory.
 
-**Easy, right?**
+## 🧞 Commands
 
+All commands are run from the root of the project, from a terminal:
 
-## 3. Workflow
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-This project uses GitHub Actions and has an automated deployment process.
-The automated building process occurs only when something changes on `master`.
+## 👀 Want to learn more?
 
-- The production branch is `master`.
-- The dev (local devevelopment) branch is `dev`.
-- Each branch starts from `dev`, then is merged to `dev`, and finally `dev` is
-  merged to `master`.
-- I am using a GitHub flow approach. Each branch contains a theme: `core`,
-  `feat`, `fix`.
-
-## 4. Architecture
-
-All the code belongs in the `src` folder.
-
-From there, here are the rules I follow:
-
-- Each component lives inside its own folder. For example, the `Header`
-  component is located inside `src/components/Header`.
-- Each component is named `index`.
-- Each component is exported as `default`.
-- There are three different types of components at the moment:
-    - `icon`: svg icons.
-    - `page`: web pages
-    - `component`: everything else. I didn't add folders for typography and
-      layout, yet!
-
-
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
