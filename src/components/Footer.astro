@@ -1,14 +1,23 @@
+---
+import GitHubIcon from "../icons/GitHub.astro"
+import MediumIcon from "../icons/Medium.astro"
+---
+
 <footer>
     <h3>
-        <a href="#">Tom</a>
+        <a href="/">tom</a>
     </h3>
     <nav>
         <ul>
             <li>
-                <a href="#">Github</a>
+                <a href="#" target="_blank">
+                    <GitHubIcon />
+                </a>
             </li>
             <li>
-                <a href="#">Medium</a>
+                <a href="#" target="_blank">
+                    <MediumIcon />
+                </a>
             </li>
         </ul>
     </nav>
@@ -17,7 +26,28 @@
 <style>
     footer {
         border-top: 1px solid var(--white);
-        margin-top: 1.5rem;
-        padding-top: 1rem;
+        margin-top: 1.75rem;
+        padding-top: 1.25rem;
+        text-align: center;
+    }
+
+    h3 {
+        margin-bottom: 1.5rem;
+        font-family: var(--pixelify-ff);
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+	    color: var(--white);
     }
 </style>
