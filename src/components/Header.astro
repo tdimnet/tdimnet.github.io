@@ -1,0 +1,85 @@
+---
+import GitHubIcon from "../icons/GitHub.astro"
+import MediumIcon from "../icons/Medium.astro"
+---
+
+<header>
+  <nav class="main-navigation">
+    <ul>
+      <li>
+        <a class="username" href="#">tom</a>
+      </li>
+      <li class="ml-auto">
+        <a href="#">
+          <GitHubIcon />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <MediumIcon />
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="mobile-navigation">
+    <ul>
+      <li>
+        <a href="#">Teaching</a>
+      </li>
+      <li>
+        <a href="#">Projects</a>
+      </li>
+      <li>
+        <a href="#">Publications</a>
+      </li>
+      <li>
+        <a href="#">Experimentations</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    margin-bottom: 2rem;
+  }
+
+  a {
+    color: var(--white);
+    text-decoration: none;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+  }
+
+  .main-navigation {
+    margin-bottom: 1.25rem;
+  }
+
+  .main-navigation ul,
+  .mobile-navigation ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  .main-navigation ul {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+  }
+
+  .username {
+    font-family: var(--pixelify-ff);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .mobile-navigation a {
+    font-family: var(--pixelify-ff);
+    font-size: 1.125rem;
+    display: block;
+    padding-top: .175rem;
+    padding-bottom: .175rem;
+  }
+</style>

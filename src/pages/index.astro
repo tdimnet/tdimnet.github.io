@@ -1,16 +1,98 @@
 ---
+import { Image } from "astro:assets";
 
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import profilPicture from "../images/profil-picture.png";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Hello, World!</h1>
-	</body>
-</html>
+<BaseLayout>
+  <main>
+    <Image
+      src={profilPicture}
+      alt="Someone wearing a baseball cap in pixel art"
+      class="hero-img"
+    />
+    <div class="titles-wrapper">
+      <h1 class="main-title">Thomas <span class="shortname">tom</span> Dimnet</h1>
+      <h2 class="secondary-title">
+        Founder and Software Engineer - <a
+          class="nav-item"
+          href="#"
+          target="_blank">NX Academy</a
+        >
+      </h2>
+      <h2 class="secondary-title">
+        Computer Science Teacher - <a class="nav-item" href="#" target="_blank"
+          >Eden School</a
+        >
+      </h2>
+    </div>
+    <article>
+      <section>
+        Based in Paris, I am the founder of NX Academy, where my mission is to
+        empower developers to reach their goals, whatever they may be. With a
+        diverse interest in Computer Science, Data Science, Learning and
+        Teaching Sciences, Psychology, and Philosophy, I’m not only passionate
+        about delving into complex topics but also about sharing this knowledge.
+      </section>
+      <section>
+        Though I occasionally speak at conferences, my true strengths shine
+        through in personal coaching and hands-on coding. Over the years, I’ve
+        honed my skills and expertise across various roles and organizations. My
+        journey includes roles as a Software Engineer and Developer Advocate at
+        Datadog, a Lead Teacher at OpenClassrooms, and a Lead Developer/CTO at
+        SensCritique.
+      </section>
+      <section>
+        My commitment to fostering learning and development extends beyond
+        traditional roles - I've been a speaker and instructor at On-Train,
+        IronHack, and several other local bootcamps, where I’ve shared insights
+        and knowledge that bridge the gap between learning and practical
+        application.
+      </section>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .hero-img {
+    height: 335px;
+    width: auto;
+    object-fit: cover;
+  }
+
+  .titles-wrapper {
+    margin-bottom: 2rem;
+  }
+
+  .main-title {
+    font-size: 1.5rem;
+    font-family: var(--pixelify-ff);
+  }
+
+  .shortname {
+	color: var(--shamrock);
+  }
+
+  .secondary-title {
+    font-size: 1.875rem;
+    font-family: var(--pixelify-ff);
+	margin-bottom: 1.25rem;
+  }
+
+  .nav-item {
+	text-decoration: none;
+	color: var(--white);
+	border-bottom: 2px solid var(--shamrock);
+  }
+
+  article {
+    color: var(--silver);
+    font-size: 1.125rem;
+  }
+
+  section {
+    margin-bottom: 1rem;
+  }
+</style>

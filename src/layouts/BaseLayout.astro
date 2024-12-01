@@ -1,0 +1,46 @@
+---
+import "../styles/normalize.css";
+import "../styles/reset.css";
+import "../styles/variables.css";
+
+import "@fontsource/pixelify-sans";
+import "@fontsource/space-grotesk";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <title>Thomas Dimnet</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    background-color: var(--cod-gray);
+    color: var(--white);
+    font-family: var(--space-grotesk-ff);
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .wrapper {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
