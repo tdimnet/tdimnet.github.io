@@ -14,7 +14,7 @@ import profilPicture from "../images/profil-picture.png";
       class="hero-img"
     />
     <div class="titles-wrapper">
-      <h1 class="main-title">Thomas `tom` Dimnet</h1>
+      <h1 class="main-title">Thomas <span class="shortname">tom</span> Dimnet</h1>
       <h2 class="secondary-title">
         Founder and Software Engineer - <a
           class="nav-item"
@@ -63,7 +63,7 @@ import profilPicture from "../images/profil-picture.png";
   }
 
   .titles-wrapper {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .main-title {
@@ -71,9 +71,14 @@ import profilPicture from "../images/profil-picture.png";
     font-family: var(--pixelify-ff);
   }
 
+  .shortname {
+	color: var(--shamrock);
+  }
+
   .secondary-title {
     font-size: 1.875rem;
     font-family: var(--pixelify-ff);
+	margin-bottom: 1.25rem;
   }
 
   .nav-item {
