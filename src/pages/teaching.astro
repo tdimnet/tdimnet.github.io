@@ -1,14 +1,19 @@
 ---
+import { Image } from "astro:assets"
+
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import {
     nxLinks,
     ocLinks
 } from "../data/teachingLinks"
+
+import teacherInClass from "../images/teacher-in-class.png"
 ---
 
 <BaseLayout>
   <main>
+    <Image src={teacherInClass} class="hero-image" alt="A classroom setting with a female teacher in front of a digital whiteboard displaying code, and students at desks with laptops." />
     <section>
       <article>
         <h1>Passion comes with great teacher</h1>
