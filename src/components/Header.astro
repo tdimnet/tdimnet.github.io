@@ -9,6 +9,20 @@ import MediumIcon from "../icons/Medium.astro";
       <li>
         <a class="username" href="#">tom</a>
       </li>
+      <ul class="desktop-navigation">
+        <li>
+          <a href="#">Teaching</a>
+        </li>
+        <li>
+          <a href="#">Projects</a>
+        </li>
+        <li>
+          <a href="#">Publications</a>
+        </li>
+        <li>
+          <a href="#">Experimentations</a>
+        </li>
+      </ul>
       <li class="ml-auto">
         <a href="#">
           <GitHubIcon />
@@ -42,6 +56,10 @@ import MediumIcon from "../icons/Medium.astro";
 <style>
   header {
     margin-bottom: 1.5rem;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 2.5rem;
+    }
   }
 
   a {
@@ -73,6 +91,21 @@ import MediumIcon from "../icons/Medium.astro";
     font-family: var(--pixelify-ff);
     font-size: 1.5rem;
     font-weight: 700;
+  }
+
+  .main-navigation .desktop-navigation {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin-left: 16px;
+    }
+  }
+
+  .mobile-navigation {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
 
   .mobile-navigation a {
