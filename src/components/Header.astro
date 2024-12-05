@@ -7,11 +7,11 @@ import MediumIcon from "../icons/Medium.astro";
   <nav class="main-navigation">
     <ul>
       <li>
-        <a class="username" href="#">tom</a>
+        <a class="username" href="/">tom</a>
       </li>
       <ul class="desktop-navigation">
         <li>
-          <a href="#">Teaching</a>
+          <a href="/teaching">Teaching</a>
         </li>
         <li>
           <a href="#">Projects</a>
@@ -38,7 +38,7 @@ import MediumIcon from "../icons/Medium.astro";
   <nav class="mobile-navigation">
     <ul>
       <li>
-        <a href="#">Teaching</a>
+        <a href="/teaching">Teaching</a>
       </li>
       <li>
         <a href="#">Projects</a>
@@ -108,6 +108,7 @@ import MediumIcon from "../icons/Medium.astro";
     }
   }
 
+  .desktop-navigation a,
   .mobile-navigation a {
     font-family: var(--pixelify-ff);
     font-size: 1.125rem;
