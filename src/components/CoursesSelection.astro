@@ -1,0 +1,31 @@
+---
+type courseLink = {
+    content: string
+    href: string
+} 
+
+interface Props {
+    selectionTitle: string
+    coursesSelection: courseLink[]
+}
+
+const {
+    selectionTitle,
+    coursesSelection
+} = Astro.props
+---
+
+<section>
+    <h3>{selectionTitle}</h3>
+    <ul>
+        {
+            coursesSelection.map(course => (
+                <li>
+                    <a href={course.href} target="_blank">
+                        {course.content}
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</section>
