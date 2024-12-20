@@ -1,19 +1,23 @@
 ---
-import { Image } from "astro:assets"
+import { Image } from "astro:assets";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CoursesSelection from "../components/CoursesSelection.astro";
 
-import {
-    nxLinks,
-    ocLinks
-} from "../data/teachingLinks"
+import { nxLinks, ocLinks } from "../data/teachingLinks";
 
-import teacherInClass from "../images/teacher-in-class.png"
+import teacherInClass from "../images/teacher-in-class.png";
 ---
 
 <BaseLayout>
   <main>
-    <Image src={teacherInClass} class="hero-image" alt="A classroom setting with a female teacher in front of a digital whiteboard displaying code, and students at desks with laptops." />
+    <div class="banner">
+      <Image
+        src={teacherInClass}
+        class="hero-image"
+        alt="A classroom setting with a female teacher in front of a digital whiteboard displaying code, and students at desks with laptops."
+      />
+    </div>
     <section>
       <article>
         <h1>Passion comes with great teacher</h1>
@@ -50,31 +54,61 @@ import teacherInClass from "../images/teacher-in-class.png"
       </article>
       <aside>
         <h2>Selected Courses</h2>
-        <section>
-            <h3>With NX Academy</h3>
-            <ul>
-                {
-                    nxLinks.map(link => (
-                        <li>
-                            <a href={link.href}>{link.content}</a>
-                        </li>
-                    ))
-                }
-            </ul>
-        </section>
-        <section>
-            <h3>With OpenClassrooms</h3>
-            <ul>
-                {
-                    ocLinks.map(link => (
-                        <li>
-                            <a href={link.href}>{link.content}</a>
-                        </li>
-                    ))
-                }
-            </ul>
-        </section>
+        <CoursesSelection
+          selectionTitle="With NX Academy"
+          coursesSelection={nxLinks}
+        />
+        <hr />
+        <CoursesSelection
+          selectionTitle="With OpenClassrooms"
+          coursesSelection={ocLinks}
+        />
       </aside>
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  .banner {
+    position: relative;
+    height: 320px;
+  }
+
+  .banner img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    color: var(--silver);
+    font-size: 1.125rem;
+  }
+
+  aside {
+    margin-bottom: 64px;
+  }
+
+  h2 {
+    font-family: var(--pixelify-ff);
+    margin-bottom: 16px;
+  }
+
+  hr {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    color: var(--shamrock);
+  }
+
+  @media screen and (min-width: 1024px) {
+    section {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 48px;
+    }
+
+    aside {
+      padding-top: 32px;
+    }
+  }
+</style>

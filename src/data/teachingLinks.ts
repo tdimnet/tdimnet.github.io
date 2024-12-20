@@ -5,38 +5,38 @@ type link = {
 
 const nxLinks: link[] = [
     {
-        content: "Conteneurisez vos applications avec Docker",
+        content: "🇫🇷 Conteneurisez vos applications avec Docker",
         href: "#"
     },
     {
-        content: "Créez des pipelines CI/CD avec les GitHub Actions",
+        content: "🇫🇷 Créez des pipelines CI/CD avec les GitHub Actions",
         href: "#"
     },
     {
-        content: "Utilisez des paradigmes de programmation",
+        content: "🇫🇷 Utilisez des paradigmes de programmation",
         href: "#"
     }
 ]
 
 const ocLinks: link[] = [
     {
-        content: "Make Your Web Content Accessible",
+        content: "🇺🇸 Make Your Web Content Accessible",
         href: "#"
     },
     {
-        content: "Utilisez des design patterns en JavaScript",
+        content: "🇫🇷 Utilisez des design patterns en JavaScript",
         href: "#"
     },
     {
-        content: "Preparez-vous aux tests techniques pour devenir developpeur",
+        content: "🇫🇷 Preparez-vous aux tests techniques pour devenir developpeur",
         href: "#"
     },
     {
-        content: "Code an Accessible Webiste in HTML and CSS",
+        content: "🇺🇸 Code an Accessible Webiste in HTML and CSS",
         href: "#"
     },
     {
-        content: "Deboguez l'interface de votre site internet",
+        content: "🇫🇷 Deboguez l'interface de votre site internet",
         href: "#"
     }
 ]
