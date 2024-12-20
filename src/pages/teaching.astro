@@ -1,8 +1,7 @@
 ---
-import { Image } from "astro:assets";
-
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CoursesSelection from "../components/CoursesSelection.astro";
+import Banner from "../components/Banner.astro"
 
 import { nxLinks, ocLinks } from "../data/teachingLinks";
 
@@ -11,13 +10,10 @@ import teacherInClass from "../images/teacher-in-class.png";
 
 <BaseLayout>
   <main>
-    <div class="banner">
-      <Image
-        src={teacherInClass}
-        class="hero-image"
-        alt="A classroom setting with a female teacher in front of a digital whiteboard displaying code, and students at desks with laptops."
-      />
-    </div>
+    <Banner
+      alt="A classroom setting with a female teacher in front of a digital whiteboard displaying code, and students at desks with laptops."
+      src={teacherInClass}
+    />
     <section>
       <article>
         <h1>Passion comes with great teacher</h1>

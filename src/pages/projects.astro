@@ -1,9 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Banner from "../components/Banner.astro"
+
+import peopleInOffice from "../images/people-in-an-office.png"
 ---
 
 <BaseLayout>
     <main>
-        <h1>Hello, Projects.</h1>
+        <Banner
+            alt="Some alt"
+            src={peopleInOffice}
+        />
+        <section>
+            <article>Some text</article>
+            <aside>Some aside</aside>
+        </section>
     </main>
 </BaseLayout>
