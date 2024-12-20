@@ -1,31 +1,51 @@
 ---
 type courseLink = {
-    content: string
-    href: string
-} 
+  content: string;
+  href: string;
+};
 
 interface Props {
-    selectionTitle: string
-    coursesSelection: courseLink[]
+  selectionTitle: string;
+  coursesSelection: courseLink[];
 }
 
-const {
-    selectionTitle,
-    coursesSelection
-} = Astro.props
+const { selectionTitle, coursesSelection } = Astro.props;
 ---
 
 <section>
-    <h3>{selectionTitle}</h3>
-    <ul>
-        {
-            coursesSelection.map(course => (
-                <li>
-                    <a href={course.href} target="_blank">
-                        {course.content}
-                    </a>
-                </li>
-            ))
-        }
-    </ul>
+  <h3>{selectionTitle}</h3>
+  <ul>
+    {
+      coursesSelection.map((course) => (
+        <li>
+          <a href={course.href} target="_blank">
+            {course.content}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </section>
+
+<style>
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 12px;
+  }
+
+  a {
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 1px solid var(--shamrock);
+    padding-bottom: 4px;
+    transition: 0.4s;
+
+    &:hover {
+        border-color: var(--white);
+    }
+  }
+</style>
