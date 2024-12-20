@@ -28,6 +28,11 @@ const { selectionTitle, coursesSelection } = Astro.props;
 </section>
 
 <style>
+  h3 {
+    font-family: var(--pixelify-ff);
+    margin-bottom: 8px;
+  }
+
   ul {
     list-style-type: none;
     padding-left: 0;
@@ -45,7 +50,7 @@ const { selectionTitle, coursesSelection } = Astro.props;
     transition: 0.4s;
 
     &:hover {
-        border-color: var(--white);
+      border-color: var(--white);
     }
   }
 </style>

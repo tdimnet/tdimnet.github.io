@@ -85,14 +85,30 @@ import teacherInClass from "../images/teacher-in-class.png";
     font-size: 1.125rem;
   }
 
+  aside {
+    margin-bottom: 64px;
+  }
+
   h2 {
     font-family: var(--pixelify-ff);
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
 
   hr {
     margin-top: 32px;
     margin-bottom: 32px;
     color: var(--shamrock);
+  }
+
+  @media screen and (min-width: 1024px) {
+    section {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 48px;
+    }
+
+    aside {
+      padding-top: 32px;
+    }
   }
 </style>
