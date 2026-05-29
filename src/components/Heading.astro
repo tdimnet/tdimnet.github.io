@@ -1,0 +1,23 @@
+---
+type Tag = "h1" | "h2" | "h3";
+
+interface Props {
+  css: string;
+  content: string;
+  as: Tag;
+}
+
+const { css, content, as }: Props = Astro.props;
+
+const sizes: Record<Tag, string> = {
+  h1: "text-5xl",
+  h2: "text-2xl",
+  h3: "text-xl",
+};
+
+const Element = as;
+---
+
+<Element class={`${css} font-bold font-space-grotest ${sizes[as]}`}>
+  {content}
+</Element>

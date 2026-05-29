@@ -1,0 +1,16 @@
+---
+import Heading from "./Heading.astro";
+import Paragraph from "./Paragraph.astro";
+
+interface Props {
+  title: string;
+  content?: string;
+}
+
+const { title, content } = Astro.props;
+---
+
+<li>
+  <Heading css="text-white" content={title} as="h3" />
+  {content && <Paragraph>{content}</Paragraph>}
+</li>
