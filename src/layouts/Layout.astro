@@ -1,0 +1,38 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Thomas Dimnet - Portfolio" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="bg-primay">
+      <div class="max-w-screen-lg mx-auto pt-5 px-5 lg:px-0 min-h-screen grid">
+        <div class="mb-5">
+          <Header />
+        </div>
+        <slot />
+        <Footer />
+      </div>
+    </div>
+  </body>
+</html>

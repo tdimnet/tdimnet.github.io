@@ -1,0 +1,74 @@
+---
+import Heading from "./Heading.astro";
+import Image from "./Image.astro";
+import Link from "./Link.astro";
+import Paragraph from "./Paragraph.astro";
+
+interface Props {
+  skills: string[];
+  title: string;
+  img: string;
+  withPixel?: string;
+}
+
+const { skills, title, img, withPixel } = Astro.props;
+---
+
+<div>
+  {
+    withPixel ? (
+      <div class="project-img-wrapper">
+        <Image
+          css="project-img project-first-img duration-300"
+          src={img}
+          alt={title}
+        />
+        <Image
+          css="project-img project-second-img duration-300"
+          src={withPixel}
+          alt={title}
+        />
+      </div>
+    ) : (
+      <Image css="mb-5" src={img} alt={title} />
+    )
+  }
+  <div class="mb-3">
+    <Heading css="text-white mb-1" content={title} as="h3" />
+    <Paragraph>{skills.join(", ")}</Paragraph>
+  </div>
+  {
+    title === "Calculator App" ? (
+      <div>
+        <Link
+          to="https://tdimnet.github.io/Calculator-app/"
+          content="Live Project"
+          external
+        />
+        <span class="text-white"> - </span>
+        <Link
+          to="https://github.com/tdimnet/Calculator-app"
+          content="View code"
+          external
+        />
+      </div>
+    ) : null
+  }
+  {
+    title === "Age Calculator App" ? (
+      <div>
+        <Link
+          to="https://tdimnet.github.io/Age-calculator-app/"
+          content="Live Project"
+          external
+        />
+        <span class="text-white"> - </span>
+        <Link
+          to="https://github.com/tdimnet/Age-calculator-app"
+          content="View code"
+          external
+        />
+      </div>
+    ) : null
+  }
+</div>

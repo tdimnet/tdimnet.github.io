@@ -106,3 +106,6 @@ typings/
 .*.swp
 .DS_STORE
 dist
+
+# Astro
+.astro/
