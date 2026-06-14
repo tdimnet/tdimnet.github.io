@@ -1,0 +1,82 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "../../layouts/Layout.astro";
+import Heading from "../../components/Heading.astro";
+import Banner from "../../components/Banner.astro";
+import Paragraph from "../../components/Paragraph.astro";
+import Button from "../../components/Button.astro";
+import PostRow from "../../components/PostRow.astro";
+import BannerWrapper from "../../layouts/BannerWrapper.astro";
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<Layout title="Writing - Thomas Dimnet">
+  <main class="mb-8">
+    <section>
+      <BannerWrapper>
+        <Banner
+          src="/assets/writter.png"
+          alt="A software engineer in pixel art"
+        />
+      </BannerWrapper>
+      <header class="mb-10">
+        <Heading
+          css="text-white mb-5"
+          content="The Pen is Mightier than the Sword"
+          as="h1"
+        />
+        <Paragraph css="mb-3">
+          Writing holds a special place in my heart as it forms a significant
+          part of my learning and teaching process. I take particular pleasure
+          in popularizing complex topics like Computer Science, Large Language
+          Models, and Economics, making them accessible and engaging to a wider
+          audience.
+        </Paragraph>
+        <Paragraph css="mb-3">
+          Depending on my readership, I oscillate between English and French to
+          ensure the content is as relatable as possible. Feedback from the
+          community is my compass, guiding my efforts to refine and adapt my
+          content to meet the evolving needs and curiosities of my audience.
+        </Paragraph>
+        <Paragraph css="mb-3">
+          I am proud of the reception my articles have received, with numerous
+          pieces being highlighted for their clarity, insight, and
+          accessibility. It’s a testament to my commitment to not just share
+          knowledge, but to do so in a way that resonates, educates, and
+          inspires.
+        </Paragraph>
+        <Paragraph css="mb-5 text-customGrey">
+          Everything now lives here on my own site, with a few pieces
+          cross-posted to the NX Academy blog — a space where education meets
+          insight, complexity is unraveled, and knowledge is shared generously.
+        </Paragraph>
+        <Button to="/rss.xml" variant="primary">Subscribe to the feed</Button>
+      </header>
+      <section>
+        <Heading
+          css="text-white mb-4 pb-3 border-b-2 border-white"
+          content="Selected Publications"
+          as="h2"
+        />
+        <div class="flex flex-col">
+          {
+            posts.map((post) => (
+              <PostRow
+                slug={post.id}
+                title={post.data.title}
+                tag={post.data.tag}
+                pubDate={post.data.pubDate}
+                home={post.data.home}
+                body={post.body}
+              />
+            ))
+          }
+        </div>
+      </section>
+    </section>
+  </main>
+</Layout>

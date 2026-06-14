@@ -19,6 +19,87 @@
 }
 
 @layer components {
+  /* Display typeface helper for body components that need the pixel voice. */
+  .font-display {
+    font-family: 'Pixelify Sans', cursive;
+  }
+
+  /* Reading layout for Markdown blog posts. The site colours text per
+     component, so the rendered Markdown needs its own on-brand rules. */
+  .article-prose {
+    color: #fff;
+  }
+
+  .article-prose p {
+    @apply mb-5 text-base text-white;
+    line-height: 1.7;
+  }
+
+  .article-prose h2 {
+    @apply mt-8 mb-3 text-2xl font-bold text-white;
+    scroll-margin-top: 1.25rem;
+  }
+
+  .article-prose h3 {
+    @apply mt-6 mb-2 text-xl font-bold text-white;
+    scroll-margin-top: 1.25rem;
+  }
+
+  .article-prose a {
+    @apply text-white border-b-2 border-secondary duration-100 ease-in;
+    text-decoration: none;
+  }
+
+  .article-prose a:hover {
+    @apply border-white;
+  }
+
+  .article-prose ul,
+  .article-prose ol {
+    @apply mb-5 flex flex-col gap-2 pl-5 text-white;
+  }
+
+  .article-prose ul {
+    list-style: square;
+  }
+
+  .article-prose ol {
+    list-style: decimal;
+  }
+
+  .article-prose li {
+    line-height: 1.7;
+  }
+
+  .article-prose blockquote {
+    @apply my-6 border-l-2 border-secondary pl-5;
+  }
+
+  .article-prose blockquote p {
+    @apply text-xl italic text-white;
+    line-height: 1.5;
+  }
+
+  .article-prose pre {
+    @apply mb-5 overflow-x-auto rounded-md border-l-2 border-secondary bg-teriary p-5;
+  }
+
+  .article-prose pre code {
+    @apply text-sm text-white;
+    line-height: 1.7;
+  }
+
+  .article-prose :not(pre) > code {
+    @apply rounded bg-teriary px-1.5 py-0.5 text-white;
+    font-size: 0.9em;
+  }
+
+  .article-prose img {
+    @apply max-w-full;
+    height: auto;
+    image-rendering: pixelated;
+  }
+
   .project-img-wrapper {
     @apply relative mb-5;
   }
