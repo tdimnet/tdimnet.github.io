@@ -1,56 +1,202 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Heading from "../components/Heading.astro";
-import Image from "../components/Image.astro";
-import Paragraph from "../components/Paragraph.astro";
-import Link from "../components/Link.astro";
+import Button from "../components/Button.astro";
+
+// "Work with me" CTA — drops straight into a pre-filled email.
+const CONTACT =
+  "mailto:thomas.dimnet@gmail.com?subject=Let's%20work%20together";
+
+// Two pillars, three audiences each. The ↗ marks links that leave the site.
+type Route = {
+  aud: string;
+  dest: string;
+  href: string;
+  external?: boolean;
+};
+
+const eduRoutes: Route[] = [
+  {
+    aud: "For learners",
+    dest: "NX Academy ↗",
+    href: "https://nx.academy/",
+    external: true,
+  },
+  { aud: "For companies", dest: "Teaching & curriculum", href: "/teaching" },
+  { aud: "For peers", dest: "Selected courses", href: "/teaching" },
+];
+
+const swRoutes: Route[] = [
+  { aud: "For companies", dest: "Selected projects", href: "/projects" },
+  { aud: "For peers", dest: "Experimentations", href: "/experimentations" },
+  {
+    aud: "For peers",
+    dest: "GitHub ↗",
+    href: "https://github.com/tdimnet",
+    external: true,
+  },
+];
+
+const routeRowClass =
+  "routelink group flex items-baseline gap-3 py-3 border-t border-hairline last:border-b text-white transition-[padding-left] duration-200 ease-in hover:pl-2";
 ---
 
 <Layout
   title="Thomas Dimnet — Software Engineer & Engineering Teacher"
-  description="Thomas Dimnet, software engineer and engineering teacher based in Paris, founder of NX Academy. Former Datadog, OpenClassrooms and SensCritique."
+  description="Thomas Dimnet, software and cloud engineer who also engineers how people learn — Lead Educational Engineer at Scaleway and founder of NX Academy."
 >
-  <main id="main-content" class="row-span-5 lg:mt-20">
-    <section class="flex flex-col md:flex-row-reverse">
-      <Image
+  <main id="main-content" class="row-span-5">
+    <!-- Hero: the unified identity, stated plainly and centred. -->
+    <section
+      class="flex flex-col items-center gap-5 max-w-[60rem] mx-auto text-center pt-12 pb-10 md:pt-20 md:pb-12"
+    >
+      <img
+        class="w-[84px] h-[84px] bg-white rounded-[2px] shadow-[0_4px_0_rgba(0,0,0,0.5)] [image-rendering:pixelated]"
         src="/assets/profil-picture.png"
-        css="mb-5 w-96 object-cover"
-        alt="Someone wearing a baseball cap in pixel art"
+        alt="Tom Dimnet, pixel-art portrait"
       />
-      <div class="mr-10">
-        <Heading css="text-white mb-2" content="Thomas 'tom' Dimnet" as="h3" />
-        <Heading css="text-white mb-2" content="Founder - NX Academy" as="h1" />
-        <Heading
-          css="text-white mb-8"
-          content="Software Engineer and Engineering Teacher"
-          as="h2"
-        />
-        <Paragraph css="mb-3">
-          Based in Paris, I am the founder of <Link
-            content="NX Academy"
-            to="https://beta.nx.academy/"
-            external
-          />, where my mission is to empower developers to reach their goals,
-          whatever they may be. With a diverse interest in Computer Science,
-          Data Science, Learning and Teaching Sciences, Psychology, and
-          Philosophy, I’m not only passionate about delving into complex topics
-          but also about sharing this knowledge.
-        </Paragraph>
-        <Paragraph css="mb-3">
-          Though I occasionally speak at conferences, my true strengths shine
-          through in personal coaching and hands-on coding. Over the years, I’ve
-          honed my skills and expertise across various roles and organizations.
-          My journey includes roles as a Software Engineer and Developer
-          Advocate at Datadog, a Lead Teacher at OpenClassrooms, and a Lead
-          Developer/CTO at SensCritique.
-        </Paragraph>
-        <Paragraph css="mb-5">
-          My commitment to fostering learning and development extends beyond
-          traditional roles - I've been a speaker and instructor at On-Train,
-          IronHack, and several other local bootcamps, where I’ve shared
-          insights and knowledge that bridge the gap between learning and
-          practical application.
-        </Paragraph>
+      <p class="font-bold text-xs uppercase tracking-[0.18em] text-customGrey">
+        Thomas &ldquo;tom&rdquo; Dimnet &middot; Paris
+      </p>
+      <h1
+        class="text-white font-bold leading-[1.05] tracking-[-0.01em] text-balance text-[clamp(2rem,9.5vw,2.9rem)] md:text-[clamp(2.6rem,5.2vw,4.25rem)]"
+      >
+        I engineer software systems &mdash;<br />and the way people <span
+          class="accent-underline">learn them</span
+        >.
+      </h1>
+      <p class="text-customGrey text-base leading-[1.6] max-w-[54ch]">
+        Educational Engineering (<em>ing&eacute;nierie p&eacute;dagogique</em>):
+        I build software and cloud infrastructure, and I know how to teach it
+        &mdash; to fellow engineers and to people coming from far outside the
+        field alike.
+      </p>
+      <p class="text-white font-bold text-base leading-[1.7]">
+        Lead Educational Engineer, Software &amp; Cloud at <span
+          class="text-secondary">Scaleway</span
+        ><span class="text-hairline mx-2">&middot;</span>Founder of <span
+          class="text-secondary">NX Academy</span
+        >
+      </p>
+      <div class="flex flex-wrap justify-center gap-3 mt-2">
+        <Button variant="primary" to={CONTACT}>Work with me</Button>
+        <Button variant="ghost" to="/publications">Read the blog</Button>
+      </div>
+    </section>
+
+    <!-- Rarity hook: one line that names the unusual fusion, links to /about. -->
+    <section
+      class="flex flex-col items-center gap-5 max-w-[58rem] mx-auto text-center border-t border-hairline pt-10 pb-12 md:pt-12 md:pb-16"
+    >
+      <p
+        class="text-white font-bold leading-[1.55] text-balance max-w-[44ch] text-[clamp(1.15rem,2.1vw,1.4rem)]"
+      >
+        Building software systems and engineering <span class="accent-underline"
+          >how people learn them</span
+        > are normally two careers, held by two different people. I do both &mdash;
+        as one job.
+      </p>
+      <a
+        class="font-display font-bold text-xl text-secondary inline-flex items-center gap-2 transition-[gap] duration-200 ease-in hover:gap-3"
+        href="/about"
+      >
+        How I ended up doing both <span aria-hidden="true">&rarr;</span>
+      </a>
+    </section>
+
+    <!-- Two-pillar split: each side routes three audiences. -->
+    <section
+      class="grid grid-cols-1 md:grid-cols-2 border-t-2 border-white mb-20"
+    >
+      <div
+        class="py-8 px-1 md:py-10 md:px-8 border-b-2 border-secondary md:border-b-0 md:border-r-2"
+      >
+        <a
+          class="block bg-white rounded-[2px] overflow-hidden mb-5 aspect-[16/9]"
+          href="/teaching"
+        >
+          <img
+            class="w-full h-full object-cover [image-rendering:pixelated]"
+            src="/assets/a-teacher.png"
+            alt="A teacher in front of a blackboard, pixel art"
+          />
+        </a>
+        <h2 class="text-white text-2xl font-bold mb-3">
+          <span class="accent-underline">Educational</span> Engineering
+        </h2>
+        <p class="text-customGrey text-base leading-[1.6] mb-6">
+          Designing how people actually learn to build &mdash; curricula,
+          courses, and coaching that turn curiosity into real capability.
+        </p>
+        <div>
+          {
+            eduRoutes.map((r) => (
+              <a
+                class={routeRowClass}
+                href={r.href}
+                target={r.external ? "_blank" : undefined}
+                rel={r.external ? "noopener noreferrer" : undefined}
+              >
+                <span class="flex-none text-xs uppercase tracking-[0.12em] text-customGrey min-w-[6rem] md:min-w-[7.5rem]">
+                  {r.aud}
+                </span>
+                <span class="flex-1 font-display text-xl font-bold">
+                  {r.dest}
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="font-display text-secondary transition-transform duration-200 ease-in group-hover:translate-x-1"
+                >
+                  &rarr;
+                </span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="py-8 px-1 md:py-10 md:px-8">
+        <a
+          class="block bg-white rounded-[2px] overflow-hidden mb-5 aspect-[16/9]"
+          href="/projects"
+        >
+          <img
+            class="w-full h-full object-cover [image-rendering:pixelated]"
+            src="/assets/software-engineer.png"
+            alt="A developer at a laptop, pixel art"
+          />
+        </a>
+        <h2 class="text-white text-2xl font-bold mb-3">
+          <span class="accent-underline">Software / Cloud</span> Engineering
+        </h2>
+        <p class="text-customGrey text-base leading-[1.6] mb-6">
+          Building and shipping real systems &mdash; cloud infrastructure,
+          developer tooling, and products that hold up under load.
+        </p>
+        <div>
+          {
+            swRoutes.map((r) => (
+              <a
+                class={routeRowClass}
+                href={r.href}
+                target={r.external ? "_blank" : undefined}
+                rel={r.external ? "noopener noreferrer" : undefined}
+              >
+                <span class="flex-none text-xs uppercase tracking-[0.12em] text-customGrey min-w-[6rem] md:min-w-[7.5rem]">
+                  {r.aud}
+                </span>
+                <span class="flex-1 font-display text-xl font-bold">
+                  {r.dest}
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="font-display text-secondary transition-transform duration-200 ease-in group-hover:translate-x-1"
+                >
+                  &rarr;
+                </span>
+              </a>
+            ))
+          }
+        </div>
       </div>
     </section>
   </main>
