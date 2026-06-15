@@ -16,6 +16,14 @@
   nav li a {
     font-family: 'Pixelify Sans', cursive;
   }
+
+  /* Visible keyboard focus on the dark theme. Mouse users are unaffected
+     thanks to :focus-visible. */
+  :focus-visible {
+    outline: 2px solid theme('colors.secondary');
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
 @layer components {
