@@ -1,0 +1,23 @@
+---
+// A small monospace chip for a post's category.
+// variant: "solid" (mint fill) | "outline" (subtle hairline)
+type Variant = "solid" | "outline";
+
+interface Props {
+  variant?: Variant;
+  css?: string;
+}
+
+const { variant = "outline", css = "" } = Astro.props;
+
+const variants: Record<Variant, string> = {
+  solid: "bg-secondary text-primay border border-secondary",
+  outline: "bg-transparent text-customGrey border border-[#2e2e2e]",
+};
+---
+
+<span
+  class={`${variants[variant]} ${css} inline-block whitespace-nowrap rounded-sm px-2 py-0.5 text-xs tracking-wider`}
+>
+  <slot />
+</span>

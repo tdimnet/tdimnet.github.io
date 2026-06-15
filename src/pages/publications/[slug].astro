@@ -1,0 +1,117 @@
+---
+import { getCollection, render } from "astro:content";
+
+import Layout from "../../layouts/Layout.astro";
+import Heading from "../../components/Heading.astro";
+import Banner from "../../components/Banner.astro";
+import Paragraph from "../../components/Paragraph.astro";
+import Tag from "../../components/Tag.astro";
+import Button from "../../components/Button.astro";
+import { formatDate } from "../../utils/formatDate";
+import { readingTime } from "../../utils/readingTime";
+
+export async function getStaticPaths() {
+  const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  );
+
+  return posts.map((post, index) => ({
+    params: { slug: post.id },
+    // The next, slightly older post — used in the footer.
+    props: { post, next: posts[index + 1] },
+  }));
+}
+
+const { post, next } = Astro.props;
+const { Content, headings } = await render(post);
+
+const { title, standfirst, tag, pubDate, home, banner, bannerAlt, lang } =
+  post.data;
+
+const flag = lang === "fr" ? "🇫🇷" : "🇺🇸";
+const homeLabel = home === "nx" ? "NX Academy" : "tdimnet.dev";
+const meta = `${flag} ${formatDate(pubDate)} · ${readingTime(post.body)} · ${homeLabel}`;
+
+// Sticky table of contents from the article's <h2> headings.
+const toc = headings.filter((h) => h.depth === 2);
+
+const GH_URL = "https://github.com/tdimnet";
+---
+
+<Layout title={`${title} - Thomas Dimnet`}>
+  <main class="mb-8">
+    <a href="/publications" class="mb-6 inline-block no-underline">
+      <Paragraph css="text-customGrey font-display">← All writing</Paragraph>
+    </a>
+
+    <header>
+      <div class="mb-4 flex items-center gap-3">
+        <Tag variant="solid">{tag}</Tag>
+        <Paragraph css="text-customGrey text-sm">{meta}</Paragraph>
+      </div>
+      <Heading css="text-white mb-4 leading-tight" content={title} as="h1" />
+      <Paragraph css="text-customGrey text-xl leading-relaxed mb-6">
+        {standfirst}
+      </Paragraph>
+      <div class="mb-6 flex items-center gap-3 border-b-2 border-white pb-6">
+        <img
+          src="/assets/profil-picture.png"
+          alt="Tom Dimnet"
+          class="h-11 w-11 rounded-sm bg-white object-cover"
+          style="image-rendering: pixelated;"
+        />
+        <Paragraph css="text-white font-display">By Tom Dimnet</Paragraph>
+      </div>
+    </header>
+
+    <div class="mb-8 h-80 md:h-[420px]">
+      <Banner src={banner} alt={bannerAlt} />
+    </div>
+
+    <div class="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_14rem]">
+      <article class="article-prose min-w-0">
+        <Content />
+
+        <div
+          class="mt-8 flex flex-wrap items-center justify-between gap-4 border-t-2 border-white pt-6"
+        >
+          <Button to={GH_URL} variant="ghost" external>Discuss on GitHub</Button
+          >
+          {
+            next && (
+              <div class="text-right">
+                <Paragraph css="text-customGrey text-xs">Next post</Paragraph>
+                <a href={`/publications/${next.id}`} class="no-underline">
+                  <Paragraph css="text-secondary font-display">
+                    {next.data.title} →
+                  </Paragraph>
+                </a>
+              </div>
+            )
+          }
+        </div>
+      </article>
+
+      {
+        toc.length > 0 && (
+          <aside class="sticky top-5 hidden lg:block">
+            <Paragraph css="text-customGrey text-xs uppercase tracking-wider mb-3">
+              Contents
+            </Paragraph>
+            <ul class="m-0 flex list-none flex-col gap-2 border-l-2 border-[#2e2e2e] p-0">
+              {toc.map((heading) => (
+                <li class="pl-3">
+                  <a href={`#${heading.slug}`} class="no-underline">
+                    <Paragraph css="text-customGrey text-sm hover:text-secondary duration-100 ease-in">
+                      {heading.text}
+                    </Paragraph>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )
+      }
+    </div>
+  </main>
+</Layout>

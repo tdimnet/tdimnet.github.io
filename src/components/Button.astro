@@ -1,0 +1,31 @@
+---
+// The portfolio's call-to-action, rendered as a link.
+// variant: "primary" (mint fill) | "ghost" (white outline)
+type Variant = "primary" | "ghost";
+
+interface Props {
+  variant?: Variant;
+  to: string;
+  external?: boolean;
+  css?: string;
+}
+
+const { variant = "primary", to, external, css = "" } = Astro.props;
+
+const variants: Record<Variant, string> = {
+  primary:
+    "bg-secondary text-primay border-2 border-transparent hover:bg-secondary/80",
+  ghost:
+    "bg-transparent text-white border-2 border-white hover:border-secondary hover:bg-white/5",
+};
+---
+
+<a
+  href={to}
+  target={external ? "_blank" : undefined}
+  rel={external ? "noopener noreferrer" : undefined}
+  class={`${variants[variant]} ${css} inline-flex items-center gap-2 rounded px-5 py-2.5 text-base font-bold tracking-wider ease-in duration-100 active:scale-95`}
+  style="font-family: 'Pixelify Sans', cursive;"
+>
+  <slot />
+</a>

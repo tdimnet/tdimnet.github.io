@@ -1,0 +1,42 @@
+---
+import Heading from "./Heading.astro";
+import Paragraph from "./Paragraph.astro";
+import Tag from "./Tag.astro";
+import { formatDate } from "../utils/formatDate";
+import { readingTime } from "../utils/readingTime";
+
+interface Props {
+  slug: string;
+  title: string;
+  tag: string;
+  pubDate: Date;
+  home: "tdimnet" | "nx";
+  body?: string;
+}
+
+const { slug, title, tag, pubDate, home, body = "" } = Astro.props;
+
+const homeLabel = home === "nx" ? "NX Academy" : "tdimnet.dev";
+const meta = `${formatDate(pubDate)} · ${readingTime(body)} · ${homeLabel}`;
+---
+
+<a
+  href={`/publications/${slug}`}
+  class="post-row group grid grid-cols-[1fr_auto] items-center gap-4 rounded-sm border-b border-[#2e2e2e] px-5 py-4 no-underline duration-100 ease-in hover:bg-teriary"
+>
+  <div>
+    <div class="mb-2 flex items-center gap-2">
+      <Tag variant={home === "nx" ? "outline" : "solid"}>{tag}</Tag>
+      <Paragraph css="text-customGrey text-xs">{meta}</Paragraph>
+    </div>
+    <Heading
+      css="text-white duration-100 ease-in group-hover:text-secondary"
+      content={title}
+      as="h3"
+    />
+  </div>
+  <span
+    class="text-2xl text-customGrey duration-100 ease-in group-hover:text-secondary"
+    style="font-family: 'Pixelify Sans', cursive;">→</span
+  >
+</a>
