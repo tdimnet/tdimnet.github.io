@@ -1,0 +1,238 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+
+// "Work with me" CTA — drops straight into a pre-filled email.
+const CONTACT =
+  "mailto:thomas.dimnet@gmail.com?subject=Let's%20work%20together";
+
+// The career arc, told as a timeline. `marker` drives the dot + tag treatment:
+// eng = filled white, teach = hollow, both = mint with a soft glow.
+type Marker = "eng" | "teach" | "both";
+type Node = {
+  org: string;
+  tag: string;
+  role: string;
+  desc: string;
+  marker: Marker;
+};
+
+const timeline: Node[] = [
+  {
+    org: "Datadog",
+    tag: "Engineer",
+    role: "Developer Advocate",
+    desc: "Building developer tooling and explaining complex systems to engineers at scale — my first real taste of teaching as part of the work, not apart from it.",
+    marker: "eng",
+  },
+  {
+    org: "OpenClassrooms",
+    tag: "Teacher",
+    role: "Lead Teacher",
+    desc: "Designed eight complete online courses that have since been the academic companion to thousands of students around the world.",
+    marker: "teach",
+  },
+  {
+    org: "Eden School",
+    tag: "Teacher",
+    role: "Computer Science Teacher · 2 years",
+    desc: "Two years in the classroom — the daily craft of turning raw curiosity into real capability, with people at every level of comfort with code.",
+    marker: "teach",
+  },
+  {
+    org: "Scaleway",
+    tag: "Engineer + Teacher",
+    role: "Lead Educational Engineer, Software & Cloud",
+    desc: "Where the two threads finally became one role: engineering both the cloud platform and the way engineers — and newcomers — actually learn to use it.",
+    marker: "both",
+  },
+  {
+    org: "NX Academy",
+    tag: "Both · ongoing",
+    role: "Founder",
+    desc: "My own company, running alongside it all: coaching and courses built to empower developers to reach their goals, whatever they may be.",
+    marker: "both",
+  },
+];
+
+const dotClass: Record<Marker, string> = {
+  eng: "bg-white",
+  teach: "bg-primay shadow-[inset_0_0_0_2px_#d9d9d9]",
+  both: "bg-secondary shadow-[0_0_0_5px_rgba(78,225,160,0.18)]",
+};
+
+// Shared "section rule": a 2px white top border with a heading sitting on it.
+const sectionRule =
+  "flex flex-wrap items-baseline gap-4 border-t-2 border-white pt-5 mb-10";
+const nowCard =
+  "border border-hairline rounded-[2px] bg-teriary p-6 flex flex-col gap-2";
+const cardLabel = "text-xs uppercase tracking-[0.16em] text-secondary";
+---
+
+<Layout
+  title="About — Thomas Dimnet"
+  description="The long version: how Thomas Dimnet ended up practicing software engineering and teaching as one job — ingénierie pédagogique — at Scaleway and NX Academy."
+>
+  <main id="main-content" class="row-span-5">
+    <!-- Intro -->
+    <section
+      class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center pt-8 pb-10 md:pt-12 md:pb-16"
+    >
+      <div class="order-2 md:order-1 flex flex-col gap-5">
+        <p
+          class="font-bold text-xs uppercase tracking-[0.18em] text-customGrey"
+        >
+          About &middot; the long version
+        </p>
+        <h1
+          class="text-white font-bold leading-[1.05] tracking-[-0.01em] text-balance text-[clamp(2rem,9vw,2.7rem)] md:text-[clamp(2.4rem,4.6vw,3.6rem)]"
+        >
+          Two careers most people choose between &mdash; <span
+            class="accent-underline">practiced as one</span
+          >.
+        </h1>
+        <p class="text-customGrey text-base leading-[1.6] max-w-[52ch]">
+          I&rsquo;m a software and cloud engineer who never stopped teaching
+          &mdash; and a teacher who never stopped building. For years those were
+          two separate jobs. Today, at Scaleway, they&rsquo;re a single one:
+          <em>ing&eacute;nierie p&eacute;dagogique</em>, Educational
+          Engineering.
+        </p>
+      </div>
+      <img
+        class="order-1 md:order-2 w-[150px] md:w-[220px] bg-white rounded-[2px] shadow-[0_4px_0_rgba(0,0,0,0.5)] justify-self-start md:justify-self-end [image-rendering:pixelated]"
+        src="/assets/profil-picture.png"
+        alt="Tom Dimnet, pixel-art portrait"
+      />
+    </section>
+
+    <!-- Two passions, one practice -->
+    <div class={sectionRule}>
+      <h2 class="text-white text-2xl font-bold">Two passions, one practice</h2>
+    </div>
+    <div class="flex flex-col gap-8 mb-16">
+      <p class="text-white text-[clamp(1.25rem,2.2vw,1.5rem)] leading-[1.5]">
+        Based in Paris, I&rsquo;ve never been able to choose between two
+        passions: unraveling complex problems through code, and helping other
+        people learn to do the same. For most of my career those looked like two
+        different jobs, pulling in opposite directions. It took me a while to
+        realise they were the same instinct &mdash; and that the place I&rsquo;m
+        most useful is exactly where they meet.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+        <p class="text-white text-[1.0625rem] leading-[1.6]">
+          My teaching philosophy is rooted in empowerment. I try to cultivate
+          autonomy rather than dependence &mdash; to teach people <em
+            >how to fish</em
+          > rather than hand them the catch: the tools, the skills, and above all
+          the confidence to navigate code on their own. That belief shapes how I engineer,
+          too. Good infrastructure, like good teaching, is the kind people can actually
+          understand and build on.
+        </p>
+        <p class="text-customGrey text-[1.0625rem] leading-[1.6]">
+          I&rsquo;m happiest in hands-on coaching and real-world code rather
+          than on a stage, though I&rsquo;ve taught at bootcamps and spoken at
+          conferences along the way. The thread through all of it is the same:
+          meaningful work, done to a high technical standard, shared so that
+          others can do it too.
+        </p>
+      </div>
+    </div>
+
+    <!-- How I got here: the timeline -->
+    <div class={sectionRule}>
+      <h2 class="text-white text-2xl font-bold">How I got here</h2>
+      <p class="text-customGrey text-sm">
+        Engineering and teaching, back and forth &mdash; until they converged.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap gap-6 mb-8">
+      <span
+        class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.1em] text-customGrey"
+      >
+        <i class="w-[14px] h-[14px] rounded-[2px] bg-white"></i> Engineering role
+      </span>
+      <span
+        class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.1em] text-customGrey"
+      >
+        <i
+          class="w-[14px] h-[14px] rounded-[2px] bg-transparent shadow-[inset_0_0_0_2px_#d9d9d9]"
+        ></i> Teaching role
+      </span>
+      <span
+        class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.1em] text-customGrey"
+      >
+        <i class="w-[14px] h-[14px] rounded-[2px] bg-secondary"></i> Both at once
+      </span>
+    </div>
+
+    <div class="relative mb-16">
+      <div
+        class="absolute left-[7px] top-[10px] bottom-[10px] w-[2px] bg-hairline"
+      >
+      </div>
+      {
+        timeline.map((node) => (
+          <div class="relative pl-10 pb-10 last:pb-0">
+            <span
+              class:list={[
+                "absolute left-0 top-1 w-4 h-4 rounded-[2px]",
+                dotClass[node.marker],
+              ]}
+            />
+            <span
+              class:list={[
+                "font-bold text-xs uppercase tracking-[0.14em]",
+                node.marker === "both" ? "text-secondary" : "text-customGrey",
+              ]}
+            >
+              {node.tag}
+            </span>
+            <h3 class="text-white font-bold text-xl md:text-2xl mt-1 mb-0.5">
+              {node.org}
+            </h3>
+            <p class="text-white font-bold text-sm">{node.role}</p>
+            <p class="text-customGrey text-base leading-[1.6] mt-3 max-w-[58ch]">
+              {node.desc}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Right now -->
+    <div class={sectionRule}>
+      <h2 class="text-white text-2xl font-bold">Right now</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
+      <div class={nowCard}>
+        <span class={cardLabel}>Day to day</span>
+        <h3 class="text-white text-xl font-bold">
+          Lead Educational Engineer, Software &amp; Cloud
+        </h3>
+        <p class="text-customGrey text-sm leading-[1.6]">
+          Scaleway &mdash; designing how people learn the cloud platform, from
+          seasoned engineers to first-timers.
+        </p>
+      </div>
+      <div class={nowCard}>
+        <span class={cardLabel}>On the side</span>
+        <h3 class="text-white text-xl font-bold">Founder, NX Academy</h3>
+        <p class="text-customGrey text-sm leading-[1.6]">
+          Coaching and courses for developers. <Link
+            content="nx.academy ↗"
+            to="https://beta.nx.academy/"
+            external
+          />
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-3 mb-20">
+      <Button variant="primary" to={CONTACT}>Work with me</Button>
+      <Button variant="ghost" to="/">Back to home</Button>
+    </div>
+  </main>
+</Layout>

@@ -24,6 +24,31 @@
     outline-offset: 2px;
     border-radius: 2px;
   }
+
+  /* Restrained, quick motion is part of the brand — but never at the cost of
+     accessibility. Honour the user's reduced-motion preference everywhere. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* The signature: a single mint accent rendered as an underline sitting
+     below the text with a gap. Applied to a few key words in headings. */
+  .accent-underline {
+    text-decoration: underline;
+    text-decoration-color: theme('colors.secondary');
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+    text-decoration-skip-ink: none;
+  }
 }
 
 @layer components {
