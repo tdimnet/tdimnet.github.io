@@ -11,8 +11,12 @@ import BannerWrapper from "../layouts/BannerWrapper.astro";
 import { experimentations } from "../data/experimentations";
 ---
 
-<Layout>
-  <main class="mb-8">
+<Layout
+  title="Experimentations — Thomas Dimnet"
+  description="Having fun with code — small but impactful experiments in JavaScript, TypeScript, Python and Docker, often born from teaching at NX Academy."
+  image="/assets/small-lab.png"
+>
+  <main id="main-content" class="mb-8">
     <section class="pr-3">
       <BannerWrapper>
         <Banner src="/assets/small-lab.png" alt="A laboratory" />

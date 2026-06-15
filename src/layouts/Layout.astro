@@ -5,26 +5,88 @@ import "../styles/global.css";
 
 interface Props {
   title?: string;
+  description?: string;
+  lang?: string;
+  // Social-share image (path under /public). Falls back to the profile picture.
+  image?: string;
+  // Set on article pages so the Open Graph type reflects the content.
+  type?: "website" | "article";
 }
 
-const { title = "Thomas Dimnet - Portfolio" } = Astro.props;
+const {
+  title = "Thomas Dimnet - Portfolio",
+  description = "Thomas Dimnet — Software Engineer and Engineering Teacher based in Paris, founder of NX Academy. Writing, teaching, and projects on software and computer science.",
+  lang = "en",
+  image = "/assets/profil-picture.png",
+  type = "website",
+} = Astro.props;
+
+// Absolute URLs are required for canonical links and Open Graph tags.
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(image, Astro.site);
+
+// JSON-LD Person schema helps search engines understand the site owner.
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Thomas Dimnet",
+  alternateName: "Tom Dimnet",
+  jobTitle: "Software Engineer and Engineering Teacher",
+  url: Astro.site?.toString(),
+  image: imageURL.toString(),
+  worksFor: { "@type": "Organization", name: "NX Academy" },
+  sameAs: ["https://github.com/tdimnet", "https://tdimnet.medium.com/"],
+};
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="/assets/favicon-32x32.png"
     />
+    <meta name="theme-color" content="#151515" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Thomas Dimnet — Writing"
+      href="/rss.xml"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:site_name" content="Thomas Dimnet" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL} />
+
     <title>{title}</title>
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(personSchema)}
+    />
   </head>
   <body>
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-secondary focus:px-4 focus:py-2 focus:text-primay focus:font-bold"
+      >Skip to content</a
+    >
     <div class="bg-primay">
       <div class="max-w-screen-lg mx-auto pt-5 px-5 lg:px-0 min-h-screen grid">
         <div class="mb-5">

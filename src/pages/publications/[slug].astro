@@ -38,8 +38,14 @@ const toc = headings.filter((h) => h.depth === 2);
 const GH_URL = "https://github.com/tdimnet";
 ---
 
-<Layout title={`${title} - Thomas Dimnet`}>
-  <main class="mb-8">
+<Layout
+  title={`${title} — Thomas Dimnet`}
+  description={standfirst}
+  lang={lang}
+  image={banner}
+  type="article"
+>
+  <main id="main-content" class="mb-8">
     <a href="/publications" class="mb-6 inline-block no-underline">
       <Paragraph css="text-customGrey font-display">← All writing</Paragraph>
     </a>

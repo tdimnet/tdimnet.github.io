@@ -15,20 +15,22 @@ const navLinks = [
 
 const activeCss = (href: string) =>
   pathname === href ? "underline decoration-secondary underline-offset-4" : "";
+
+const isActive = (href: string) => (pathname === href ? "page" : undefined);
 ---
 
 <header class="row-span-1">
-  <nav>
+  <nav aria-label="Main navigation">
     <ul class="flex flex-row items-end mb-3">
       <li class="mr-2 lg:mr-5">
-        <a href="/">
+        <a href="/" aria-label="Home">
           <Heading css="text-white" content="tom" as="h3" />
         </a>
       </li>
       {
         navLinks.map((link) => (
           <li class="hidden md:block mr-2 lg:mr-5">
-            <a href={link.href}>
+            <a href={link.href} aria-current={isActive(link.href)}>
               <Paragraph css={activeCss(link.href)}>{link.label}</Paragraph>
             </a>
           </li>
@@ -40,6 +42,7 @@ const activeCss = (href: string) =>
           href="https://github.com/tdimnet"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub profile (opens in a new tab)"
         >
           <GithubIcon />
         </a>
@@ -50,6 +53,7 @@ const activeCss = (href: string) =>
           href="https://tdimnet.medium.com/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Medium profile (opens in a new tab)"
         >
           <MediumIcon />
         </a>
@@ -59,7 +63,7 @@ const activeCss = (href: string) =>
       {
         navLinks.map((link) => (
           <li class="mr-2">
-            <a href={link.href}>
+            <a href={link.href} aria-current={isActive(link.href)}>
               <Paragraph css={activeCss(link.href)}>{link.label}</Paragraph>
             </a>
           </li>

@@ -14,8 +14,12 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
 );
 ---
 
-<Layout title="Writing - Thomas Dimnet">
-  <main class="mb-8">
+<Layout
+  title="Writing — Thomas Dimnet"
+  description="Writing on software, teaching, and the occasional detour into economics. Popularizing Computer Science, Large Language Models and more."
+  image="/assets/writter.png"
+>
+  <main id="main-content" class="mb-8">
     <section>
       <BannerWrapper>
         <Banner
