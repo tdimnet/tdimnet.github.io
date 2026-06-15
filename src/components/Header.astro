@@ -16,8 +16,7 @@ const navLinks = [
 const activeCss = (href: string) =>
   pathname === href ? "underline decoration-secondary underline-offset-4" : "";
 
-const isActive = (href: string) =>
-  pathname === href ? "page" : undefined;
+const isActive = (href: string) => (pathname === href ? "page" : undefined);
 ---
 
 <header class="row-span-1">
