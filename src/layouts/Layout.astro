@@ -18,8 +18,8 @@ interface Props {
 }
 
 const {
-  title = "Tom Dimnet",
-  description = "Tom Dimnet — developer and educational engineer in Paris. I build software and cloud systems, and I teach engineers to build them. Founder of NX Academy.",
+  title = "Thomas Dimnet",
+  description = "Thomas Dimnet — developer and educational engineer in Paris. I build software and cloud systems, and I teach engineers to build them. Founder of NX Academy.",
   lang = "en",
   image = "/assets/profil-picture.png",
   type = "website",
@@ -35,7 +35,7 @@ const imageURL = new URL(image, Astro.site);
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Tom Dimnet",
+  name: "Thomas Dimnet",
   alternateName: "Thomas Dimnet",
   jobTitle: "Lead Educational Engineer",
   url: Astro.site?.toString(),
@@ -74,7 +74,7 @@ const personSchema = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={imageURL} />
-    <meta property="og:site_name" content="Tom Dimnet" />
+    <meta property="og:site_name" content="Thomas Dimnet" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
