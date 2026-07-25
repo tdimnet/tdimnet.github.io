@@ -1,236 +1,262 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
-
-// "Work with me" CTA — drops straight into a pre-filled email.
-const CONTACT =
-  "mailto:thomas.dimnet@gmail.com?subject=Let's%20work%20together";
-
-// The career arc, told as a timeline. `marker` drives the dot + tag treatment:
-// eng = filled white, teach = hollow, both = mint with a soft glow.
-type Marker = "eng" | "teach" | "both";
-type Node = {
-  org: string;
-  tag: string;
-  role: string;
-  desc: string;
-  marker: Marker;
-};
-
-const timeline: Node[] = [
-  {
-    org: "Datadog",
-    tag: "Engineer",
-    role: "Developer Advocate",
-    desc: "Building developer tooling and explaining complex systems to engineers at scale — my first real taste of teaching as part of the work, not apart from it.",
-    marker: "eng",
-  },
-  {
-    org: "OpenClassrooms",
-    tag: "Teacher",
-    role: "Lead Teacher",
-    desc: "Designed eight complete online courses that have since been the academic companion to thousands of students around the world.",
-    marker: "teach",
-  },
-  {
-    org: "Eden School",
-    tag: "Teacher",
-    role: "Computer Science Teacher · 2 years",
-    desc: "Two years in the classroom — the daily craft of turning raw curiosity into real capability, with people at every level of comfort with code.",
-    marker: "teach",
-  },
-  {
-    org: "Scaleway",
-    tag: "Engineer + Teacher",
-    role: "Lead Educational Engineer, Software & Cloud",
-    desc: "Where the two threads finally became one role: engineering both the cloud platform and the way engineers — and newcomers — actually learn to use it.",
-    marker: "both",
-  },
-  {
-    org: "NX Academy",
-    tag: "Both · ongoing",
-    role: "Founder",
-    desc: "My own company, running alongside it all: coaching and courses built to empower developers to reach their goals, whatever they may be.",
-    marker: "both",
-  },
-];
-
-const dotClass: Record<Marker, string> = {
-  eng: "bg-white",
-  teach: "bg-primay shadow-[inset_0_0_0_2px_#d9d9d9]",
-  both: "bg-secondary shadow-[0_0_0_5px_rgba(78,225,160,0.18)]",
-};
-
-// Shared "section rule": a 2px white top border with a heading sitting on it.
-const sectionRule =
-  "flex flex-wrap items-baseline gap-4 border-t-2 border-white pt-5 mb-10";
-const nowCard =
-  "border border-hairline rounded-[2px] bg-teriary p-6 flex flex-col gap-2";
-const cardLabel = "text-xs uppercase tracking-[0.16em] text-secondary";
 ---
 
 <Layout
   title="About — Thomas Dimnet"
-  description="The long version: how Thomas Dimnet ended up practicing software engineering and teaching as one job — ingénierie pédagogique — at Scaleway and NX Academy."
+  description="Developer and teacher, thirteen years of refusing to choose between the two. The long version of how I ended up doing both."
+  current="about"
 >
-  <main id="main-content" class="row-span-5">
-    <!-- Intro -->
-    <section
-      class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center pt-8 pb-10 md:pt-12 md:pb-16"
-    >
-      <div class="order-2 md:order-1 flex flex-col gap-5">
-        <p
-          class="font-bold text-xs uppercase tracking-[0.18em] text-customGrey"
-        >
-          About &middot; the long version
-        </p>
-        <h1
-          class="text-white font-bold leading-[1.05] tracking-[-0.01em] text-balance text-[clamp(2rem,9vw,2.7rem)] md:text-[clamp(2.4rem,4.6vw,3.6rem)]"
-        >
-          Two careers most people choose between &mdash; <span
-            class="accent-underline">practiced as one</span
-          >.
-        </h1>
-        <p class="text-customGrey text-base leading-[1.6] max-w-[52ch]">
-          I&rsquo;m a software and cloud engineer who never stopped teaching
-          &mdash; and a teacher who never stopped building. For years those were
-          two separate jobs. Today, at Scaleway, they&rsquo;re a single one:
-          <em>ing&eacute;nierie p&eacute;dagogique</em>, Educational
-          Engineering.
+  <div class="region">
+    <div class="about-head">
+      <div class="head-text">
+        <h1 class="page">About</h1>
+        <p class="altitude">
+          Developer and teacher, thirteen years of refusing to choose between
+          the two.
         </p>
       </div>
-      <img
-        class="order-1 md:order-2 w-[150px] md:w-[220px] bg-white rounded-[2px] shadow-[0_4px_0_rgba(0,0,0,0.5)] justify-self-start md:justify-self-end [image-rendering:pixelated]"
-        src="/assets/profil-picture.png"
-        alt="Tom Dimnet, pixel-art portrait"
-      />
+      <figure class="portrait">
+        <div class="frame">
+          <img
+            src="/assets/portrait-pixel.png"
+            alt="Thomas Dimnet — pixel-art self-portrait"
+            width="190"
+            height="190"
+          />
+        </div>
+        <figcaption>Self-portrait, in pixels.</figcaption>
+      </figure>
+    </div>
+
+    <section class="mvt" style="padding-top:64px;">
+      <div class="col">
+        <p>
+          A few years into my career, OpenClassrooms offered me a full-time
+          teaching job.
+        </p>
+        <p>
+          I'd been writing courses for them on the side for four years,
+          alongside my day job as a developer. The offer was the obvious next
+          step: stop splitting yourself, pick the thing you're good at, do it
+          properly.
+        </p>
+      </div>
+      <p class="beat">I said no.</p>
+      <div class="col">
+        <p>
+          Not out of caution — it was the safer job, and better paid. I said no
+          because taking the practice away would have taken away the thing that
+          made the teaching any good. I'd already met enough people who taught
+          software they'd stopped writing years ago. Their courses were fine.
+          They were also slightly, unmistakably out of date, in a way the
+          students could feel and the teacher couldn't.
+        </p>
+        <p>
+          That was the first time I turned down a real opportunity to protect
+          something I couldn't fully justify yet. It wasn't the last.
+        </p>
+      </div>
     </section>
 
-    <!-- Two passions, one practice -->
-    <div class={sectionRule}>
-      <h2 class="text-white text-2xl font-bold">Two passions, one practice</h2>
-    </div>
-    <div class="flex flex-col gap-6 mb-16 max-w-[68ch]">
-      <p class="text-white text-[1.0625rem] leading-[1.6]">
-        Based in Paris, I&rsquo;ve never been able to choose between two
-        passions: unraveling complex problems through code, and helping other
-        people learn to do the same. For most of my career those looked like two
-        different jobs, pulling in opposite directions. It took me a while to
-        realise they were the same instinct &mdash; and that the place I&rsquo;m
-        most useful is exactly where they meet.
-      </p>
-      <p class="text-white text-[1.0625rem] leading-[1.6]">
-        My teaching philosophy is rooted in empowerment. I try to cultivate
-        autonomy rather than dependence &mdash; to teach people <em
-          >how to fish</em
-        > rather than hand them the catch: the tools, the skills, and above all the
-        confidence to navigate code on their own. That belief shapes how I engineer,
-        too. Good infrastructure, like good teaching, is the kind people can actually
-        understand and build on.
-      </p>
-      <p class="text-customGrey text-[1.0625rem] leading-[1.6]">
-        I&rsquo;m happiest in hands-on coaching and real-world code rather than
-        on a stage, though I&rsquo;ve taught at bootcamps and spoken at
-        conferences along the way. The thread through all of it is the same:
-        meaningful work, done to a high technical standard, shared so that
-        others can do it too.
-      </p>
-    </div>
-
-    <!-- How I got here: the timeline -->
-    <div class={sectionRule}>
-      <h2 class="text-white text-2xl font-bold">How I got here</h2>
-      <p class="text-customGrey text-sm">
-        Engineering and teaching, back and forth &mdash; until they converged.
-      </p>
-    </div>
-
-    <div class="flex flex-wrap gap-6 mb-8">
-      <span
-        class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.1em] text-customGrey"
-      >
-        <i class="w-[14px] h-[14px] rounded-[2px] bg-white"></i> Engineering role
-      </span>
-      <span
-        class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.1em] text-customGrey"
-      >
-        <i
-          class="w-[14px] h-[14px] rounded-[2px] bg-transparent shadow-[inset_0_0_0_2px_#d9d9d9]"
-        ></i> Teaching role
-      </span>
-      <span
-        class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.1em] text-customGrey"
-      >
-        <i class="w-[14px] h-[14px] rounded-[2px] bg-secondary"></i> Both at once
-      </span>
-    </div>
-
-    <div class="relative mb-16">
-      <div
-        class="absolute left-[7px] top-[10px] bottom-[10px] w-[2px] bg-hairline"
-      >
-      </div>
-      {
-        timeline.map((node) => (
-          <div class="relative pl-10 pb-10 last:pb-0">
-            <span
-              class:list={[
-                "absolute left-0 top-1 w-4 h-4 rounded-[2px]",
-                dotClass[node.marker],
-              ]}
-            />
-            <span
-              class:list={[
-                "font-bold text-xs uppercase tracking-[0.14em]",
-                node.marker === "both" ? "text-secondary" : "text-customGrey",
-              ]}
-            >
-              {node.tag}
-            </span>
-            <h3 class="text-white font-bold text-xl md:text-2xl mt-1 mb-0.5">
-              {node.org}
-            </h3>
-            <p class="text-white font-bold text-sm">{node.role}</p>
-            <p class="text-customGrey text-base leading-[1.6] mt-3 max-w-[58ch]">
-              {node.desc}
-            </p>
-          </div>
-        ))
-      }
-    </div>
-
-    <!-- Right now -->
-    <div class={sectionRule}>
-      <h2 class="text-white text-2xl font-bold">Right now</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
-      <div class={nowCard}>
-        <span class={cardLabel}>Day to day</span>
-        <h3 class="text-white text-xl font-bold">
-          Lead Educational Engineer, Software &amp; Cloud
-        </h3>
-        <p class="text-customGrey text-sm leading-[1.6]">
-          Scaleway &mdash; designing how people learn the cloud platform, from
-          seasoned engineers to first-timers.
+    <section class="mvt">
+      <div class="col">
+        <p>Here's what I couldn't have explained at the time.</p>
+        <p>
+          Teaching something forces you to make it visible. You can write code
+          for years on instinct — the pattern works, you reach for it, you move
+          on. The moment you have to put it in front of thirty people who will
+          ask why, the instinct has to become an argument. Half of what I
+          understand properly, I understand because I had to teach it badly
+          first.
         </p>
       </div>
-      <div class={nowCard}>
-        <span class={cardLabel}>On the side</span>
-        <h3 class="text-white text-xl font-bold">Founder, NX Academy</h3>
-        <p class="text-customGrey text-sm leading-[1.6]">
-          Coaching and courses for developers. <Link
-            content="nx.academy ↗"
-            to="https://nx.academy/"
-            external
-          />
+      <p class="beat">Everything I teach, I've broken.</p>
+      <div class="col">
+        <p>
+          I know which part of Docker people actually get stuck on because I got
+          stuck there, on a Tuesday, on something real that was on fire. That's
+          not a detail you can get from a book.
+        </p>
+        <p>
+          The cost is real. Thirteen years of doing both means I've never been
+          the most specialized person in the room. There's always someone deeper
+          in Kubernetes, someone who's read more on cognitive science. For a
+          long time that felt like a deficiency I was one good year away from
+          fixing.
+        </p>
+        <p>
+          It isn't one. It's the shape of the job. The people who need me don't
+          need the deepest specialist — they need someone who can sit with the
+          engineers and go deep, then turn around and make the same idea land
+          for someone who started six months ago, without becoming a different
+          person in between.
         </p>
       </div>
-    </div>
+    </section>
 
-    <div class="flex flex-wrap gap-3 mb-20">
-      <Button variant="primary" to={CONTACT}>Work with me</Button>
-      <Button variant="ghost" to="/">Back to home</Button>
-    </div>
-  </main>
+    <section class="mvt">
+      <div class="col">
+        <p>Years later, I took the job I'd turned down.</p>
+        <p>
+          A school hired me to teach programming full-time — teenagers, five
+          days a week, the exact thing I'd said no to. The difference was that I
+          didn't stop building. NX Academy was running alongside it, and the
+          strange part is that I've never written more code than during the
+          years I taught full-time. Teaching all day left me wanting to build in
+          a way that building all day never did.
+        </p>
+      </div>
+      <p class="beat">Then someone taught me to teach.</p>
+      <div class="col">
+        <p>
+          My director came out of the French public school system, trained in
+          cognitive science and education. Until then I'd taught on instinct. I
+          was decent at it and I couldn't have told you why any of it worked.
+          She made me work on the parts that don't improvise — how you stand in
+          front of a room, the rhythm of a session, what to do with a silence.
+          I'd been teaching for years and I was being taught the fundamentals.
+        </p>
+        <p>
+          The framework on my <a href="/method">method page</a> comes from there.
+          I didn't invent it. It was handed to me, late, by someone who'd had it from
+          the start.
+        </p>
+        <p>
+          Then Scaleway, a year ago, where the two stopped being two. They hired
+          me to build a training program: teach educational engineering to
+          engineers who know how to build and don't yet know how to teach — and
+          design the trainings myself, so there's something to point at. I
+          train, and I train the people who will train. There's no version of
+          that job where I put one of the two down.
+        </p>
+        <p>
+          These days, when someone asks what I do, I don't have a short answer.
+          Developer? Teacher? Both are true, neither is enough alone. I stopped
+          looking for the word.
+        </p>
+      </div>
+    </section>
+
+    <section class="facts-block">
+      <div>
+        <p class="col-label">Now</p>
+        <p class="f">
+          Lead Educational Engineer, Software &amp; Cloud<span class="yr"
+            >Scaleway · Paris</span
+          >
+        </p>
+        <p class="f">
+          Founder — NX Academy<span class="yr"
+            >A free, open-source school for developers, in French</span
+          >
+        </p>
+      </div>
+      <div>
+        <p class="col-label">Before</p>
+        <p class="f">CTO<span class="yr">SensCritique</span></p>
+        <p class="f">
+          Computer Science Teacher<span class="yr">Eden School</span>
+        </p>
+        <p class="f">Lead Teacher<span class="yr">OpenClassrooms</span></p>
+        <p class="f">Developer Advocate<span class="yr">Datadog</span></p>
+      </div>
+    </section>
+  </div>
 </Layout>
+
+<style>
+  /* Page head with pixel-art portrait. */
+  .about-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding: 72px 0 8px;
+  }
+  .about-head .head-text {
+    max-width: 34rem;
+  }
+  .about-head .altitude {
+    margin-top: 16px;
+  }
+  figure.portrait {
+    margin: 0;
+    flex: 0 0 auto;
+  }
+  figure.portrait .frame {
+    border: 1px solid var(--ink);
+    padding: 6px;
+    background: #fff;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  figure.portrait img {
+    display: block;
+    width: 190px;
+    height: 190px;
+    image-rendering: pixelated;
+  }
+  figure.portrait figcaption {
+    font-style: italic;
+    color: var(--meta);
+    font-size: 12.5px;
+    margin-top: 10px;
+    text-align: right;
+  }
+  @media (max-width: 640px) {
+    .about-head {
+      align-items: flex-start;
+    }
+    figure.portrait img {
+      width: 132px;
+      height: 132px;
+    }
+  }
+
+  /* Now / Before — factual coda, raised onto a panel so it stands apart. */
+  .facts-block {
+    margin-top: 100px;
+    background: var(--paper-2);
+    padding: 38px 40px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 48px;
+    max-width: 48rem;
+    border-top: 3px solid var(--ink);
+  }
+  .facts-block .col-label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .facts-block p.f {
+    margin: 0 0 14px;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+  .facts-block p.f:last-child {
+    margin-bottom: 0;
+  }
+  .facts-block p.f .yr {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--meta);
+    margin-top: 1px;
+  }
+  @media (max-width: 640px) {
+    .facts-block {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding: 28px 22px;
+    }
+  }
+</style>

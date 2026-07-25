@@ -1,203 +1,230 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Button from "../components/Button.astro";
-
-// "Work with me" CTA — drops straight into a pre-filled email.
-const CONTACT =
-  "mailto:thomas.dimnet@gmail.com?subject=Let's%20work%20together";
-
-// Two pillars, three audiences each. The ↗ marks links that leave the site.
-type Route = {
-  aud: string;
-  dest: string;
-  href: string;
-  external?: boolean;
-};
-
-const eduRoutes: Route[] = [
-  {
-    aud: "For learners",
-    dest: "NX Academy ↗",
-    href: "https://nx.academy/",
-    external: true,
-  },
-  { aud: "For companies", dest: "Teaching & curriculum", href: "/teaching" },
-  { aud: "For peers", dest: "Selected courses", href: "/teaching" },
-];
-
-const swRoutes: Route[] = [
-  { aud: "For companies", dest: "Selected projects", href: "/projects" },
-  { aud: "For peers", dest: "Experimentations", href: "/experimentations" },
-  {
-    aud: "For peers",
-    dest: "GitHub ↗",
-    href: "https://github.com/tdimnet",
-    external: true,
-  },
-];
-
-const routeRowClass =
-  "routelink group flex items-baseline gap-3 py-3 border-t border-hairline last:border-b text-white transition-[padding-left] duration-200 ease-in hover:pl-2";
 ---
 
 <Layout
-  title="Thomas Dimnet — Software Engineer & Engineering Teacher"
-  description="Thomas Dimnet, software and cloud engineer who also engineers how people learn — Lead Educational Engineer at Scaleway and founder of NX Academy."
+  title="Thomas Dimnet"
+  description="I build systems, and I teach engineers to build them. The hard part is the same in both: deciding what to leave out. Lead Educational Engineer at Scaleway, founder of NX Academy."
+  caret={true}
 >
-  <main id="main-content" class="row-span-5">
-    <!-- Hero: the unified identity, stated plainly and centred. -->
-    <section
-      class="flex flex-col items-center gap-5 max-w-[60rem] mx-auto text-center pt-12 pb-10 md:pt-20 md:pb-12"
-    >
-      <img
-        class="w-[84px] h-[84px] bg-white rounded-[2px] shadow-[0_4px_0_rgba(0,0,0,0.5)] [image-rendering:pixelated]"
-        src="/assets/profil-picture.png"
-        alt="Tom Dimnet, pixel-art portrait"
-      />
-      <p class="font-bold text-xs uppercase tracking-[0.18em] text-customGrey">
-        Thomas &ldquo;tom&rdquo; Dimnet &middot; Paris
-      </p>
-      <h1
-        class="text-white font-bold leading-[1.05] tracking-[-0.01em] text-balance text-[clamp(2rem,9.5vw,2.9rem)] md:text-[clamp(2.6rem,5.2vw,4.25rem)]"
-      >
-        I engineer software systems &mdash;<br />and the way people <span
-          class="accent-underline">learn them</span
-        >.
-      </h1>
-      <p class="text-customGrey text-base leading-[1.6] max-w-[54ch]">
-        Educational Engineering (<em>ing&eacute;nierie p&eacute;dagogique</em>):
-        I build software and cloud infrastructure, and I know how to teach it
-        &mdash; to fellow engineers and to people coming from far outside the
-        field alike.
-      </p>
-      <p class="text-white font-bold text-base leading-[1.7]">
-        Lead Educational Engineer, Software &amp; Cloud at <span
-          class="text-secondary">Scaleway</span
-        ><span class="text-hairline mx-2">&middot;</span>Founder of <span
-          class="text-secondary">NX Academy</span
-        >
-      </p>
-      <div class="flex flex-wrap justify-center gap-3 mt-2">
-        <Button variant="primary" to={CONTACT}>Work with me</Button>
-        <Button variant="ghost" to="/publications">Read the blog</Button>
-      </div>
-    </section>
-
-    <!-- Rarity hook: one line that names the unusual fusion, links to /about. -->
-    <section
-      class="flex flex-col items-center gap-5 max-w-[58rem] mx-auto text-center border-t border-hairline pt-10 pb-12 md:pt-12 md:pb-16"
-    >
-      <p
-        class="text-white font-bold leading-[1.55] text-balance max-w-[44ch] text-[clamp(1.15rem,2.1vw,1.4rem)]"
-      >
-        Building software systems and engineering <span class="accent-underline"
-          >how people learn them</span
-        > are normally two careers, held by two different people. I do both &mdash;
-        as one job.
-      </p>
-      <a
-        class="font-display font-bold text-xl text-secondary inline-flex items-center gap-2 transition-[gap] duration-200 ease-in hover:gap-3"
-        href="/about"
-      >
-        How I ended up doing both <span aria-hidden="true">&rarr;</span>
-      </a>
-    </section>
-
-    <!-- Two-pillar split: each side routes three audiences. -->
-    <section
-      class="grid grid-cols-1 md:grid-cols-2 border-t-2 border-white mb-20"
-    >
-      <div
-        class="py-8 px-1 md:py-10 md:px-8 border-b-2 border-secondary md:border-b-0 md:border-r-2"
-      >
-        <a
-          class="block bg-white rounded-[2px] overflow-hidden mb-5 aspect-[16/9]"
-          href="/teaching"
-        >
-          <img
-            class="w-full h-full object-cover [image-rendering:pixelated]"
-            src="/assets/a-teacher.png"
-            alt="A teacher in front of a blackboard, pixel art"
-          />
-        </a>
-        <h2 class="text-white text-2xl font-bold mb-3">
-          <span class="accent-underline">Educational</span> Engineering
-        </h2>
-        <p class="text-customGrey text-base leading-[1.6] mb-6">
-          Designing how people actually learn to build &mdash; curricula,
-          courses, and coaching that turn curiosity into real capability.
+  <div class="region">
+    <section class="hero">
+      <div class="col">
+        <h1>
+          I build systems, and I teach engineers to build them. The hard part is
+          the same in both: deciding what to leave out.
+        </h1>
+        <p class="proof">
+          Thirteen years of building software and cloud systems, and just as
+          long teaching them. Today at Scaleway, I train the engineers who train
+          everyone else.
         </p>
-        <div>
-          {
-            eduRoutes.map((r) => (
-              <a
-                class={routeRowClass}
-                href={r.href}
-                target={r.external ? "_blank" : undefined}
-                rel={r.external ? "noopener noreferrer" : undefined}
-              >
-                <span class="flex-none text-xs uppercase tracking-[0.12em] text-customGrey min-w-[6rem] md:min-w-[7.5rem]">
-                  {r.aud}
-                </span>
-                <span class="flex-1 font-display text-xl font-bold">
-                  {r.dest}
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="font-display text-secondary transition-transform duration-200 ease-in group-hover:translate-x-1"
-                >
-                  &rarr;
-                </span>
-              </a>
-            ))
-          }
-        </div>
-      </div>
-
-      <div class="py-8 px-1 md:py-10 md:px-8">
-        <a
-          class="block bg-white rounded-[2px] overflow-hidden mb-5 aspect-[16/9]"
-          href="/projects"
-        >
-          <img
-            class="w-full h-full object-cover [image-rendering:pixelated]"
-            src="/assets/software-engineer.png"
-            alt="A developer at a laptop, pixel art"
-          />
-        </a>
-        <h2 class="text-white text-2xl font-bold mb-3">
-          <span class="accent-underline">Software / Cloud</span> Engineering
-        </h2>
-        <p class="text-customGrey text-base leading-[1.6] mb-6">
-          Building and shipping real systems &mdash; cloud infrastructure,
-          developer tooling, and products that hold up under load.
-        </p>
-        <div>
-          {
-            swRoutes.map((r) => (
-              <a
-                class={routeRowClass}
-                href={r.href}
-                target={r.external ? "_blank" : undefined}
-                rel={r.external ? "noopener noreferrer" : undefined}
-              >
-                <span class="flex-none text-xs uppercase tracking-[0.12em] text-customGrey min-w-[6rem] md:min-w-[7.5rem]">
-                  {r.aud}
-                </span>
-                <span class="flex-1 font-display text-xl font-bold">
-                  {r.dest}
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="font-display text-secondary transition-transform duration-200 ease-in group-hover:translate-x-1"
-                >
-                  &rarr;
-                </span>
-              </a>
-            ))
-          }
-        </div>
+        <dl class="now">
+          <div class="row">
+            <dt>Now</dt>
+            <dd>
+              Lead Educational Engineer, Software &amp; Cloud — <strong
+                >Scaleway</strong
+              >, Paris
+            </dd>
+          </div>
+          <div class="row">
+            <dt>Also</dt>
+            <dd>
+              Founder of <a href="https://nx.academy/">NX Academy</a>, a free
+              school for developers, in French ↗
+            </dd>
+          </div>
+        </dl>
       </div>
     </section>
-  </main>
+
+    <section class="mvt">
+      <div class="col">
+        <p class="mvt-kicker">The build side</p>
+        <h2>The choice I'm proudest of doesn't look like much.</h2>
+        <p>
+          As CTO of SensCritique, I had to containerize our infrastructure. The
+          expected answer was Kubernetes — the powerful one, the one that looks
+          good on a CV. I went with Docker Swarm instead: smaller, plainer, and
+          something the whole team could run and repair on a Sunday night
+          without me.
+        </p>
+      </div>
+      <p class="beat">I could have picked Kubernetes for the photo.</p>
+      <div class="col">
+        <p>
+          I'd make the same call today, and I make it every time I design a
+          course: the content is never the hard part, deciding what to leave out
+          is.
+        </p>
+        <p class="meta"><a href="/work">How that rebuild went →</a></p>
+      </div>
+    </section>
+
+    <section class="mvt">
+      <div class="col">
+        <p class="mvt-kicker">The teaching side</p>
+        <h2>The course where I couldn't cut anything.</h2>
+        <p>
+          I wrote a course on design patterns in JavaScript. Nine patterns, the
+          full catalog — the exact opposite of leaving things out. So where's
+          the refusal?
+        </p>
+        <p>
+          Not in what I removed; a course on patterns has to cover the patterns.
+          It's in the order. You don't open with a pattern. You open with the
+          objects and inheritance that make patterns readable at all. Then they
+          arrive, one at a time, each one starting from a real problem rather
+          than a definition.
+        </p>
+      </div>
+      <p class="beat">
+        The inventory is real. What I refuse is to dump it all at once.
+      </p>
+      <div class="col">
+        <p class="meta">
+          <a href="https://nx.academy/">The course is public, in French →</a>
+        </p>
+      </div>
+    </section>
+
+    <nav class="route" aria-label="Sections">
+      <p class="route-kicker">Read on</p>
+      <p class="line">
+        <strong>Method</strong> — how I design courses and train the trainers, with
+        the work that proves it. <a href="/method">→</a>
+      </p>
+      <p class="line">
+        <strong>Work</strong> — the systems I've built, and the games I'm building
+        now. <a href="/work">→</a>
+      </p>
+      <p class="line">
+        <strong>Speaking</strong> — what I talk about, and how to get me in the room.
+        <a href="/speaking">→</a>
+      </p>
+      <p class="line">
+        <strong>About</strong> — the long version of how I ended up doing both.
+        <a href="/about">→</a>
+      </p>
+    </nav>
+
+    <section class="close">
+      <div class="col">
+        <p>
+          I'm always up for a conversation about teaching engineers — a training
+          program to build, a talk to give, or just the problem itself.
+        </p>
+      </div>
+    </section>
+  </div>
 </Layout>
+
+<style>
+  .hero {
+    padding: 96px 0 8px;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(34px, 4.7vw, 52px);
+    line-height: 1.14;
+    margin: 0;
+    letter-spacing: -0.01em;
+    max-width: 30rem;
+    text-wrap: balance;
+  }
+  .hero .proof {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 34px 0 0;
+    max-width: 33rem;
+  }
+  .now {
+    margin-top: 34px;
+    display: grid;
+    gap: 14px;
+    max-width: 33rem;
+  }
+  .now .row {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 16px;
+    align-items: baseline;
+  }
+  .now dt {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--meta);
+    padding-top: 3px;
+  }
+  .now dd {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  .now dd strong {
+    font-weight: 700;
+  }
+  .mvt-kicker {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--meta);
+    margin: 0 0 14px;
+  }
+  .route {
+    margin-top: 96px;
+    padding-top: 40px;
+    border-top: 2px solid var(--ink);
+  }
+  .route-kicker {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--meta);
+    margin: 0 0 22px;
+  }
+  .route .line {
+    padding: 20px 0;
+    border-top: 1px solid var(--rule);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 34rem;
+  }
+  .route .line:first-of-type {
+    border-top: 0;
+  }
+  .route .line strong {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 19px;
+    color: var(--ink);
+  }
+
+  /* Hero entrance: title "compiles" left→right, then proof/now rise-fade in. */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero h1 {
+      clip-path: inset(0 100% 0 0);
+      animation: wipeIn 1.25s 0.15s cubic-bezier(0.33, 0.1, 0.25, 1) forwards;
+    }
+    .hero .proof {
+      opacity: 0;
+      animation: riseIn 0.6s 0.95s ease forwards;
+    }
+    .hero .now {
+      opacity: 0;
+      animation: riseIn 0.6s 1.15s ease forwards;
+    }
+  }
+</style>
