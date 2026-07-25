@@ -1,0 +1,278 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Work — Tom Dimnet"
+  description="Four systems and a pile of games. SensCritique, Popcorns, Datadog, NX Academy — each here for a decision, not for a stack."
+  current="work"
+>
+  <div class="region">
+    <div class="pagehead">
+      <h1 class="page">Work</h1>
+      <p class="altitude">
+        Four systems and a pile of games. Each one is here for a decision, not
+        for a stack.
+      </p>
+    </div>
+
+    <section class="mvt">
+      <div class="col">
+        <h2>SensCritique</h2>
+        <p class="role">CTO · a few million visitors a month</p>
+        <p>
+          Aging PHP on a framework to match. Two business APIs doing the same
+          job. A GraphQL gateway on top. Two frontends alongside the PHP. No
+          monitoring, no CI/CD. Eight of us.
+        </p>
+        <p>
+          Everyone wanted the rewrite, including me. I did the boring things
+          first: monitoring across the whole stack, containers, CI/CD, Figma and
+          Storybook so the two frontends stopped drifting apart. Only then did
+          we start deleting services — and by then we could see which ones were
+          actually dead.
+        </p>
+      </div>
+      <p class="beat">You can't delete what you can't see.</p>
+      <div class="col">
+        <p>
+          Starting with the rewrite would have been faster to begin and much
+          slower to finish.
+        </p>
+        <p class="tech">
+          PHP, Node.js, GraphQL, Next.js, Docker Swarm, Datadog · <a href="#"
+            >the long version →</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <section class="mvt">
+      <div class="col">
+        <figure class="phone">
+          <div class="frame">
+            <div class="slot" style="width:216px;height:468px">
+              Popcorns app screenshot
+            </div>
+          </div>
+        </figure>
+        <h2>Popcorns</h2>
+        <p class="role">A SensCritique product</p>
+        <p>
+          A mobile app answering one question: what's actually worth watching
+          tonight, across Netflix, Prime, and HBO.
+        </p>
+        <p>
+          I built it on Expo rather than bare React Native. That capped us — a
+          few native things were simply off the table — and it was the right
+          trade. The question wasn't how good the app could get. It was whether
+          anyone wanted it, and Expo got us to that answer in a fraction of the
+          time.
+        </p>
+        <p>
+          On the backend we reused SensCritique's microservices instead of
+          writing new ones. The cleanup from the year before was what made that
+          possible.
+        </p>
+      </div>
+      <p class="beat">It got traction, but not enough. We shut it down.</p>
+      <div class="col">
+        <p>
+          Which is the trade working, not the trade failing — we got that answer
+          in months instead of a year, and on an app we hadn't over-built.
+        </p>
+        <p class="tech">React Native, Expo, Python, Selenium</p>
+      </div>
+    </section>
+
+    <section class="mvt">
+      <div class="col">
+        <h2>Datadog</h2>
+        <p>
+          Developer advocacy for Datadog Apps — a platform for building your own
+          interfaces on top of Datadog, and at the time, a thing almost nobody
+          could picture.
+        </p>
+        <p>
+          I could have written documentation and talked about what was possible.
+          Possibilities teach nothing. So I shipped instead: an app to manage
+          Redis clusters without leaving Datadog, and one that ordered pizza
+          through an external API — deliberately silly, because the fastest way
+          to make a platform feel real is to show it doing something nobody
+          expected.
+        </p>
+      </div>
+      <p class="beat">
+        Explaining the thing and building the thing stopped being two tasks.
+      </p>
+      <div class="col">
+        <p>
+          Both ran against Datadog's own products and internal APIs rather than
+          a sandbox, which is the only version worth showing. I took the work to
+          AWS Summit Paris.
+        </p>
+        <p class="tech">React, TypeScript, Python</p>
+      </div>
+    </section>
+
+    <section class="mvt">
+      <div class="col">
+        <h2>NX Academy</h2>
+        <p>
+          A free, open-source school for developers, in French. Two full
+          courses, dozens of technical sheets, no paywall.
+        </p>
+        <p>
+          It runs on Astro with no API and no database. Not because I can't
+          build them — I've built dozens — but because every brick you add is a
+          brick someone has to understand and maintain. Static means the whole
+          thing survives me not touching it for three months, and a reader on a
+          bad connection still gets the page.
+        </p>
+      </div>
+      <p class="beat">The same call I made with Swarm, alone this time.</p>
+      <div class="col">
+        <p class="tech">
+          Astro, TypeScript, GitHub Actions, Docker · <a
+            href="https://github.com/tdimnet">source ↗</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <section class="dry">
+      <p class="dry-kicker">Games</p>
+      <p class="dry-intro">
+        A year and a half ago I got curious about how games are actually made.
+        Same instinct as the rest of this page, on a surface where I'm a
+        beginner — and being a beginner again is the point.
+      </p>
+
+      <figure class="artifact pixel">
+        <div class="frame">
+          <div class="slot" style="width:100%;height:340px">
+            Campfire Stories — pixel art / gameplay
+          </div>
+        </div>
+        <figcaption>
+          Campfire Stories — pixel art done in Aseprite. The one image on this
+          page that isn't a stack diagram: a game about a cook, a fire, and
+          strangers telling you real things.
+        </figcaption>
+      </figure>
+
+      <div class="item" style="margin-top:44px;">
+        <h3>Campfire Stories</h3>
+        <p>
+          My first game jam. Two weeks, one constraint. You play a cook at a
+          campfire while strangers tell you real things. I built two systems at
+          once, a dialogue engine and a cooking engine, having built neither
+          before — which is exactly the mistake this whole site argues against.
+          I shipped it anyway. Open source, runs on macOS, Linux, and Windows.
+        </p>
+        <p class="meta">
+          MonoGame, C#, Aseprite · <a href="#">play ↗</a> · <a
+            href="https://github.com/tdimnet">source ↗</a
+          >
+        </p>
+      </div>
+      <div class="item">
+        <h3>Before that</h3>
+        <p>
+          An idle game and a small city builder, both unfinished, both useful.
+        </p>
+        <p class="meta"><a href="#">itch.io ↗</a></p>
+      </div>
+    </section>
+
+    <section class="close">
+      <p>
+        Games aside, this is thirteen years of the same decision: pick the
+        smaller thing you can actually stand behind.
+      </p>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  /* Wider region so an artifact can break past the reading measure. */
+  .region {
+    max-width: 52rem;
+  }
+  .role {
+    font-style: italic;
+    color: var(--meta);
+    font-size: 14px;
+    margin: 0 0 24px;
+  }
+  .tech {
+    font-style: italic;
+    color: var(--meta);
+    font-size: 14px;
+    line-height: 1.55;
+    margin: 24px 0 0;
+  }
+
+  /* Artifact: a real thing he made, framed plainly, never decoration. */
+  figure.artifact {
+    margin: 44px 0 0;
+  }
+  figure.artifact .frame {
+    border: 1px solid var(--ink);
+    background: var(--paper-2);
+    padding: 8px;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  figure.artifact.pixel .slot {
+    image-rendering: pixelated;
+  }
+  figure.artifact figcaption {
+    font-style: italic;
+    color: var(--meta);
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin: 12px 2px 0;
+    max-width: 34rem;
+  }
+
+  /* Phone-shaped artifact floated beside prose on wide screens. */
+  figure.phone {
+    float: right;
+    width: 230px;
+    margin: 6px 0 20px 40px;
+  }
+  figure.phone .frame {
+    border: 1px solid var(--ink);
+    background: #c9c4b7;
+    padding: 7px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  figure.phone .slot {
+    border-radius: 13px;
+    overflow: hidden;
+  }
+  @media (max-width: 640px) {
+    figure.phone {
+      float: none;
+      width: 100%;
+      max-width: 300px;
+      margin: 28px 0 0;
+    }
+  }
+
+  /* Placeholder for images Tom will drop in (Popcorns / Campfire). Swap the
+     .slot div for a plain <img> once the real screenshots exist. */
+  .slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px;
+    background: var(--paper);
+    color: var(--meta);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    max-width: 100%;
+  }
+</style>

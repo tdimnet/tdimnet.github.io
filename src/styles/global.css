@@ -1,156 +1,531 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Space+Mono:ital@0;1&display=swap');
+/* Tom Dimnet — editorial monochrome portfolio (light/print direction).
+   Hand-written plain CSS. Shared visual system for every page: tokens,
+   base typography, layout, footer, and all entrance/hover animation.
+   Fonts (Pixelify Sans + Space Mono) are loaded from the <head> in Layout.astro. */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  /* ── Colors — the paper direction ── */
+  --paper: #f4f1ea; /* warm near-white — page background */
+  --paper-2: #ece8df; /* faint raised tone for aside blocks */
+  --ink: #1a1815; /* near-black text, heavy rules, wordmark */
+  --ink-soft: #413d36; /* prose that isn't the darkest */
+  --meta: #7a7469; /* muted grey — meta lines, kickers */
+  --rule: #d6d0c4; /* hairline on paper */
+  --accent: #0b6b43; /* deep green, links only, 4.5:1+ on paper */
 
-@layer base {
-  html {
-    font-family: 'Space Mono', monospace;
+  /* ── Type ── */
+  --font-display: "Pixelify Sans", "Courier New", monospace;
+  --font-body: "Space Mono", "Courier New", monospace;
+
+  /* ── Layout measure ── */
+  --measure: 34rem; /* ~66–68ch of Space Mono — the reading column */
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* Faint pixel-dot grid, like an engineer's graph paper. Static. */
+  background-image: radial-gradient(
+    rgba(26, 24, 21, 0.055) 1.2px,
+    transparent 1.3px
+  );
+  background-size: 23px 23px;
+  background-position: -2px -2px;
+  background-attachment: fixed;
+}
+
+/* Sensible display-font default; specific rules below still win. */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+/* ── Links: the one place colour does any work ── */
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: none;
+}
+a:hover {
+  color: var(--ink);
+}
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* ── Skip link ── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 10px 16px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ── Chrome ── */
+header.site {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 34px 32px 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+.wordmark a {
+  color: var(--ink);
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  gap: 22px;
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
+}
+nav .here {
+  color: var(--ink);
+}
+
+/* ── Column ── */
+main {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.col {
+  max-width: var(--measure);
+}
+
+/* ── Page head: three distinct levels ── */
+.pagehead {
+  padding: 72px 0 8px;
+}
+h1.page {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(46px, 7vw, 68px);
+  line-height: 1;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.altitude {
+  font-style: italic;
+  color: var(--meta);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 18px 0 0;
+  max-width: 30rem;
+}
+
+/* ── Movement / section ── */
+.mvt {
+  padding-top: 104px;
+}
+.mvt h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(28px, 3.4vw, 36px);
+  line-height: 1.12;
+  margin: 0 0 30px;
+  letter-spacing: -0.01em;
+  max-width: 24rem;
+  text-wrap: balance;
+}
+p {
+  margin: 0 0 22px;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+p strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* ── Lever 1: the isolated line ── */
+.beat {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(24px, 3vw, 30px);
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 52px 0;
+  max-width: 26rem;
+  letter-spacing: -0.01em;
+}
+
+/* ── Lever 2: meta lines ── */
+.meta {
+  font-style: italic;
+  color: var(--meta);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 6px 0 0;
+}
+
+/* ── Lever 3: dry blocks ── */
+.dry {
+  margin-top: 96px;
+  padding-top: 40px;
+  border-top: 2px solid var(--ink);
+}
+.dry-kicker {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--meta);
+  margin: 0 0 6px;
+}
+.dry-intro {
+  color: var(--ink-soft);
+  margin: 0 0 40px;
+}
+.item {
+  padding: 26px 0;
+  border-top: 1px solid var(--rule);
+}
+.item:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+.item h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1.2;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+.item .meta {
+  margin: 0 0 12px;
+}
+.item p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.7;
+}
+
+/* ── Aside block ── */
+.aside {
+  margin-top: 84px;
+  padding: 32px 34px;
+  background: var(--paper-2);
+}
+.aside h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+.aside p {
+  margin: 0;
+  font-size: 15.5px;
+}
+
+/* ── Close + single action ── */
+.close {
+  margin-top: 88px;
+}
+.close p {
+  color: var(--ink-soft);
+}
+.action {
+  margin-top: 36px;
+}
+.action a {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(22px, 3vw, 28px);
+}
+
+/* ── Footer: shared across all pages ── */
+.site-footer {
+  border-top: 2px solid var(--ink);
+  margin-top: 120px;
+}
+.site-footer .fwrap {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 40px 32px 48px;
+}
+.footer-call {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(21px, 2.6vw, 26px);
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 0 0 6px;
+  max-width: 26rem;
+  letter-spacing: -0.01em;
+}
+.footer-call a {
+  text-decoration-thickness: 2px;
+}
+.footer-sub {
+  font-style: italic;
+  color: var(--meta);
+  font-size: 14px;
+  margin: 0 0 40px;
+  max-width: 30rem;
+}
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 48px;
+  max-width: 34rem;
+}
+.footer-cols .col-label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--meta);
+  margin: 0 0 14px;
+}
+.footer-cols ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-cols li {
+  margin: 0 0 9px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.footer-cols li a {
+  color: var(--ink);
+  text-decoration: none;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 2px;
+  transition:
+    background-size 0.3s cubic-bezier(0.2, 0.7, 0.2, 1),
+    color 0.2s ease;
+  padding-bottom: 2px;
+}
+.footer-cols li a:hover {
+  background-size: 100% 2px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer-base {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  color: var(--meta);
+}
+.footer-base .wordmark {
+  font-size: 15px;
+}
+
+/* ── Responsive: single breakpoint ── */
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
   }
-
-  h1, h2, h3 {
-    font-family: 'Pixelify Sans', cursive;
+  header.site {
+    padding-top: 26px;
   }
-
-  nav li a {
-    font-family: 'Pixelify Sans', cursive;
+  main {
+    padding-bottom: 0;
   }
-
-  /* Visible keyboard focus on the dark theme. Mouse users are unaffected
-     thanks to :focus-visible. */
-  :focus-visible {
-    outline: 2px solid theme('colors.secondary');
-    outline-offset: 2px;
-    border-radius: 2px;
+  .mvt {
+    padding-top: 80px;
   }
-
-  /* Restrained, quick motion is part of the brand — but never at the cost of
-     accessibility. Honour the user's reduced-motion preference everywhere. */
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
+  .aside {
+    padding: 26px 22px;
+  }
+  .site-footer {
+    margin-top: 88px;
+  }
+  .footer-cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 24px;
   }
 }
 
-@layer components {
-  /* The signature: a single mint accent rendered as an underline sitting
-     below the text with a gap. Applied to a few key words in headings. */
-  .accent-underline {
-    text-decoration: underline;
-    text-decoration-color: theme('colors.secondary');
-    text-decoration-thickness: 3px;
-    text-underline-offset: 8px;
-    text-decoration-skip-ink: none;
+/* ── Terminal caret (Home wordmark) ── */
+.caret {
+  display: inline-block;
+  width: 0.5em;
+  height: 1.02em;
+  background: var(--accent);
+  margin-left: 3px;
+  transform: translateY(3px);
+  vertical-align: baseline;
+}
+
+/* ── Top-nav underline draws in on hover ── */
+header.site nav a {
+  text-decoration: none;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 2px;
+  transition:
+    background-size 0.3s cubic-bezier(0.2, 0.7, 0.2, 1),
+    color 0.2s ease;
+  padding-bottom: 3px;
+}
+header.site nav a:hover {
+  background-size: 100% 2px;
+}
+
+/* ── Artifacts lift on hover ── */
+figure.artifact .frame,
+figure.phone .frame,
+figure.portrait .frame {
+  transition:
+    transform 0.28s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.28s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+figure.artifact .frame:hover,
+figure.phone .frame:hover,
+figure.portrait .frame:hover {
+  transform: translate(-2px, -3px);
+  box-shadow: 9px 11px 0 var(--ink);
+}
+
+/* ── Heavy section rules draw left→right when scrolled into view ── */
+.dry,
+.route,
+.facts-block {
+  position: relative;
+}
+
+/* ── Motion: entrance + hover only, never looping ── */
+@media (prefers-reduced-motion: no-preference) {
+  h1.page {
+    clip-path: inset(0 100% 0 0);
+    animation: wipeIn 1.25s 0.15s cubic-bezier(0.33, 0.1, 0.25, 1) forwards;
+  }
+  .pagehead .altitude,
+  .about-head .altitude {
+    opacity: 0;
+    animation: riseIn 0.6s 0.95s ease forwards;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(15px);
+    transition:
+      opacity 0.55s ease,
+      transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+  .caret {
+    animation: blink 1.05s steps(1) 5 both;
+  }
+
+  /* Section rules render as an animated ::before bar. */
+  .dry,
+  .route,
+  .facts-block {
+    border-top-color: transparent;
+  }
+  .dry::before,
+  .route::before,
+  .facts-block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--ink);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .facts-block::before {
+    height: 3px;
+  }
+  .dry.is-in::before,
+  .route.is-in::before,
+  .facts-block.is-in::before {
+    transform: scaleX(1);
   }
 }
 
-@layer components {
-  /* Display typeface helper for body components that need the pixel voice. */
-  .font-display {
-    font-family: 'Pixelify Sans', cursive;
+@keyframes wipeIn {
+  to {
+    clip-path: inset(0 0 0 0);
   }
-
-  /* Reading layout for Markdown blog posts. The site colours text per
-     component, so the rendered Markdown needs its own on-brand rules. */
-  .article-prose {
-    color: #fff;
+}
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
   }
-
-  .article-prose p {
-    @apply mb-5 text-base text-white;
-    line-height: 1.7;
+  to {
+    opacity: 1;
+    transform: none;
   }
-
-  .article-prose h2 {
-    @apply mt-8 mb-3 text-2xl font-bold text-white;
-    scroll-margin-top: 1.25rem;
-  }
-
-  .article-prose h3 {
-    @apply mt-6 mb-2 text-xl font-bold text-white;
-    scroll-margin-top: 1.25rem;
-  }
-
-  .article-prose a {
-    @apply text-white border-b-2 border-secondary duration-100 ease-in;
-    text-decoration: none;
-  }
-
-  .article-prose a:hover {
-    @apply border-white;
-  }
-
-  .article-prose ul,
-  .article-prose ol {
-    @apply mb-5 flex flex-col gap-2 pl-5 text-white;
-  }
-
-  .article-prose ul {
-    list-style: square;
-  }
-
-  .article-prose ol {
-    list-style: decimal;
-  }
-
-  .article-prose li {
-    line-height: 1.7;
-  }
-
-  .article-prose blockquote {
-    @apply my-6 border-l-2 border-secondary pl-5;
-  }
-
-  .article-prose blockquote p {
-    @apply text-xl italic text-white;
-    line-height: 1.5;
-  }
-
-  .article-prose pre {
-    @apply mb-5 overflow-x-auto rounded-md border-l-2 border-secondary bg-teriary p-5;
-  }
-
-  .article-prose pre code {
-    @apply text-sm text-white;
-    line-height: 1.7;
-  }
-
-  .article-prose :not(pre) > code {
-    @apply rounded bg-teriary px-1.5 py-0.5 text-white;
-    font-size: 0.9em;
-  }
-
-  .article-prose img {
-    @apply max-w-full;
-    height: auto;
-    image-rendering: pixelated;
-  }
-
-  .project-img-wrapper {
-    @apply relative mb-5;
-  }
-
-  .project-img {
-    @apply duration-300;
-  }
-
-  .project-img-wrapper:hover .project-first-img {
-    @apply hover:opacity-0;
-  }
-
-  .project-second-img {
-    @apply absolute left-0 top-0 opacity-0;
-  }
-
-  .project-img-wrapper:hover .project-second-img {
-    @apply  hover:opacity-100;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
 }
 
+/* ── Reduced motion: kill everything ── */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

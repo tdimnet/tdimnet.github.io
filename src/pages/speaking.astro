@@ -1,0 +1,154 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Speaking — Tom Dimnet"
+  description="Talks on what a good course refuses to teach, and why you can't train a trainer with a slide deck. French and English, based in Paris, happy to travel."
+  current="speaking"
+>
+  <div class="region">
+    <div class="pagehead">
+      <h1 class="page">Speaking</h1>
+    </div>
+
+    <section class="mvt" style="padding-top:48px;">
+      <p class="beat" style="margin-top:0;">
+        A course is judged by what it refuses to teach. A system, by what it
+        refuses to add.
+      </p>
+      <div class="col">
+        <p>
+          I've spent thirteen years in front of rooms — classrooms, bootcamps,
+          engineering teams — and I'm now building a training program for
+          engineers at a cloud company. I talk about the part of teaching nobody
+          prepares you for: deciding what to leave out, and holding a room when
+          your plan stops helping.
+        </p>
+      </div>
+    </section>
+
+    <section class="dry">
+      <p class="dry-kicker">Talks</p>
+      <div class="abstract">
+        <h3>What a Good Course Refuses to Teach</h3>
+        <p>
+          Most failed trainings suffer from the same thing: too much content.
+          Not because the trainer knew too much, but because nobody ever asked
+          them to decide what mattered. I walk through real courses — Docker,
+          design patterns — and show the decisions behind them: what I cut, what
+          I kept, and why the order matters more than the list. For anyone who
+          has to explain their work to someone else: mentors, tech leads, and
+          yes, trainers.
+        </p>
+        <p class="tech">30–40 min · also works as a 15-min short</p>
+      </div>
+      <div class="abstract">
+        <h3>You Can't Train a Trainer With a Slide Deck</h3>
+        <p>
+          Handing someone your slides doesn't make them a trainer — it makes
+          them a narrator. Three levels of what "train the trainer" can mean:
+          content, methodology, and the one almost nobody works on — posture,
+          what you do when the room goes quiet and you can't tell whether
+          they're thinking or lost. Drawn from building a training program for
+          engineers, including the parts I haven't solved yet.
+        </p>
+        <p class="tech">30–40 min</p>
+      </div>
+    </section>
+
+    <section class="dry">
+      <p class="dry-kicker">Previously</p>
+      <div class="item">
+        <h3>AWS Summit Paris</h3>
+        <p class="meta">
+          Two Datadog partner sessions on the main program — a log strategy that
+          lets you sleep, and shipping features on Datadog Apps.
+        </p>
+      </div>
+      <div class="item">
+        <h3>DevOps D-Day</h3>
+        <p class="meta">
+          Conference talk. <a href="https://www.youtube.com/watch?v=dS9Hsti1OJo"
+            >Watch ↗</a
+          >
+        </p>
+      </div>
+      <div class="item">
+        <h3>The Product Crew</h3>
+        <p class="meta">
+          Guest, on building and teaching. <a
+            href="https://www.youtube.com/watch?v=SsCAZhUaTM8">Watch ↗</a
+          >
+        </p>
+      </div>
+      <div class="item">
+        <h3>training-dev.fr</h3>
+        <p class="meta">
+          Interview on training developers. <a
+            href="https://www.youtube.com/watch?v=gknHY5nlC6s">Watch ↗</a
+          >
+        </p>
+      </div>
+      <div class="item">
+        <h3>Le Joboscope — OpenClassrooms</h3>
+        <p class="meta">
+          Podcast episode. <a
+            href="https://open.spotify.com/episode/11Mjn1lKEhz6FH1qaBbkpg?si=b4869a203c874fb7"
+            >Listen ↗</a
+          >
+        </p>
+      </div>
+      <div class="item">
+        <h3>Ironhack</h3>
+        <p class="meta">Talks on how developers actually get hired.</p>
+      </div>
+    </section>
+
+    <section class="dry practical">
+      <p class="dry-kicker">Practical</p>
+      <p>I speak in French and English. Based in Paris, happy to travel.</p>
+      <p>Conferences, meetups, internal engineering sessions, podcasts.</p>
+      <p class="meta" style="margin-top:20px;">
+        Tell me the audience and I'll tell you honestly whether I'm the right
+        person.
+      </p>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .abstract {
+    padding: 40px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .abstract:first-of-type {
+    border-top: 0;
+  }
+  .abstract h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(22px, 2.6vw, 27px);
+    line-height: 1.18;
+    margin: 0 0 18px;
+    color: var(--ink);
+    max-width: 24rem;
+  }
+  .abstract p {
+    font-size: 15.5px;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 34rem;
+  }
+  .abstract .tech {
+    font-style: italic;
+    color: var(--meta);
+    font-size: 14px;
+    margin: 18px 0 0;
+  }
+  .practical p {
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+    max-width: 34rem;
+  }
+</style>

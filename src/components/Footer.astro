@@ -1,37 +1,54 @@
 ---
-import Heading from "./Heading.astro";
-import GithubIcon from "../icons/Github.astro";
-import MediumIcon from "../icons/Medium.astro";
+// Shared site footer: the email call-to-action, two link columns
+// (Explore / Elsewhere) and the base line. Present on every page.
+// LinkedIn and Bluesky URLs are placeholders (#) until Tom provides them.
 ---
 
-<footer
-  class="flex flex-col justify-center items-center border-t-2 border-white pt-5 md:flex-row"
->
-  <a href="/" aria-label="Home">
-    <Heading css="text-white mb-5" content="tom" as="h3" />
-  </a>
-  <ul class="grid grid-cols-2 md:ml-auto">
-    <li>
-      <a
-        class="ml-auto mr-5 opacity-80 hover:opacity-100 ease-in duration-200 hover:scale-125"
-        href="https://github.com/tdimnet"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub profile (opens in a new tab)"
-      >
-        <GithubIcon />
-      </a>
-    </li>
-    <li>
-      <a
-        class="opacity-80 hover:opacity-100 ease-in duration-200 hover:scale-125"
-        href="https://tdimnet.medium.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Medium profile (opens in a new tab)"
-      >
-        <MediumIcon />
-      </a>
-    </li>
-  </ul>
+<footer class="site-footer">
+  <div class="fwrap">
+    <p class="footer-call">
+      <a href="mailto:thomas@tdimnet.com">thomas@tdimnet.com</a>
+    </p>
+    <p class="footer-sub">
+      A training program to build, a talk to give, or just the problem itself —
+      I'm up for the conversation.
+    </p>
+    <div class="footer-cols">
+      <div>
+        <p class="col-label">Explore</p>
+        <ul>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/speaking">Speaking</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="col-label">Elsewhere</p>
+        <ul>
+          <li>
+            <a href="https://nx.academy/" target="_blank" rel="noopener"
+              >NX Academy ↗</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/tdimnet" target="_blank" rel="noopener"
+              >GitHub ↗</a
+            >
+          </li>
+          <li><a href="#">LinkedIn ↗</a></li>
+          <li><a href="#">Bluesky ↗</a></li>
+          <li>
+            <a href="https://tdimnet.medium.com/" target="_blank" rel="noopener"
+              >Medium ↗</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span class="wordmark">tom</span>
+      <span>© 2026 Tom Dimnet · Paris · Built static, on purpose.</span>
+    </div>
+  </div>
 </footer>
