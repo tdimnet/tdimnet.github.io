@@ -10,7 +10,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "prettier --write \"src/**/*.{ts,astro}\"",
+    "prettier:format": "prettier . --write",
     "typecheck": "astro check"
   },
   "dependencies": {
