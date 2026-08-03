@@ -2,11 +2,9 @@
 
 My portfolio built with Astro, TypeScript, and Tailwind.
 
-
 ## 1. Prerequisites
 
 - Node (>=20)
-
 
 ## 2. Setting Up
 
@@ -24,13 +22,11 @@ git@github.com:tdimnet/tdimnet.github.io.git
 https://github.com/tdimnet/tdimnet.github.io.git
 ```
 
-
 ### 2.2. Installing the dependencies
 
 ```
 yarn
 ```
-
 
 ### 2.3. Launching the dev server
 
@@ -38,20 +34,17 @@ yarn
 yarn dev
 ```
 
-
 ### 2.4. Building for production
 
 ```
 yarn build
 ```
 
-
 ### 2.5. Previewing the build artifact
 
 ```
 yarn preview
 ```
-
 
 ### 2.6. Type-checking
 
@@ -60,7 +53,6 @@ yarn typecheck
 ```
 
 **Easy, right?**
-
 
 ## 3. Workflow
 
@@ -76,7 +68,6 @@ The automated building process occurs only when something changes on `master`.
 
 The site is fully static. Astro builds it to the `dist/` folder, and the
 GitHub Actions workflow uploads that folder to GitHub Pages.
-
 
 ## 4. Architecture
 

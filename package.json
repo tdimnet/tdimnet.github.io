@@ -10,16 +10,15 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "prettier --write \"src/**/*.{ts,astro}\"",
-    "typecheck": "astro check",
-    "prepare": "husky install"
+    "prettier:format": "prettier . --write",
+    "typecheck": "astro check"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
-    "astro": "^5.18.2"
+    "astro": "^7.1.6"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.4",
+    "@astrojs/check": "^0.9.10",
     "husky": "^8.0.3",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",

@@ -51,9 +51,14 @@ import Layout from "../layouts/Layout.astro";
       <div class="col">
         <figure class="phone">
           <div class="frame">
-            <div class="slot" style="width:216px;height:468px">
-              Popcorns app screenshot
-            </div>
+            <img
+              src="/assets/popcorns-app.webp"
+              alt="Popcorns — film detail screen showing Les Frères Sisters, with watch and watch-later actions"
+              width="460"
+              height="766"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </figure>
         <h2>Popcorns</h2>
@@ -150,9 +155,14 @@ import Layout from "../layouts/Layout.astro";
 
       <figure class="artifact pixel">
         <div class="frame">
-          <div class="slot" style="width:100%;height:340px">
-            Campfire Stories — pixel art / gameplay
-          </div>
+          <img
+            src="/assets/campfire-stories.png"
+            alt="Campfire Stories — the fire, three stones, and Albert asking to join, over a dialogue box with three replies"
+            width="1284"
+            height="766"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <figcaption>
           Campfire Stories — pixel art done in Aseprite. The one image on this
@@ -181,7 +191,7 @@ import Layout from "../layouts/Layout.astro";
         <p>
           An idle game and a small city builder, both unfinished, both useful.
         </p>
-        <p class="meta"><a href="#">itch.io ↗</a></p>
+        <p class="meta"><a href="https://tdimnet.itch.io/">itch.io ↗</a></p>
       </div>
     </section>
 
@@ -223,7 +233,12 @@ import Layout from "../layouts/Layout.astro";
     padding: 8px;
     box-shadow: 6px 6px 0 var(--ink);
   }
-  figure.artifact.pixel .slot {
+  figure.artifact img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  figure.artifact.pixel img {
     image-rendering: pixelated;
   }
   figure.artifact figcaption {
@@ -248,9 +263,11 @@ import Layout from "../layouts/Layout.astro";
     border-radius: 20px;
     box-shadow: 6px 6px 0 var(--ink);
   }
-  figure.phone .slot {
+  figure.phone .frame img {
+    display: block;
+    width: 100%;
+    height: auto;
     border-radius: 13px;
-    overflow: hidden;
   }
   @media (max-width: 640px) {
     figure.phone {
@@ -259,20 +276,5 @@ import Layout from "../layouts/Layout.astro";
       max-width: 300px;
       margin: 28px 0 0;
     }
-  }
-
-  /* Placeholder for images Tom will drop in (Popcorns / Campfire). Swap the
-     .slot div for a plain <img> once the real screenshots exist. */
-  .slot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 16px;
-    background: var(--paper);
-    color: var(--meta);
-    font-size: 12px;
-    letter-spacing: 0.04em;
-    max-width: 100%;
   }
 </style>
