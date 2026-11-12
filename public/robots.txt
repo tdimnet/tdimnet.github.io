@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tdimnet.github.io/sitemap-index.xml
+Sitemap: https://tdimnet.com/sitemap-index.xml
